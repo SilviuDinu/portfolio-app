@@ -1,0 +1,28 @@
+<app-header *ngIf="isUpToMedium$ | async"></app-header>
+
+<mat-sidenav-container class="app-main-container">
+  <mat-sidenav
+    role="navigation"
+    aria-label="Panel"
+    [disableClose]="(isUpToMedium$ | async) ? false : true"
+    fxFlex
+    fxLayoutAlign="start center"
+    fxLayout="column"
+    [mode]="(isUpToMedium$ | async) ? 'over' : 'side'"
+    class="app-main-sidenav"
+    [opened]="(isUpToMedium$ | async) ? false : true"
+    >Drawer content</mat-sidenav
+  >
+  <mat-sidenav-content
+    fxFlex
+    fxLayoutAlign="center center"
+    class="app-main-content"
+  >
+    <main>
+      <div id="main">
+        Main content
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
