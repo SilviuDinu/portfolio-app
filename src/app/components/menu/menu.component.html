@@ -1,1 +1,9 @@
-<div>Menu Component</div>
+<div class="app-menu">
+  <ul class="menu-list" role="list">
+    <li *ngFor="let route of routes" class="menu-item" role="menuitem">
+      <div class="menu-item-wrapper">
+        <a [href]="route.link">{{ route.name }}</a>
+      </div>
+    </li>
+  </ul>
+</div>

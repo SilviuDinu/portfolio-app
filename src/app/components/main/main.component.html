@@ -11,8 +11,10 @@
     [mode]="(isUpToMedium$ | async) ? 'over' : 'side'"
     class="app-main-sidenav"
     [opened]="(isUpToMedium$ | async) ? false : true"
-    >Drawer content</mat-sidenav
   >
+    <app-menu></app-menu>
+  </mat-sidenav>
+
   <mat-sidenav-content
     fxFlex
     fxLayoutAlign="center center"
