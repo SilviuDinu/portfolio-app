@@ -19,4 +19,9 @@ export const routes = [
     name: 'Contact',
     link: '/contact'
   },
+  {
+    name: 'Github',
+    link: 'https://github.com/SilviuDinu/portfolio-app',
+    target: '_blank'
+  },
 ]

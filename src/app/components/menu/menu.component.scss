@@ -1,5 +1,7 @@
 .app-menu {
   margin-top: 32px;
+  overflow: hidden;
+
   ul.menu-list {
     list-style: none;
     text-align: center;
@@ -9,13 +11,44 @@
   }
 
   li.menu-item {
-    padding: 16px;
-    margin-top: 8px;
+    margin-top: 16px;
+    height: 40px;
+    width: 100%;
     font-size: 1rem;
     text-align: center;
+    vertical-align: middle;
 
-    .menu-item-wrapper {
-      text-align: center;
+    a {
+      text-decoration: none;
+      vertical-align: middle;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: rgba(15, 108, 255, 0.1);
+      }
+    }
+
+    // &:hover, &:focus {
+    //   background: rgba(15, 108, 255, 0.1);
+    // }
+
+    .menu-item-route {
+      .route {
+        text-align: center;
+      }
     }
   }
 }
+
+// mat-sidenav {
+//   div['cdkscrollable'] {
+//     -ms-overflow-style: none; /* for Internet Explorer, Edge */
+//     scrollbar-width: none; /* for Firefox */
+
+//     &::-webkit-scrollbar {
+//       width: 8px;
+//       height: 6px;
+//     }
+//   }
+// }

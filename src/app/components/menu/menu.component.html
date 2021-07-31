@@ -1,9 +1,28 @@
 <div class="app-menu">
+  <app-photo></app-photo>
   <ul class="menu-list" role="list">
     <li *ngFor="let route of routes" class="menu-item" role="menuitem">
-      <div class="menu-item-wrapper">
-        <a [href]="route.link">{{ route.name }}</a>
-      </div>
+      <a
+        fxFlex="100%"
+        fxLayoutAlign="center center"
+        fxLayout="column"
+        class="route"
+        [href]="route.link"
+        [attr.target]="route.target"
+        rel="noreferrer"
+      >
+        <div class="menu-item-route">
+          <div
+            fxFlex="100%"
+            fxLayoutAlign="center center"
+            fxLayout="row"
+            class="route"
+          >
+            <!-- <mat-icon class="mat-icon-rtl-mirror" svgIcon="home"></mat-icon> -->
+            <span>{{ route.name }}</span>
+          </div>
+        </div>
+      </a>
     </li>
   </ul>
 </div>

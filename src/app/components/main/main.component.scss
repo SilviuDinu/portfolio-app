@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+// mat-sidenav-container {
+//   position: static;
+// }
+
 .app-main-sidenav {
   width: 300px;
   background-color: lightcoral;
@@ -15,8 +19,8 @@
 }
 
 .app-main-content {
-  margin: 16px 16px 16px 32px;
-  padding: 16px;
+  // margin: 16px 16px 16px 32px;
+  // padding: 16px;
   font-size: 2rem;
   color: lightgray;
   text-align: center;

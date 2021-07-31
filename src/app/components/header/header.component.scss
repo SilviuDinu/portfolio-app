@@ -1,0 +1,23 @@
+// mat-toolbar {
+//   position: fixed;
+//   top: 0;
+//   z-index: 100;
+// }
+
+.menu-toggle {
+  vertical-align: middle;
+  outline: none;
+  text-align: center;
+
+  mat-icon {
+    font-size: 30px;
+    text-align: center;
+    width: 30px;
+    height: auto;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
