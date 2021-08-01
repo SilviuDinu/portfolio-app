@@ -3,24 +3,28 @@
   overflow: hidden;
 
   ul.menu-list {
+    margin-top: 8px;
     list-style: none;
     text-align: center;
     padding-left: 0;
     text-align: center;
     list-style-type: none;
+    line-height: 24px;
   }
 
   li.menu-item {
-    margin-top: 16px;
-    height: 40px;
+    // margin-top: 16px;
+    height: 48px;
     width: 100%;
     font-size: 1rem;
     text-align: center;
     vertical-align: middle;
 
     a {
+      padding: 8px;
       text-decoration: none;
       vertical-align: middle;
+      color: rgba(50, 50, 50, 0.8);
 
       &:hover,
       &:focus,
@@ -40,15 +44,3 @@
     }
   }
 }
-
-// mat-sidenav {
-//   div['cdkscrollable'] {
-//     -ms-overflow-style: none; /* for Internet Explorer, Edge */
-//     scrollbar-width: none; /* for Firefox */
-
-//     &::-webkit-scrollbar {
-//       width: 8px;
-//       height: 6px;
-//     }
-//   }
-// }

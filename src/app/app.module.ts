@@ -16,9 +16,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PhotoComponent } from './components/photo/photo.component';
 import { SocialComponent } from './components/social/social.component';
+import { ContactInformationComponent } from './components/contact-information/contact-information.component';
 
 @NgModule({
-  declarations: [AppComponent, TokenPipe, MenuComponent, MainComponent, HeaderComponent, PhotoComponent, SocialComponent],
+  declarations: [AppComponent, TokenPipe, MenuComponent, MainComponent, HeaderComponent, PhotoComponent, SocialComponent, ContactInformationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

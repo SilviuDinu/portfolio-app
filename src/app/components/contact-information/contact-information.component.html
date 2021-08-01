@@ -1,0 +1,28 @@
+<div class="contact-information">
+  
+  <app-photo></app-photo>
+
+  <div
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    fxLayoutGap="16px"
+    class="social"
+  >
+    <app-social
+      [url]="'social.github.url' | token"
+      [icon]="'github_logo'"
+    ></app-social>
+    <app-social
+      [url]="'social.linkedin.url' | token"
+      [icon]="'linkedin_circle'"
+    ></app-social>
+    <app-social
+      [url]="'social.twitter.url' | token"
+      [icon]="'twitter'"
+    ></app-social>
+    <app-social
+      [url]="'social.facebook.url' | token"
+      [icon]="'facebook_circle'"
+    ></app-social>
+  </div>
+</div>
