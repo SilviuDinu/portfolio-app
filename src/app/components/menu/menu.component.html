@@ -12,7 +12,8 @@
         fxLayoutAlign="center center"
         fxLayout="column"
         class="route"
-        [href]="route.path"
+        [route]="route.path"
+        [routerLink]="[route.path]"
         [attr.target]="route.target"
         rel="noreferrer"
       >
