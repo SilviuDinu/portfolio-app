@@ -1,6 +1,10 @@
 <div class="app-menu">
   <app-contact-information></app-contact-information>
 
+  <div fxLayoutAlign="center center">
+    <mat-divider></mat-divider>
+  </div>
+
   <ul class="menu-list" role="list">
     <li *ngFor="let route of routes" class="menu-item" role="menuitem">
       <a
@@ -8,7 +12,7 @@
         fxLayoutAlign="center center"
         fxLayout="column"
         class="route"
-        [href]="route.link"
+        [href]="route.path"
         [attr.target]="route.target"
         rel="noreferrer"
       >

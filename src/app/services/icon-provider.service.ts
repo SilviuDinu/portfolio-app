@@ -18,6 +18,10 @@ export class IconProviderService {
     ['facebook', 'facebook.svg'],
     ['facebook_circle', 'facebook-circle.svg'],
     ['twitter', 'twitter.svg'],
+    ['phone_white', 'call_white.svg'],
+    ['phone_black', 'call_black.svg'],
+    ['email_white', 'email_white.svg'],
+    ['email_black', 'email_black.svg'],
   ];
 
   constructor(

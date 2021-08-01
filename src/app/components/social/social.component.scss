@@ -2,3 +2,18 @@
   width: 32px;
   height: 32px;
 }
+
+.social-container {
+  &:hover {
+    box-shadow: darkgray;
+  }
+  a {
+    text-decoration: none;
+    color: rgba(50, 50, 50, 0.8);
+  }
+  ::ng-deep {
+    span {
+      color: rgba(50, 50, 50, 0.8);
+    }
+  }
+}

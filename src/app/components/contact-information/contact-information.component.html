@@ -1,5 +1,4 @@
 <div class="contact-information">
-  
   <app-photo></app-photo>
 
   <div
@@ -24,5 +23,33 @@
       [url]="'social.facebook.url' | token"
       [icon]="'facebook_circle'"
     ></app-social>
+  </div>
+
+  <div fxLayoutAlign="center center">
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="email-phone">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      class="email-container"
+    >
+      <app-social
+        url="{{ 'mailto:' + ('contact.email' | token) }}"
+        [icon]="'email_white'"
+      >
+        <span class="email">{{ "contact.email" | token }}</span>
+      </app-social>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      class="phone-container"
+    >
+      <app-social [icon]="'phone_white'">
+        <span class="phone">{{ "contact.phone" | token }}</span>
+      </app-social>
+    </div>
   </div>
 </div>

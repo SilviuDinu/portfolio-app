@@ -1,27 +1,38 @@
 export const routes = [
   {
     name: 'Home',
-    link: '/'
+    component: 'Home',
+    path: '/',
+    isExternal: false,
   },
   {
     name: 'About me',
-    link: '/about-me'
+    path: '/about-me',
+    component: 'AboutMe',
+    isExternal: false,
   },
   {
     name: 'Resume',
-    link: '/resume'
+    path: '/resume',
+    component: 'Resume',
+    isExternal: false,
   },
   {
     name: 'Projects',
-    link: '/projects'
+    path: '/projects',
+    component: 'Projects',
+    isExternal: false,
   },
   {
     name: 'Contact',
-    link: '/contact'
+    path: '/contact',
+    component: 'Contact',
+    isExternal: false,
   },
   {
     name: 'Github',
-    link: 'https://github.com/SilviuDinu/portfolio-app',
-    target: '_blank'
+    path: 'https://github.com/SilviuDinu/portfolio-app',
+    target: '_blank',
+    isExternal: true,
   },
-]
+];

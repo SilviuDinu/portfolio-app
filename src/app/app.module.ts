@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
 import { MenuComponent } from './components/menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainComponent } from './components/main/main.component';
@@ -29,7 +30,8 @@ import { ContactInformationComponent } from './components/contact-information/co
     MatButtonModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
