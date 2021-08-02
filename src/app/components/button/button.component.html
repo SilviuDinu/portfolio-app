@@ -1,8 +1,32 @@
-<button
-  [attr.aria-label]="text"
-  [attr.type]="type"
-  class="btn + {{ type }}"
-  (click)="onClick()"
->
-  {{ text }}
-</button>
+<div class="button-container">
+  <button
+    [attr.aria-label]="text"
+    [attr.type]="type"
+    class="{{ 'btn ' + type }}"
+    (click)="onClick()"
+  >
+    <span fxLayoutAlign="start center">
+      <ng-container *ngIf="icon">
+        <mat-icon svgIcon="{{ icon }}"></mat-icon>
+      </ng-container>
+      <span>{{ text }}</span>
+    </span>
+  </button>
+
+  <ng-template #anchor>
+    <a
+      [attr.aria-label]="text"
+      [attr.type]="type"
+      class="{{ 'btn ' + type }}"
+      [href]="downloadUrl"
+      download
+    >
+      <span fxLayoutAlign="start center">
+        <ng-container *ngIf="icon">
+          <mat-icon svgIcon="{{ icon }}"></mat-icon>
+        </ng-container>
+        <span>{{ text }}</span>
+      </span>
+    </a>
+  </ng-template>
+</div>

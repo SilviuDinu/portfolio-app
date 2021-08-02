@@ -22,6 +22,12 @@ import { ResumeComponent } from '@pages/resume/resume.component';
 import { ProjectsComponent } from '@pages/projects/projects.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ButtonComponent } from './components/button/button.component';
+import { MobileNumberPipe } from './pipes/mobile-number.pipe';
+import { DownloadComponent } from './components/download/download.component';
+import { TitleComponent } from './components/title/title.component';
+import { HomeComponent } from '@pages/home/home.component';
+import { AboutMeComponent } from '@pages/about-me/about-me.component';
+import { ContentComponent } from './components/content/content.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,14 @@ import { ButtonComponent } from './components/button/button.component';
     ProjectsComponent,
     NotFoundComponent,
     ButtonComponent,
+    MobileNumberPipe,
+    DownloadComponent,
+    TitleComponent,
+    HomeComponent,
+    AboutMeComponent,
+    ResumeComponent,
+    ProjectsComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div
+  class="home-page"
+  fxFlex="100%"
+  fxLayoutAlign="center start"
+  fxLayout="column"
+  fxLayoutGap="32px"
+>
+  <app-title [text]="'homepage.title' | token"></app-title>
+
+  <app-content>
+    <div class="home-content-parapgraph">
+      {{ "resume.paragraph1" | token }}
+    </div>
+    <div class="home-content-parapgraph">
+      {{ "resume.paragraph2" | token }}
+    </div>
+    <div class="home-content-parapgraph">
+      {{ "resume.paragraph3" | token }}
+    </div>
+  </app-content>
+</div>

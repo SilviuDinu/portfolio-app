@@ -1,0 +1,12 @@
+<div class="download-container">
+  <span fxLayout="row">
+    <app-button
+      [icon]="'download_black'"
+      [isDownload]="true"
+      [downloadUrl]="'/assets/Silviu-Alexandru_Dinu_CV_ENG.pdf'"
+      type="secondary"
+      [text]="'resume.downloadAction' | token"
+      (action)="onDownload()"
+    ></app-button>
+  </span>
+</div>
