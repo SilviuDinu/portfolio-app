@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-download',
@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./download.component.scss'],
 })
 export class DownloadComponent implements OnInit {
+
+  @Input() downloadUrl: string;
+  @Input() text: string;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   onDownload() {
-    
+  
   }
 }

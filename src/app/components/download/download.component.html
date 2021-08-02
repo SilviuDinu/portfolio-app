@@ -3,9 +3,9 @@
     <app-button
       [icon]="'download_black'"
       [isDownload]="true"
-      [downloadUrl]="'/assets/Silviu-Alexandru_Dinu_CV_ENG.pdf'"
+      [downloadUrl]="downloadUrl"
       type="secondary"
-      [text]="'resume.downloadAction' | token"
+      [text]="text"
       (action)="onDownload()"
     ></app-button>
   </span>

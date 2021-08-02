@@ -6,9 +6,25 @@
   class="resume-container"
 >
   <app-title [text]="'resume.title' | token">
-    <app-download></app-download>
+    <app-download
+      [downloadUrl]="'/assets/Silviu-Alexandru_Dinu_CV_ENG.pdf'"
+      [text]="'resume.downloadAction' | token"
+    ></app-download>
   </app-title>
 
+  <app-content>
+    <div class="resume-content-parapgraph">
+      {{ "resume.paragraph1" | token }}
+    </div>
+    <div class="resume-content-parapgraph">
+      {{ "resume.paragraph2" | token }}
+    </div>
+    <div class="resume-content-parapgraph">
+      {{ "resume.paragraph3" | token }}
+    </div>
+  </app-content>
+
+  <app-title [text]="'resume.title1' | token" [size]="'medium'"></app-title>
   <app-content>
     <div class="resume-content-parapgraph">
       {{ "resume.paragraph1" | token }}
