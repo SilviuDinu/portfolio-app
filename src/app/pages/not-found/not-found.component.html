@@ -1,0 +1,12 @@
+<div class="404">
+  <h1 class="404-title">
+    {{ "404.title" | token }}
+  </h1>
+  <div class="404-actions">
+    <app-button
+      [type]="'primary'"
+      [text]="'404.action' | token"
+      (action)="goHome()"
+    ></app-button>
+  </div>
+</div>

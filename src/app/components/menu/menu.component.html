@@ -7,12 +7,16 @@
 
   <ul class="menu-list" role="list">
     <li *ngFor="let route of routes" class="menu-item" role="menuitem">
+      <!-- These are router paths -->
       <a
+        *ngIf="!route.isExternal"
         fxFlex="100%"
         fxLayoutAlign="center center"
         fxLayout="column"
         class="route"
         [route]="route.path"
+        routerLinkActive="active"
+        [attr.href]="route.path"
         [routerLink]="[route.path]"
         [attr.target]="route.target"
         rel="noreferrer"
@@ -24,7 +28,29 @@
             fxLayout="row"
             class="route"
           >
-            <!-- <mat-icon class="mat-icon-rtl-mirror" svgIcon="home"></mat-icon> -->
+            <span>{{ route.name }}</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Display external links sperately  -->
+      <a
+        *ngIf="route.isExternal"
+        fxFlex="100%"
+        fxLayoutAlign="center center"
+        fxLayout="column"
+        class="route"
+        [attr.href]="route.path"
+        [attr.target]="route.target"
+        rel="noreferrer"
+      >
+        <div class="menu-item-route">
+          <div
+            fxFlex="100%"
+            fxLayoutAlign="center center"
+            fxLayout="row"
+            class="route"
+          >
             <span>{{ route.name }}</span>
           </div>
         </div>

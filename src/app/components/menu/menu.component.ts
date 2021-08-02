@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { routes } from '@constants/routes';
+import { menuRoutes as routes } from '@constants/routes';
 
 @Component({
   selector: 'app-menu',

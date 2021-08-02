@@ -62,9 +62,10 @@
 }
 
 .app-main-content {
-  // margin: 16px 16px 16px 32px;
-  // padding: 16px;
-  font-size: 2rem;
   color: lightgray;
-  text-align: center;
+
+  #main {
+    padding: 8px;
+    margin: 16px 8px;
+  }
 }

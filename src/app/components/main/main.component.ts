@@ -1,8 +1,9 @@
 import { Responsive } from '@abstracts/responsive.abstract';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
+import { NavigationEnd, Router } from '@angular/router';
 import { SidenavService } from '@services/sidenav.service';
-import { filter } from 'lodash';
+import { withLatestFrom, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-main',
@@ -12,8 +13,24 @@ import { filter } from 'lodash';
 export class MainComponent extends Responsive implements OnInit, AfterViewInit {
   @ViewChild('sidenavMenu', { static: false }) sidenavMenu: MatSidenav;
 
-  constructor(private sidenavService: SidenavService) {
+  constructor(private sidenavService: SidenavService, private router: Router) {
     super();
+
+    /* 
+    Automatically close the sidenav after 
+    clicking on a route for mobile / tablet
+    */
+    this.router.events
+      .pipe(
+        withLatestFrom(this.isUpToMedium$),
+        filter(([a, b]) => {
+          return b && a instanceof NavigationEnd;
+        })
+      )
+      .subscribe(() => {
+        this.sidenavService.close();
+        window.scrollTo(0, 0);
+      });
   }
 
   ngOnInit(): void {}

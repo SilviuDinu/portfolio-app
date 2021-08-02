@@ -1,32 +1,22 @@
-export const routes = [
+export const menuRoutes = [
   {
     name: 'Home',
-    component: 'Home',
     path: '/',
     isExternal: false,
   },
   {
     name: 'About me',
     path: '/about-me',
-    component: 'AboutMe',
     isExternal: false,
   },
   {
     name: 'Resume',
     path: '/resume',
-    component: 'Resume',
     isExternal: false,
   },
   {
     name: 'Projects',
     path: '/projects',
-    component: 'Projects',
-    isExternal: false,
-  },
-  {
-    name: 'Contact',
-    path: '/contact',
-    component: 'Contact',
     isExternal: false,
   },
   {

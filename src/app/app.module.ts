@@ -18,9 +18,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { PhotoComponent } from './components/photo/photo.component';
 import { SocialComponent } from './components/social/social.component';
 import { ContactInformationComponent } from './components/contact-information/contact-information.component';
+import { ResumeComponent } from '@pages/resume/resume.component';
+import { ProjectsComponent } from '@pages/projects/projects.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
-  declarations: [AppComponent, TokenPipe, MenuComponent, MainComponent, HeaderComponent, PhotoComponent, SocialComponent, ContactInformationComponent],
+  declarations: [
+    AppComponent,
+    TokenPipe,
+    MenuComponent,
+    MainComponent,
+    HeaderComponent,
+    PhotoComponent,
+    SocialComponent,
+    ContactInformationComponent,
+    ResumeComponent,
+    ProjectsComponent,
+    NotFoundComponent,
+    ButtonComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,13 +48,12 @@ import { ContactInformationComponent } from './components/contact-information/co
     BrowserAnimationsModule,
     FlexLayoutModule,
     HttpClientModule,
-    MatDividerModule
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-
 export class AppModule {
   constructor(private injector: Injector) {
     AppInjector = this.injector;

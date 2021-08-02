@@ -1,0 +1,8 @@
+<button
+  [attr.aria-label]="text"
+  [attr.type]="type"
+  class="btn + {{ type }}"
+  (click)="onClick()"
+>
+  {{ text }}
+</button>

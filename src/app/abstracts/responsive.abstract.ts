@@ -3,7 +3,7 @@ import { ResponsiveService } from '@services/responsive.service';
 import { AppInjector } from '@app.module';
 
 export abstract class Responsive {
-  protected responsiveService: ResponsiveService;
+protected responsiveService: ResponsiveService;
 
   isHandset$: Observable<boolean>;
   isTablet$: Observable<boolean>;
