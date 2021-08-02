@@ -1,5 +1,5 @@
-@import '../../../breakpoints.scss';
-@import '../../../colors.scss';
+@import "../../../breakpoints.scss";
+@import "../../../colors.scss";
 
 .app-main-container {
   width: 100%;
@@ -67,6 +67,10 @@
 .app-main-content {
   color: rgb(133, 128, 128);
   background-color: $main-bg;
+
+  main {
+    width: 100%;
+  }
 
   #main {
     padding: 8px 24px;
