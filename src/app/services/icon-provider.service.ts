@@ -24,6 +24,10 @@ export class IconProviderService {
     ['email_black', 'email_black.svg'],
     ['download_white', 'download_white.svg'],
     ['download_black', 'download_black.svg'],
+    ['briefcase', 'briefcase.svg'],
+    ['project', 'project.svg'],
+    ['idea', 'idea.svg'],
+    ['school_hat', 'school_hat.svg'],
   ];
 
   constructor(

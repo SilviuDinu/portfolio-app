@@ -1,4 +1,3 @@
-
 /*
   To add a new work experience section you can copy and paste
   one of the models below (the ones inside { } braces) and change
@@ -15,25 +14,44 @@
 
 export const workExperience = [
   {
-    name: 'Deloitte Digital',
-    position: 'resume.experience1.position',
-    company: 'resume.experience1.company',
-    city: 'resume.experience1.city',
-    period: 'resume.experience1.period',
+    title: 'Deloitte Digital',
+    position: 'resume.experiences.experience1.position',
+    company: 'resume.experiences.experience1.company',
+    city: 'resume.experiences.experience1.city',
+    period: 'resume.experiences.experience1.period',
     responsibilities: [
-      'resume.experience1.responsibilities.item1',
-      'resume.experience1.responsibilities.item2',
+      'resume.experiences.experience1.responsibilities.item1',
+      'resume.experiences.experience1.responsibilities.item2',
     ],
   },
   {
-    name: 'Themeisle',
-    position: 'resume.experience2.position',
-    company: 'resume.experience2.company',
-    city: 'resume.experience2.city',
-    period: 'resume.experience2.period',
+    title: 'Themeisle',
+    position: 'resume.experiences.experience2.position',
+    company: 'resume.experiences.experience2.company',
+    city: 'resume.experiences.experience2.city',
+    period: 'resume.experiences.experience2.period',
     responsibilities: [
-      'resume.experience2.responsibilities.item1',
-      'resume.experience2.responsibilities.item2',
+      'resume.experiences.experience2.responsibilities.item1',
+      'resume.experiences.experience2.responsibilities.item2',
     ],
+  },
+];
+
+export const projects = [
+  {
+    title: 'resume.projects.project1.title',
+    city: 'resume.projects.project1.city',
+    description: 'resume.projects.project1.description',
+    period: 'resume.projects.project1.period',
+    tools: [
+      'resume.projects.project1.tools.tool1',
+      'resume.projects.project1.tools.tool2',
+      'resume.projects.project1.tools.tool3',
+      'resume.projects.project1.tools.tool4',
+      'resume.projects.project1.tools.tool5',
+      'resume.projects.project1.tools.tool6',
+    ],
+    website: 'resume.projects.project1.website',
+    repo: 'resume.projects.project1.repo',
   },
 ];

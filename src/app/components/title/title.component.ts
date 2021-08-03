@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./title.component.scss'],
 })
 export class TitleComponent implements OnInit {
+  @Input() icon: string;
   @Input() text: string;
   @Input() size: 'largest' | 'large' | 'medium' | 'small' = 'largest';
 

@@ -4,7 +4,37 @@
   fxLayoutAlign="start start"
   class="experience-container"
 >
-  <h4 class="position">{{ position.toUpperCase() }}</h4>
+  <ng-container *ngIf="!isProject; else project">
+    <h4 class="position">
+      {{ position.toUpperCase() }}
+      <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+    </h4>
+    <div
+      fxFlex="100%"
+      fxLayout="row wrap"
+      fxLayoutAlign="start start"
+      fxLayoutGap="8px"
+      class="experience-details"
+    >
+      <span class="company detail">{{ company | capitalize }}</span>
+      <span class="location detail">{{ city }}</span>
+      <span class="period detail">{{ period }}</span>
+    </div>
+    <div class="experience-responsabilities">
+      <ul role="list" class="responsabilities">
+        <li *ngFor="let item of responsibilities" role="listitem">
+          <span class="responsibility">{{ item | token }}</span>
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #project>
+  <h4 class="title">
+    {{ title.toUpperCase() }}
+    <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+  </h4>
   <div
     fxFlex="100%"
     fxLayout="row wrap"
@@ -12,15 +42,30 @@
     fxLayoutGap="8px"
     class="experience-details"
   >
-    <span class="company detail">{{ company.toUpperCase() }}</span>
-    <span class="location detail">{{ city }}</span>
-    <span class="period detail">{{ period }}</span>
+    <span *ngIf="company" class="company detail">{{
+      company | capitalize
+    }}</span>
+    <span *ngIf="city" class="location detail">{{ city }}</span>
+    <span *ngIf="period" class="period detail">{{ period }}</span>
   </div>
-  <div class="experience-responsabilities">
-    <ul role="list" class="responsabilities">
-      <li *ngFor="let item of responsibilities" role="listitem">
-        <span class="responsibility">{{ item | token }}</span>
-      </li>
-    </ul>
+  <div class="description">
+    <span>{{ description }}</span>
   </div>
-</div>
+  <div *ngIf="tools.length > 0" class="experience-tools">
+    <div role="list" class="tools">
+      <span *ngFor="let item of tools" class="tool">{{ item | token }}</span>
+    </div>
+  </div>
+  <div *ngIf="website || repo" class="websites">
+    <div class="website-container">
+      <a [href]="website">
+        <span *ngIf="website" class="website">{{ website }}</span>
+      </a>
+    </div>
+    <div class="website-container">
+      <a [href]="repo">
+        <span *ngIf="repo" class="repo"> {{ repo }} </span>
+      </a>
+    </div>
+  </div>
+</ng-template>

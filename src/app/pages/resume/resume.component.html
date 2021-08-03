@@ -5,25 +5,34 @@
   fxLayoutGap="16px"
   class="resume-container"
 >
-  <app-title [text]="'resume.title' | token">
+  <!-- Resume title and download button -->
+  <app-title [text]="'resume.titles.aboutTitle' | token">
     <app-download
       [downloadUrl]="'/assets/Silviu-Alexandru_Dinu_CV_ENG.pdf'"
       [text]="'resume.downloadAction' | token"
     ></app-download>
   </app-title>
+  <!-- END Resume title and download button -->
 
   <app-horizontal-divider></app-horizontal-divider>
 
+  <!-- About me information -->
   <app-title [text]="'resume.about.title' | token" [size]="'large'"></app-title>
   <app-content>
     <div class="resume-content-parapgraph">
       {{ "resume.about.content" | token }}
     </div>
   </app-content>
+  <!-- END About me information -->
 
   <app-horizontal-divider></app-horizontal-divider>
 
-  <app-title [text]="'resume.title1' | token" [size]="'large'"></app-title>
+  <!-- Work experience -->
+  <app-title
+    [text]="'resume.titles.workExperienceTitle' | token"
+    [size]="'large'"
+    [icon]="'briefcase'"
+  ></app-title>
   <app-content>
     <div *ngFor="let item of experiences" class="resume-content-parapgraph">
       <app-work-experience
@@ -35,4 +44,53 @@
       ></app-work-experience>
     </div>
   </app-content>
+  <!-- END Work experience -->
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <!-- Education -->
+  <app-title
+    [text]="'resume.titles.educationTitle' | token"
+    [size]="'large'"
+    [icon]="'school_hat'"
+  ></app-title>
+  <app-content>
+    <div *ngFor="let item of projects" class="resume-content-parapgraph">
+      <app-work-experience
+        [isProject]="true"
+        [title]="item.title | token"
+        [city]="item.city | token"
+        [period]="item.period | token"
+        [description]="item.description | token"
+        [website]="item.website | token"
+        [repo]="item.repo | token"
+        [tools]="item.tools"
+      ></app-work-experience>
+    </div>
+  </app-content>
+  <!-- END Education -->
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <!-- My projects -->
+  <app-title
+    [text]="'resume.titles.projectsTitle' | token"
+    [size]="'large'"
+    [icon]="'idea'"
+  ></app-title>
+  <app-content>
+    <div *ngFor="let item of projects" class="resume-content-parapgraph">
+      <app-work-experience
+        [isProject]="true"
+        [title]="item.title | token"
+        [city]="item.city | token"
+        [period]="item.period | token"
+        [description]="item.description | token"
+        [website]="item.website | token"
+        [repo]="item.repo | token"
+        [tools]="item.tools"
+      ></app-work-experience>
+    </div>
+  </app-content>
+  <!-- END My projects -->
 </div>
