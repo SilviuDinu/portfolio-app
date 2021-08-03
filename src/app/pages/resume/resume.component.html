@@ -6,7 +6,7 @@
   class="resume-container"
 >
   <!-- Resume title and download button -->
-  <app-title [text]="'resume.titles.aboutTitle' | token">
+  <app-title [text]="'resume.titles.pageTitle' | token">
     <app-download
       [downloadUrl]="'/assets/Silviu-Alexandru_Dinu_CV_ENG.pdf'"
       [text]="'resume.downloadAction' | token"
@@ -17,7 +17,7 @@
   <app-horizontal-divider></app-horizontal-divider>
 
   <!-- About me information -->
-  <app-title [text]="'resume.about.title' | token" [size]="'large'"></app-title>
+  <app-title [text]="'resume.titles.aboutTitle' | token" [size]="'large'"></app-title>
   <app-content>
     <div class="resume-content-parapgraph">
       {{ "resume.about.content" | token }}
@@ -55,16 +55,12 @@
     [icon]="'school_hat'"
   ></app-title>
   <app-content>
-    <div *ngFor="let item of projects" class="resume-content-parapgraph">
+    <div *ngFor="let item of education" class="resume-content-parapgraph">
       <app-work-experience
-        [isProject]="true"
-        [title]="item.title | token"
+        [position]="item.position | token"
+        [company]="item.company | token"
         [city]="item.city | token"
         [period]="item.period | token"
-        [description]="item.description | token"
-        [website]="item.website | token"
-        [repo]="item.repo | token"
-        [tools]="item.tools"
       ></app-work-experience>
     </div>
   </app-content>
@@ -93,4 +89,28 @@
     </div>
   </app-content>
   <!-- END My projects -->
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <!-- My skills -->
+  <app-title
+    [text]="'resume.titles.skillsTitle' | token"
+    [size]="'large'"
+    [icon]="'skills'"
+  ></app-title>
+  <app-content>
+    <!-- <div *ngFor="let item of projects" class="resume-content-parapgraph">
+      <app-work-experience
+        [isProject]="true"
+        [title]="item.title | token"
+        [city]="item.city | token"
+        [period]="item.period | token"
+        [description]="item.description | token"
+        [website]="item.website | token"
+        [repo]="item.repo | token"
+        [tools]="item.tools"
+      ></app-work-experience>
+    </div> -->
+  </app-content>
+  <!-- END My skills -->
 </div>

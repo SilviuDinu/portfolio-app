@@ -1,6 +1,6 @@
 import { Responsive } from '@abstracts/responsive.abstract';
 import { Component, OnInit } from '@angular/core';
-import { projects, workExperience } from '@constants/work-experience';
+import { education, projects, workExperience } from '@constants/work-experience';
 
 @Component({
   selector: 'app-resume',
@@ -11,6 +11,7 @@ export class ResumeComponent extends Responsive implements OnInit {
 
   experiences = workExperience;
   projects = projects;
+  education = education;
 
   constructor() {
     super();

@@ -1,5 +1,9 @@
 .experience-container {
-  .experience-details, .description {
+  .label {
+    font-weight: 500;
+  }
+  .experience-details,
+  .description {
     margin-top: 8px;
 
     .detail {
@@ -11,8 +15,9 @@
       }
     }
   }
-  .experience-responsabilities, .experience-tools {
-    .responsabilities {
+  .experience-responsibilities,
+  .experience-tools {
+    .responsibilities {
       li {
         margin-top: 8px;
       }

@@ -28,6 +28,7 @@ export class IconProviderService {
     ['project', 'project.svg'],
     ['idea', 'idea.svg'],
     ['school_hat', 'school_hat.svg'],
+    ['skills', 'skills.svg'],
   ];
 
   constructor(
