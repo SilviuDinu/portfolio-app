@@ -28,6 +28,8 @@ import { TitleComponent } from './components/title/title.component';
 import { HomeComponent } from '@pages/home/home.component';
 import { AboutMeComponent } from '@pages/about-me/about-me.component';
 import { ContentComponent } from './components/content/content.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { HorizontalDividerComponent } from './components/horizontal-divider/horizontal-divider.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ContentComponent } from './components/content/content.component';
     AboutMeComponent,
     ResumeComponent,
     ProjectsComponent,
-    ContentComponent
+    ContentComponent,
+    WorkExperienceComponent,
+    HorizontalDividerComponent,
   ],
   imports: [
     BrowserModule,

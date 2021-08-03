@@ -1,11 +1,12 @@
-<div class="app-menu">
+<div class="app-menu" role="menu">
   <app-contact-information></app-contact-information>
 
-  <div fxLayoutAlign="center center">
-    <mat-divider></mat-divider>
-  </div>
+  <app-horizontal-divider
+    [isCentered]="true"
+    [length]="'three-quarters'"
+  ></app-horizontal-divider>
 
-  <ul class="menu-list" role="list">
+  <ul class="menu-list" role="menubar" aria-hidden="true">
     <li *ngFor="let route of routes" class="menu-item" role="menuitem">
       <!-- These are router paths -->
       <a

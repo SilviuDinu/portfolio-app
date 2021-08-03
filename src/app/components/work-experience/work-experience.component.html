@@ -1,22 +1,25 @@
-<div class="experience-container">
+<div
+  fxFlex="100%"
+  fxLayout="column"
+  fxLayoutAlign="start start"
+  class="experience-container"
+>
   <h4 class="position">{{ position.toUpperCase() }}</h4>
-  <div class="experience-details">
+  <div
+    fxFlex="100%"
+    fxLayout="row wrap"
+    fxLayoutAlign="start start"
+    fxLayoutGap="8px"
+    class="experience-details"
+  >
     <span class="company detail">{{ company.toUpperCase() }}</span>
     <span class="location detail">{{ city }}</span>
     <span class="period detail">{{ period }}</span>
   </div>
   <div class="experience-responsabilities">
     <ul role="list" class="responsabilities">
-      <li role="listitem">
-        <span class="responsibility"
-          >respons1</span
-        >
-      </li>
-      <li>
-        <span class="responsibility"
-          >Working with tools like: AngularJS, Angular, React, SCSS, NodeJS,
-          Jira</span
-        >
+      <li *ngFor="let item of responsibilities" role="listitem">
+        <span class="responsibility">{{ item | token }}</span>
       </li>
     </ul>
   </div>

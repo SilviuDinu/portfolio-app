@@ -11,8 +11,9 @@ export class WorkExperienceComponent implements OnInit {
   @Input() company: string;
   @Input() city: string;
   @Input() period: string;
+  @Input() responsibilities: string[];
 
-  constructor() { }
+  constructor() { console.log(this.responsibilities)}
 
   ngOnInit(): void {
   }

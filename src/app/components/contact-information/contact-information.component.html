@@ -25,16 +25,13 @@
     ></app-social>
   </div>
 
-  <div fxLayoutAlign="center center">
-    <mat-divider></mat-divider>
-  </div>
+  <app-horizontal-divider
+    [isCentered]="true"
+    [length]="'three-quarters'"
+  ></app-horizontal-divider>
 
   <div class="email-phone">
-    <div
-      fxLayout="row"
-      fxLayoutAlign="start center"
-      class="email-container"
-    >
+    <div fxLayout="row" fxLayoutAlign="start center" class="email-container">
       <app-social
         url="{{ 'mailto:' + ('contact.email' | token) }}"
         [icon]="'email_white'"
@@ -42,11 +39,7 @@
         <span class="email">{{ "contact.email" | token }}</span>
       </app-social>
     </div>
-    <div
-      fxLayout="row"
-      fxLayoutAlign="start center"
-      class="phone-container"
-    >
+    <div fxLayout="row" fxLayoutAlign="start center" class="phone-container">
       <app-social [icon]="'phone_white'">
         <span class="phone">{{ "contact.phone" | token | mobileNumber }}</span>
       </app-social>

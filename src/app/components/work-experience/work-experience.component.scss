@@ -1,0 +1,21 @@
+.experience-container {
+  .experience-details {
+    margin-top: 8px;
+
+    .detail {
+      &:not(:last-child) {
+        &::after {
+          content: " | ";
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+  .experience-responsabilities {
+    .responsabilities {
+      li {
+        margin-top: 8px;
+      }
+    }
+  }
+}

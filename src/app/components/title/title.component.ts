@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TitleComponent implements OnInit {
   @Input() text: string;
-  @Input() size: 'large' | 'medium' | 'small' = 'large';
+  @Input() size: 'largest' | 'large' | 'medium' | 'small' = 'largest';
 
   constructor() {}
 
@@ -15,6 +15,9 @@ export class TitleComponent implements OnInit {
 
   get isLarge() {
     return this.size === 'large';
+  }
+  get isLargest() {
+    return this.size === 'largest';
   }
   get isMedium() {
     return this.size === 'medium';

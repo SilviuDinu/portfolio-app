@@ -2,7 +2,7 @@
   fxFlex="100%"
   fxLayoutAlign="center start"
   fxLayout="column"
-  fxLayoutGap="32px"
+  fxLayoutGap="16px"
   class="resume-container"
 >
   <app-title [text]="'resume.title' | token">
@@ -12,28 +12,27 @@
     ></app-download>
   </app-title>
 
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <app-title [text]="'resume.about.title' | token" [size]="'large'"></app-title>
   <app-content>
     <div class="resume-content-parapgraph">
-      {{ "resume.paragraph1" | token }}
-    </div>
-    <div class="resume-content-parapgraph">
-      {{ "resume.paragraph2" | token }}
-    </div>
-    <div class="resume-content-parapgraph">
-      {{ "resume.paragraph3" | token }}
+      {{ "resume.about.content" | token }}
     </div>
   </app-content>
 
-  <app-title [text]="'resume.title1' | token" [size]="'medium'"></app-title>
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <app-title [text]="'resume.title1' | token" [size]="'large'"></app-title>
   <app-content>
-    <div class="resume-content-parapgraph">
-      {{ "resume.paragraph1" | token }}
-    </div>
-    <div class="resume-content-parapgraph">
-      {{ "resume.paragraph2" | token }}
-    </div>
-    <div class="resume-content-parapgraph">
-      {{ "resume.paragraph3" | token }}
+    <div *ngFor="let item of experiences" class="resume-content-parapgraph">
+      <app-work-experience
+        [position]="item.position | token"
+        [company]="item.company | token"
+        [city]="item.city | token"
+        [period]="item.period | token"
+        [responsibilities]="item.responsibilities"
+      ></app-work-experience>
     </div>
   </app-content>
 </div>
