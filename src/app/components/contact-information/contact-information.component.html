@@ -34,13 +34,13 @@
     <div fxLayout="row" fxLayoutAlign="start center" class="email-container">
       <app-social
         url="{{ 'mailto:' + ('contact.email' | token) }}"
-        [icon]="'email_white'"
+        [icon]="'email_black'"
       >
         <span class="email">{{ "contact.email" | token }}</span>
       </app-social>
     </div>
     <div fxLayout="row" fxLayoutAlign="start center" class="phone-container">
-      <app-social [icon]="'phone_white'">
+      <app-social [icon]="'phone_black'">
         <span class="phone">{{ "contact.phone" | token | mobileNumber }}</span>
       </app-social>
     </div>

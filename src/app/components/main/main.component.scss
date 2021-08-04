@@ -68,6 +68,8 @@
   color: $gray-700;
   // color: rgb(133, 128, 128);
   background-color: $main-bg;
+  overflow: auto;
+  height: 100%;
 
   main {
     width: 100%;
