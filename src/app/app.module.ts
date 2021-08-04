@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MenuComponent } from './components/menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -28,9 +29,11 @@ import { TitleComponent } from './components/title/title.component';
 import { HomeComponent } from '@pages/home/home.component';
 import { AboutMeComponent } from '@pages/about-me/about-me.component';
 import { ContentComponent } from './components/content/content.component';
-import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 import { HorizontalDividerComponent } from './components/horizontal-divider/horizontal-divider.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { SkillsComponent } from './components/skills/skills.component';
+import { SkillComponent } from './components/skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -54,9 +57,11 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
     ResumeComponent,
     ProjectsComponent,
     ContentComponent,
-    WorkExperienceComponent,
+    ExperienceComponent,
     HorizontalDividerComponent,
     CapitalizePipe,
+    SkillsComponent,
+    SkillComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +74,7 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
     FlexLayoutModule,
     HttpClientModule,
     MatDividerModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

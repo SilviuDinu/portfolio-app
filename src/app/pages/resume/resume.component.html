@@ -17,7 +17,10 @@
   <app-horizontal-divider></app-horizontal-divider>
 
   <!-- About me information -->
-  <app-title [text]="'resume.titles.aboutTitle' | token" [size]="'large'"></app-title>
+  <app-title
+    [text]="'resume.titles.aboutTitle' | token"
+    [size]="'large'"
+  ></app-title>
   <app-content>
     <div class="resume-content-parapgraph">
       {{ "resume.about.content" | token }}
@@ -35,13 +38,13 @@
   ></app-title>
   <app-content>
     <div *ngFor="let item of experiences" class="resume-content-parapgraph">
-      <app-work-experience
+      <app-experience
         [position]="item.position | token"
         [company]="item.company | token"
         [city]="item.city | token"
         [period]="item.period | token"
         [responsibilities]="item.responsibilities"
-      ></app-work-experience>
+      ></app-experience>
     </div>
   </app-content>
   <!-- END Work experience -->
@@ -56,12 +59,12 @@
   ></app-title>
   <app-content>
     <div *ngFor="let item of education" class="resume-content-parapgraph">
-      <app-work-experience
+      <app-experience
         [position]="item.position | token"
         [company]="item.company | token"
         [city]="item.city | token"
         [period]="item.period | token"
-      ></app-work-experience>
+      ></app-experience>
     </div>
   </app-content>
   <!-- END Education -->
@@ -76,7 +79,7 @@
   ></app-title>
   <app-content>
     <div *ngFor="let item of projects" class="resume-content-parapgraph">
-      <app-work-experience
+      <app-experience
         [isProject]="true"
         [title]="item.title | token"
         [city]="item.city | token"
@@ -85,7 +88,7 @@
         [website]="item.website | token"
         [repo]="item.repo | token"
         [tools]="item.tools"
-      ></app-work-experience>
+      ></app-experience>
     </div>
   </app-content>
   <!-- END My projects -->
@@ -99,18 +102,7 @@
     [icon]="'skills'"
   ></app-title>
   <app-content>
-    <!-- <div *ngFor="let item of projects" class="resume-content-parapgraph">
-      <app-work-experience
-        [isProject]="true"
-        [title]="item.title | token"
-        [city]="item.city | token"
-        [period]="item.period | token"
-        [description]="item.description | token"
-        [website]="item.website | token"
-        [repo]="item.repo | token"
-        [tools]="item.tools"
-      ></app-work-experience>
-    </div> -->
+    <app-skills [skills]="skills"></app-skills>
   </app-content>
   <!-- END My skills -->
 </div>

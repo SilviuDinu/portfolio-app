@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-work-experience',
-  templateUrl: './work-experience.component.html',
-  styleUrls: ['./work-experience.component.scss']
+  selector: 'app-experience',
+  templateUrl: './experience.component.html',
+  styleUrls: ['./experience.component.scss']
 })
-export class WorkExperienceComponent implements OnInit {
+export class ExperienceComponent implements OnInit {
 
   @Input() isProject = false;
 
@@ -25,7 +25,7 @@ export class WorkExperienceComponent implements OnInit {
   // Projects
   @Input() title: string;
 
-  constructor() { console.log(this.responsibilities)}
+  constructor() {}
 
   ngOnInit(): void {
   }
