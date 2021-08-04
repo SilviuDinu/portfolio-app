@@ -1,8 +1,11 @@
-// mat-toolbar {
-//   position: fixed;
-//   top: 0;
-//   z-index: 100;
-// }
+@import '../../../sizes.scss';
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: $toolbar-height;
+}
 
 .menu-toggle {
   vertical-align: middle;

@@ -5,6 +5,8 @@
     #sidenavMenu
     role="navigation"
     aria-label="Panel"
+    fixedInViewport
+    [autoFocus]="false"
     [disableClose]="(isUpToMedium$ | async) ? false : true"
     fxFlex
     fxLayoutAlign="center center"
