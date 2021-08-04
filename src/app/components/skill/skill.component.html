@@ -1,1 +1,6 @@
-<p>skill works!</p>
+<div class="skill">
+  <span *ngIf="skill" class="skill-name">{{ skill }}</span>
+  <span *ngIf="level" class="skill-name">
+    <mat-progress-bar mode="determinate" [value]="level"></mat-progress-bar>
+  </span>
+</div>

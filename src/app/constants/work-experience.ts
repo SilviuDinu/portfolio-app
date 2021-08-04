@@ -138,80 +138,88 @@ export const education = [
 export const skills = [
   {
     type: 'professional',
-    js: {
-      token: 'resume.skills.professional.js',
-      level: 85
-    },
-    angular: {
-      token: 'resume.skills.professional.angular',
-      level: 85
-    },
-    react: {
-      token: 'resume.skills.professional.react',
-      level: 85
-    },
-    vue: {
-      token: 'resume.skills.professional.vue',
-      level: 85
-    },
-    nodeExpress: {
-      token: 'resume.skills.professional.nodeExpress',
-      level: 85
-    },
-    socket: {
-      token: 'resume.skills.professional.socket',
-      level: 85
-    },
-    htmlCss: {
-      token: 'resume.skills.professional.htmlCss',
-      level: 85
-    },
-    db: {
-      token: 'resume.skills.professional.db',
-      level: 85
-    },
-    rest: {
-      token: 'resume.skills.professional.rest',
-      level: 85
-    },
-    python: {
-      token: 'resume.skills.professional.python',
-      level: 85
-    },
-    php: {
-      token: 'resume.skills.professional.php',
-      level: 85
-    },
-    java: {
-      token: 'resume.skills.professional.java',
-      level: 85
-    },
-    cpp: {
-      token: 'resume.skills.professional.cpp',
-      level: 85
-    },
+    list: [
+      {
+        token: 'resume.skills.professional.js',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.angular',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.react',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.vue',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.nodeExpress',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.socket',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.htmlCss',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.db',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.rest',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.python',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.php',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.java',
+        level: 85,
+      },
+      {
+        token: 'resume.skills.professional.cpp',
+        level: 85,
+      },
+    ],
   },
   {
     type: 'languages',
-    english: 'resume.skills.languages.english',
-    romanian: 'resume.skills.languages.romanian',
+    list: [
+      'resume.skills.languages.english',
+      'resume.skills.languages.romanian',
+    ],
   },
   {
     type: 'developmentTools',
-    git: 'resume.skills.developmentTools.git',
-    jira: 'resume.skills.developmentTools.jira',
-    azure: 'resume.skills.developmentTools.azure',
-    jenkins: 'resume.skills.developmentTools.jenkins',
-    sonar: 'resume.skills.developmentTools.sonar',
+    list: [
+      'resume.skills.developmentTools.git',
+      'resume.skills.developmentTools.jira',
+      'resume.skills.developmentTools.azure',
+      'resume.skills.developmentTools.jenkins',
+      'resume.skills.developmentTools.sonar',
+    ],
   },
   {
     type: 'personal',
-    realiable: 'resume.skills.personal.realiable',
-    organised: 'resume.skills.personal.organised',
-    punctual: 'resume.skills.personal.punctual',
-    teamPlayer: 'resume.skills.personal.teamPlayer',
-    fastLearner: 'resume.skills.personal.fastLearner',
-    motivated: 'resume.skills.personal.motivated',
-    curios: 'resume.skills.personal.curios',
+    list: [
+      'resume.skills.personal.realiable',
+      'resume.skills.personal.organised',
+      'resume.skills.personal.punctual',
+      'resume.skills.personal.teamPlayer',
+      'resume.skills.personal.fastLearner',
+      'resume.skills.personal.motivated',
+      'resume.skills.personal.curios',
+    ],
   },
 ];

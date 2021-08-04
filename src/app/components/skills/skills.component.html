@@ -1,5 +1,36 @@
 <div class="skills-container">
-  <div class="skills">
-    <app-skill *ngFor="let item of skills"></app-skill>
+  <div
+    class="skill-groups"
+    fxFlex="100%"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+  >
+    <ng-container *ngFor="let item of skills" [ngSwitch]="item.type">
+      <div class="group profesional" *ngSwitchCase="'professional'">
+        <app-skill
+          *ngFor="let skill of item.list"
+          [skill]="skill?.token | token"
+          [level]="skill?.level"
+        ></app-skill>
+      </div>
+      <div class="group languages" *ngSwitchCase="'languages'">
+        <app-skill
+          *ngFor="let skill of item.list"
+          [skill]="skill | token"
+        ></app-skill>
+      </div>
+      <div class="group developmentTools" *ngSwitchCase="'developmentTools'">
+        <app-skill
+          *ngFor="let skill of item.list"
+          [skill]="skill | token"
+        ></app-skill>
+      </div>
+      <div class="group personal" *ngSwitchCase="'personal'">
+        <app-skill
+          *ngFor="let skill of item.list"
+          [skill]="skill | token"
+        ></app-skill>
+      </div>
+    </ng-container>
   </div>
 </div>
