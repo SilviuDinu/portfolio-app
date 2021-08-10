@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { pictures } from '@constants/pictures';
+import { Picture } from '@models/picture.model';
 
 @Component({
   selector: 'app-pictures',
   templateUrl: './pictures.component.html',
   styleUrls: ['./pictures.component.scss']
 })
-export class PicturesComponent implements OnInit {
+export class PicturesComponent {
+
+  pictures: Picture[] = pictures;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

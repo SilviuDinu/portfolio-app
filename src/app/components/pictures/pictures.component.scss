@@ -1,6 +1,36 @@
 .picture {
-  img {
-    width: 300px;
-    height: auto;
-  }
+  // img {
+  //   width: 300px;
+  //   height: auto;
+  // }
+
+  margin-top: 8px;
+}
+
+div.pictures-container {
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 60vh;
+}
+.picture {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+div.pictures-container .picture img {
+  transition: 0.8s opacity;
+}
+div.pictures-container:hover .picture img {
+  opacity: 0.3;
+}
+div.pictures-container:hover .picture img:hover {
+  opacity: 1;
+}
+
+.pictures-container {
+  width: 100%;
 }

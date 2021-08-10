@@ -1,5 +1,13 @@
 <div class="pictures-container">
-  <div class="picture">
-    <img src="assets/images/mountains.jpg" alt="Mountains picture" loading="lazy">
+  <div class="picture" *ngFor="let pic of pictures">
+    <a [href]="pic.url" target="_blank">
+      <img
+        [src]="pic.path"
+        [alt]="pic.alt"
+        loading="lazy"
+        [width]="pic.width"
+        height="auto"
+      />
+    </a>
   </div>
 </div>
