@@ -1,36 +1,39 @@
-.picture {
-  // img {
-  //   width: 300px;
-  //   height: auto;
-  // }
-
-  margin-top: 8px;
-}
-
-div.pictures-container {
-  display: -ms-flexbox;
-  -ms-flex-direction: column;
-  -ms-flex-wrap: wrap;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 60vh;
-}
-.picture {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-}
-div.pictures-container .picture img {
-  transition: 0.8s opacity;
-}
-div.pictures-container:hover .picture img {
-  opacity: 0.3;
-}
-div.pictures-container:hover .picture img:hover {
-  opacity: 1;
-}
+@import "../../../breakpoints.scss";
 
 .pictures-container {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  @media screen and (min-width: #{$md}) {
+    max-height: 65vw;
+  }
+  .picture {
+    @media screen and (min-width: #{$md}) {
+      margin-left: 8px;
+    }
+    @media screen and (max-width: #{$md}) {
+      margin-top: 8px;
+    }
+    width: 100%;
+    box-sizing: border-box;
+
+    img {
+      @media screen and (max-width: #{$xs}) {
+        width: 100%;
+      }
+      @media screen and (min-width: #{$md}) {
+        opacity: 0.65;
+
+        &:hover {
+          opacity: 1;
+          transition: .3s linear;
+          // transform: scale(1.5);
+          // -ms-transform: scale(1.5); /* IE 9 */
+          // -moz-transform: scale(1.5); /* Firefox */
+          // -webkit-transform: scale(1.5); /* Safari and Chrome */
+          // -o-transform: scale(1.5); /* Opera */
+        }
+      }
+    }
+  }
 }

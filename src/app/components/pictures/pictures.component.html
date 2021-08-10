@@ -1,4 +1,10 @@
-<div class="pictures-container">
+<div
+  class="pictures-container"
+  fxLayoutGap="8px"
+  fxLayout="{{
+    ((isDesktop$ || isUpToMedium$) | async) ? 'column wrap' : 'row wrap'
+  }}"
+>
   <div class="picture" *ngFor="let pic of pictures">
     <a [href]="pic.url" target="_blank">
       <img
