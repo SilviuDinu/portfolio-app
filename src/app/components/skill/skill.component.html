@@ -1,6 +1,23 @@
-<div class="skill">
-  <span *ngIf="skill" class="skill-name">{{ skill }}</span>
-  <span *ngIf="level" class="skill-name">
-    <mat-progress-bar mode="determinate" [value]="level"></mat-progress-bar>
-  </span>
+<div
+  class="skill"
+  fxFlex="100%"
+  fxLayoutAlign="start center"
+  fxLayoutGap="8px"
+  fxLayout="column"
+>
+  <div *ngIf="skill" class="skill-name">
+    <span>{{ skill }}</span>
+  </div>
+  <div *ngIf="level" class="skill-level">
+    <mat-progress-bar
+      #tooltip="matTooltip"
+      (click)="isUpToMedium$ && tooltip.show()"
+      matTooltip="{{ level + ' / 100' }}"
+      [matTooltipPosition]="(isUpToMedium$ | async) ? 'left' : 'above'"
+      mode="determinate"
+      [value]="level"
+      [color]="'primary'"
+    >
+    </mat-progress-bar>
+  </div>
 </div>

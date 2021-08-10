@@ -1,6 +1,6 @@
 import { Responsive } from '@abstracts/responsive.abstract';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { SidenavService } from '@services/sidenav.service';
 import { withLatestFrom, filter } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { withLatestFrom, filter } from 'rxjs/operators';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent extends Responsive implements OnInit, AfterViewInit {
+export class MainComponent extends Responsive implements AfterViewInit {
   @ViewChild('sidenavMenu', { static: false }) sidenavMenu: MatSidenav;
 
   constructor(private sidenavService: SidenavService, private router: Router) {
@@ -32,8 +32,6 @@ export class MainComponent extends Responsive implements OnInit, AfterViewInit {
         window.scrollTo(0, 0);
       });
   }
-
-  ngOnInit(): void {}
 
   ngAfterViewInit() {
     this.sidenavService.registerSidenav(this.sidenavMenu);

@@ -1,17 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent implements OnInit {
-
+export class SkillsComponent {
   @Input() skills: any[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  sortHighToLow(skills: any) {
+    return skills.sort((a: any, b: any) => b.level - a.level);
   }
-
 }

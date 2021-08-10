@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SidenavService } from '@services/sidenav.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { SidenavService } from '@services/sidenav.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   isSidenavOpened: boolean;
 
   constructor(private sidenavService: SidenavService) {
@@ -14,8 +14,6 @@ export class HeaderComponent implements OnInit {
       this.isSidenavOpened = isOpened;
     });
   }
-
-  ngOnInit(): void {}
 
   toggleSidenav(event: Event) {
     event.stopPropagation();

@@ -141,55 +141,68 @@ export const skills = [
     list: [
       {
         token: 'resume.skills.professional.js',
-        level: 85,
+        level: 90,
+        priority: 1
       },
       {
         token: 'resume.skills.professional.angular',
-        level: 85,
+        level: 86,
+        priority: 1
       },
       {
         token: 'resume.skills.professional.react',
-        level: 85,
+        level: 83,
+        priority: 1
       },
       {
         token: 'resume.skills.professional.vue',
-        level: 85,
+        level: 65,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.nodeExpress',
-        level: 85,
+        level: 80,
+        priority: 1
       },
       {
         token: 'resume.skills.professional.socket',
-        level: 85,
+        level: 68,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.htmlCss',
-        level: 85,
+        level: 90,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.db',
-        level: 85,
+        level: 72,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.rest',
-        level: 85,
+        level: 82,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.python',
-        level: 85,
+        level: 72,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.php',
-        level: 85,
+        level: 57,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.java',
-        level: 85,
+        level: 45,
+        priority: 2
       },
       {
         token: 'resume.skills.professional.cpp',
-        level: 85,
+        level: 45,
+        priority: 2
       },
     ],
   },

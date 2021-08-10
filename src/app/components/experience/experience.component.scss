@@ -1,10 +1,17 @@
 .experience-container {
   .label {
     font-weight: 500;
+    margin-right: 4px;
+  }
+
+  a {
+    word-wrap: break-word;
+    width: 100%;
   }
   .experience-details,
   .description {
     margin-top: 8px;
+    width: 100%;
 
     .detail {
       &:not(:last-child) {
@@ -38,4 +45,8 @@
   .website-container {
     margin-top: 8px;
   }
+}
+
+.websites {
+  width: 100%;
 }

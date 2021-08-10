@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IconProviderService } from '@services/icon-provider.service';
-import { TokenService } from '@services/token.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'portfolio-app';
 
   constructor(private iconProvider: IconProviderService) {
     this.iconProvider.init();
   }
-
-  ngOnInit() {}
 }

@@ -1,3 +1,5 @@
+@import "../../../colors.scss";
+
 .skills-container {
   width: 100%;
 
@@ -5,3 +7,25 @@
     width: 100%;
   }
 }
+
+.group {
+  width: 100%;
+  // margin-top: 8px;
+
+  &.profesional {
+    app-skill {
+      margin-top: 8px;
+    }
+  }
+}
+
+.skills-list {
+  li:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+app-skill {
+  width: 100%;
+}
+

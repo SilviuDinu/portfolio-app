@@ -1,18 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Responsive } from '@abstracts/responsive.abstract';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.scss']
+  styleUrls: ['./skill.component.scss'],
 })
-export class SkillComponent implements OnInit {
-
+export class SkillComponent extends Responsive {
   @Input() skill: string;
   @Input() level?: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    super();
   }
-
 }

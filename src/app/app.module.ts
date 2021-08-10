@@ -8,6 +8,7 @@ import { TokenPipe } from './pipes/token.pipe';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
@@ -74,7 +75,8 @@ import { SkillComponent } from './components/skill/skill.component';
     FlexLayoutModule,
     HttpClientModule,
     MatDividerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

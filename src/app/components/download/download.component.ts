@@ -1,20 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-download',
   templateUrl: './download.component.html',
   styleUrls: ['./download.component.scss'],
 })
-export class DownloadComponent implements OnInit {
-
+export class DownloadComponent {
   @Input() downloadUrl: string;
   @Input() text: string;
 
   constructor() {}
-
-  ngOnInit(): void {}
-
-  onDownload() {
-  
-  }
 }
