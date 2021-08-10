@@ -35,6 +35,7 @@ import { HorizontalDividerComponent } from './components/horizontal-divider/hori
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { PicturesComponent } from './components/pictures/pictures.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { SkillComponent } from './components/skill/skill.component';
     CapitalizePipe,
     SkillsComponent,
     SkillComponent,
+    PicturesComponent,
   ],
   imports: [
     BrowserModule,

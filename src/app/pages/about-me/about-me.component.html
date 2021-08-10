@@ -1,1 +1,60 @@
-<app-title [text]="'about.title' | token"></app-title>
+<div
+  fxFlex="100%"
+  fxLayoutAlign="center start"
+  fxLayout="column"
+  fxLayoutGap="16px"
+  class="about-container"
+>
+  <app-title [text]="'about.title' | token"></app-title>
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <!-- Introduction -->
+  <app-title
+    [text]="'about.titles.introduction' | token"
+    [size]="'large'"
+    [icon]="'person'"
+  ></app-title>
+
+  <app-content>
+    <div class="about-content-parapgraph">
+      {{ "about.contents.introduction.p1" | token }}
+    </div>
+  </app-content>
+  <app-content>
+    <div class="about-content-parapgraph">
+      {{ "about.contents.introduction.p2" | token }}
+    </div>
+  </app-content>
+  <app-content>
+    <div class="about-content-parapgraph">
+      {{ "about.contents.introduction.p3" | token }}
+    </div>
+  </app-content>
+  <!-- END Introduction -->
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <!-- Hobbies -->
+  <app-title
+    [text]="'about.titles.hobbies' | token"
+    [size]="'large'"
+    [icon]="'gamepad'"
+  ></app-title>
+  <app-content>
+    <div class="about-content-parapgraph">
+      {{ "about.contents.hobbies.p1" | token }}
+    </div>
+  </app-content>
+
+  <app-title
+    [text]="'about.contents.hobbies.photography' | token"
+    [size]="'medium'"
+    [icon]="'camera'"
+  ></app-title>
+  <app-content>
+    <app-pictures></app-pictures>
+  </app-content>
+  
+  <!-- END Hobbies -->
+</div>
