@@ -1,14 +1,12 @@
 import { Responsive } from '@abstracts/responsive.abstract';
 import {
   Component,
-  ElementRef,
   OnDestroy,
   OnInit,
-  ViewChild,
 } from '@angular/core';
 import { pictures } from '@constants/pictures';
 import { Picture } from '@models/picture.model';
-import { BehaviorSubject, of, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Component({
