@@ -10,7 +10,7 @@ export const pictures = [
     path: 'assets/images/tree.jpg',
     width: 300,
     height: 300,
-    url: 'https://unsplash.com/photos/qWvKHnu9lyY',
+    url: 'https://unsplash.com/photos/qJIgaF44sTg',
     alt: 'Tree picture',
   },
   {
@@ -41,4 +41,11 @@ export const pictures = [
     url: 'https://unsplash.com/photos/U172-ZN0Jjg',
     alt: 'Jack Daniels glass with Nikon and Airpods',
   },
+  // {
+  //   path: 'assets/images/chairs.jpg',
+  //   width: 300,
+  //   height: 300,
+  //   url: 'https://unsplash.com/photos/aJncVsc-dn4',
+  //   alt: 'Chairs on Cliff',
+  // },
 ];

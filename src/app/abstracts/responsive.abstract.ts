@@ -3,7 +3,7 @@ import { ResponsiveService } from '@services/responsive.service';
 import { AppInjector } from '@app.module';
 
 export abstract class Responsive {
-protected responsiveService: ResponsiveService;
+  protected responsiveService: ResponsiveService;
 
   isHandset$: Observable<boolean>;
   isTablet$: Observable<boolean>;
@@ -14,6 +14,8 @@ protected responsiveService: ResponsiveService;
   isUpToSmall$: Observable<boolean>;
   isUpToMedium$: Observable<boolean>;
   isLarge$: Observable<boolean>;
+
+  isIpadProLandscape$: Observable<boolean>;
 
   constructor() {
     this.responsiveService = AppInjector.get(ResponsiveService);
@@ -26,5 +28,7 @@ protected responsiveService: ResponsiveService;
     this.isUpToSmall$ = this.responsiveService.isUpToSmall$;
     this.isUpToMedium$ = this.responsiveService.isUpToMedium$;
     this.isLarge$ = this.responsiveService.isLarge$;
+
+    this.isIpadProLandscape$ = this.responsiveService.isIpadProLandscape$;
   }
 }

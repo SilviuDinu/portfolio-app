@@ -1,12 +1,11 @@
 <div
   class="pictures-container"
-  fxLayoutGap="8px"
-  fxLayout="{{
-    ((isDesktop$ || isUpToMedium$) | async) ? 'column wrap' : 'row wrap'
-  }}"
+  fxLayout="{{ (isIpadProLandscape$ | async) ? 'column' : 'row' }}"
+  fxLayoutAlign="start start"
+  fxFlex="100%"
 >
-  <div class="picture" *ngFor="let pic of pictures">
-    <a [href]="pic.url" target="_blank">
+  <div class="picture" *ngFor="let group of picGroups">
+    <a [href]="pic.url" target="_blank" *ngFor="let pic of group">
       <img
         [src]="pic.path"
         [alt]="pic.alt"

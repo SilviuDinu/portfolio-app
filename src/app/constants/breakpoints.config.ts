@@ -1,5 +1,11 @@
 export const BREAKPOINTS = [
   {
+    alias: 'ipadProLandscape',
+    mediaQuery:
+      'screen and (min-height: 1023.9px) and (max-height: 1024px) and (min-width: 1365.9px) and (max-width: 1366px)',
+    priority: 800,
+  },
+  {
     alias: 'xs',
     mediaQuery: 'screen and (min-width: 0px) and (max-width: 599.9px)',
     priority: 1000,

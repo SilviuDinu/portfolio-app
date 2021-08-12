@@ -18,7 +18,12 @@ export class ResponsiveService {
   isUpToMedium$: Observable<boolean>;
   isLarge$: Observable<boolean>;
 
+  isIpadProLandscape$: Observable<boolean>;
+
   constructor(private breakpointObserver: BreakpointObserver) {
+    this.isIpadProLandscape$ = this.observe([
+      this.getCustomBreakpoint('ipadProLandscape'),
+    ]);
     this.isHandset$ = this.observe([Breakpoints.Handset]);
     this.isTablet$ = this.observe([Breakpoints.Tablet]);
     this.isDesktop$ = this.observe([Breakpoints.Web]);

@@ -4,34 +4,51 @@
   width: 100%;
   max-width: 100%;
   height: auto;
-  @media screen and (min-width: #{$md}) {
-    max-height: 65vw;
-  }
+  overflow: hidden;
+  margin-top: 8px;
+
   .picture {
-    @media screen and (min-width: #{$md}) {
-      margin-left: 8px;
-    }
-    @media screen and (max-width: #{$md}) {
-      margin-top: 8px;
-    }
     width: 100%;
+    max-height: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
 
-    img {
-      @media screen and (max-width: #{$xs}) {
+    & > a {
+      text-align: center;
+      max-height: 100%;
+      display: flex;
+      margin-right: 16px;
+      overflow: hidden;
+      height: auto;
+      margin-bottom: 16px;
+
+      @media screen and (max-width: #{$sm}) {
         width: 100%;
+        padding-right: 16px;
       }
-      @media screen and (min-width: #{$md}) {
-        opacity: 0.65;
 
-        &:hover {
-          opacity: 1;
-          transition: .3s linear;
-          // transform: scale(1.5);
-          // -ms-transform: scale(1.5); /* IE 9 */
-          // -moz-transform: scale(1.5); /* Firefox */
-          // -webkit-transform: scale(1.5); /* Safari and Chrome */
-          // -o-transform: scale(1.5); /* Opera */
+      img {
+        max-height: 100%;
+        @media screen and (max-width: #{$xs}) {
+          width: 100%;
+          height: auto;
+        }
+
+        @media screen and (min-width: #{$md}) {
+          opacity: 0.65;
+
+          &:hover {
+            opacity: 1;
+            transition: 0.3s linear;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            transform: scale(1.1);
+            -ms-transform: scale(1.1); /* IE 9 */
+            -moz-transform: scale(1.1); /* Firefox */
+            -webkit-transform: scale(1.1); /* Safari and Chrome */
+            -o-transform: scale(1.1); /* Opera */
+          }
         }
       }
     }
