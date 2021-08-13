@@ -5,7 +5,12 @@
   fxFlex="100%"
 >
   <div class="picture" *ngFor="let group of picGroups">
-    <a [href]="pic.url" target="_blank" *ngFor="let pic of group">
+    <a
+      [href]="pic.url"
+      target="_blank"
+      *ngFor="let pic of group"
+      rel="noreferrer"
+    >
       <img
         [src]="pic.path"
         [alt]="pic.alt"

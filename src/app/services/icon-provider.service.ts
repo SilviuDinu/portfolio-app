@@ -32,6 +32,7 @@ export class IconProviderService {
     ['person', 'person.svg'],
     ['gamepad', 'gamepad.svg'],
     ['camera', 'camera.svg'],
+    ['hobbies', 'hobbies.svg'],
   ];
 
   constructor(

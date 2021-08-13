@@ -12,6 +12,7 @@
     max-height: 100%;
     box-sizing: border-box;
     overflow: hidden;
+
     height: auto;
 
     & > a {
@@ -22,27 +23,30 @@
       overflow: hidden;
       height: auto;
       margin-bottom: 16px;
+      border-radius: 6px;
+      box-shadow: 4px ​4px 8px 0px rgb(0 0 0 / 56%);
 
       @media screen and (max-width: #{$sm}) {
         width: 100%;
         padding-right: 16px;
+        box-shadow: 0 4px 4px -8px rgb(0 0 0 / 56%);
       }
 
       img {
         max-height: 100%;
+        border-radius: 6px;
+
         @media screen and (max-width: #{$xs}) {
           width: 100%;
           height: auto;
         }
 
         @media screen and (min-width: #{$md}) {
-          opacity: 0.65;
+          // opacity: 0.75;
 
           &:hover {
             opacity: 1;
             transition: 0.3s linear;
-            overflow-y: hidden;
-            overflow-x: hidden;
             transform: scale(1.1);
             -ms-transform: scale(1.1); /* IE 9 */
             -moz-transform: scale(1.1); /* Firefox */
