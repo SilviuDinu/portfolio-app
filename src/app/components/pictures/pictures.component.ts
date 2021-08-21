@@ -1,13 +1,10 @@
 import { Responsive } from '@abstracts/responsive.abstract';
-import {
-  Component,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { pictures } from '@constants/pictures';
 import { Picture } from '@models/picture.model';
-import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { Observable, Subscription } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pictures',
@@ -18,10 +15,16 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
   pictures: Picture[] = pictures;
   picGroups: any[] = [];
 
+  wrap$: Observable<any>;
+
   subscribtions: Subscription[] = [];
 
-  constructor() {
+  constructor(private breakpointObserver: BreakpointObserver) {
     super();
+
+    this.wrap$ = this.breakpointObserver
+      .observe(['(min-width: 1250px) and (max-width: 1500px)'])
+      .pipe(map((result) => result.matches));
   }
 
   ngOnInit() {
