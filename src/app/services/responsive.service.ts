@@ -17,6 +17,7 @@ export class ResponsiveService {
   isUpToSmall$: Observable<boolean>;
   isUpToMedium$: Observable<boolean>;
   isLarge$: Observable<boolean>;
+  isBeyondLarge$: Observable<boolean>;
 
   isIpadProLandscape$: Observable<boolean>;
 
@@ -38,6 +39,7 @@ export class ResponsiveService {
       this.getCustomBreakpoint('md'),
       Breakpoints.XLarge,
     ]);
+    this.isBeyondLarge$ = this.observe([this.getCustomBreakpoint('gt-xl')]);
   }
 
   observe(breakpoints: any[]) {

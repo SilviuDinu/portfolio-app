@@ -78,4 +78,10 @@ export const BREAKPOINTS = [
     mediaQuery: 'screen and (min-width: 1920px)',
     priority: -650,
   },
+  {
+    alias: 'gt-xl',
+    overlapping: true,
+    mediaQuery: 'screen and (min-width: 2200px)',
+    priority: -650,
+  },
 ];

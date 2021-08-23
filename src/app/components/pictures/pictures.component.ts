@@ -47,7 +47,10 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
           } else {
             this.buildLayout(2);
           }
-        })
+        }),
+      this.isBeyondLarge$.pipe(filter((isBeyondLarge) => !!isBeyondLarge)).subscribe(() => {
+        this.buildLayout(3);
+      })
     );
   }
 

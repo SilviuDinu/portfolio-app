@@ -14,6 +14,7 @@ export abstract class Responsive {
   isUpToSmall$: Observable<boolean>;
   isUpToMedium$: Observable<boolean>;
   isLarge$: Observable<boolean>;
+  isBeyondLarge$: Observable<boolean>;
 
   isIpadProLandscape$: Observable<boolean>;
 
@@ -28,6 +29,7 @@ export abstract class Responsive {
     this.isUpToSmall$ = this.responsiveService.isUpToSmall$;
     this.isUpToMedium$ = this.responsiveService.isUpToMedium$;
     this.isLarge$ = this.responsiveService.isLarge$;
+    this.isBeyondLarge$ = this.responsiveService.isBeyondLarge$;
 
     this.isIpadProLandscape$ = this.responsiveService.isIpadProLandscape$;
   }

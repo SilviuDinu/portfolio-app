@@ -1,15 +1,15 @@
 <div
   class="pictures-container"
-  [fxLayout.lt-md]="'column'"
+  [fxLayout.lt-md]="'row'"
   [fxLayout.gt-md]="(wrap$ | async) ? 'column' : 'row'"
   fxLayoutAlign="start start"
   fxFlex="100%"
 >
-  <div class="picture">
+  <div class="picture" *ngFor="let groups of picGroups">
     <a
       [href]="pic.url"
       target="_blank"
-      *ngFor="let pic of pictures.slice(0, pictures.length / 3)"
+      *ngFor="let pic of groups"
       rel="noreferrer"
     >
       <img
@@ -20,49 +20,5 @@
         height="auto"
       />
     </a>
-  </div>
-  <div
-    [fxLayout.lt-sm]="'column'"
-    [fxLayout.gt-md]="(wrap$ | async) ? 'column' : 'row'"
-    fxLayoutAlign="start start"
-    fxFlex="100%"
-  >
-    <div class="picture">
-      <a
-        [href]="pic.url"
-        target="_blank"
-        *ngFor="
-          let pic of pictures.slice(
-            pictures.length / 3,
-            pictures.length / 2 + 1
-          )
-        "
-        rel="noreferrer"
-      >
-        <img
-          [src]="pic.path"
-          [alt]="pic.alt"
-          loading="lazy"
-          [width]="pic.width"
-          height="auto"
-        />
-      </a>
-    </div>
-    <div class="picture">
-      <a
-        [href]="pic.url"
-        target="_blank"
-        *ngFor="let pic of pictures.slice(pictures.length / 2 + 1)"
-        rel="noreferrer"
-      >
-        <img
-          [src]="pic.path"
-          [alt]="pic.alt"
-          loading="lazy"
-          [width]="pic.width"
-          height="auto"
-        />
-      </a>
-    </div>
   </div>
 </div>
