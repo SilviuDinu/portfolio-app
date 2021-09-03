@@ -38,6 +38,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { PicturesComponent } from './components/pictures/pictures.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
     SkillComponent,
     PicturesComponent,
     TechnologiesComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

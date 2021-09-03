@@ -1,0 +1,35 @@
+.carousel {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.carousel-item {
+  margin-top: 32px;
+  width: 60px;
+  height: auto;
+
+  &:last-child {
+    margin-right: 32px;
+  }
+}
+
+@keyframes carouseling {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.carousel {
+  animation: carouseling linear 20s infinite;
+}
+.carousel:hover {
+  animation-play-state: paused;
+}

@@ -1,5 +1,25 @@
 export const tech = [
   {
+    title: 'about.contents.technologies.tech.sass',
+    icon: 'sass',
+  },
+  {
+    title: 'about.contents.technologies.tech.mongo',
+    icon: 'mongodb',
+  },
+  {
+    title: 'about.contents.technologies.tech.postgres',
+    icon: 'postgres',
+  },
+  {
+    title: 'about.contents.technologies.tech.python',
+    icon: 'python',
+  },
+  {
+    title: 'about.contents.technologies.tech.php',
+    icon: 'php',
+  },
+  {
     title: 'about.contents.technologies.tech.react',
     icon: 'react',
   },
@@ -38,25 +58,5 @@ export const tech = [
   {
     title: 'about.contents.technologies.tech.css',
     icon: 'css',
-  },
-  {
-    title: 'about.contents.technologies.tech.sass',
-    icon: 'sass',
-  },
-  {
-    title: 'about.contents.technologies.tech.mongo',
-    icon: 'mongodb',
-  },
-  {
-    title: 'about.contents.technologies.tech.postgres',
-    icon: 'postgres',
-  },
-  {
-    title: 'about.contents.technologies.tech.python',
-    icon: 'python',
-  },
-  {
-    title: 'about.contents.technologies.tech.php',
-    icon: 'php',
-  },
+  }
 ];
