@@ -1,3 +1,15 @@
+@import "../../../breakpoints.scss";
+
 app-horizontal-divider {
   width: 100%;
+}
+
+app-games {
+  width: 100%;
+}
+
+app-content {
+  @media screen and (max-width: #{$xs}) {
+    width: 100%;
+  }
 }

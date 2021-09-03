@@ -1,14 +1,16 @@
 <div
   class="grid-container"
   fxLayoutAlign="start center"
-  fxLayout="row wrap"
-  fxLayoutGap="48px"
+  fxLayout.gt-md="row wrap"
+  fxLayout="row"
+  fxLayoutGap="32px"
 >
   <div
     *ngFor="let item of items"
     fxLayoutAlign="center center"
     fxLayout="column"
     fxLayoutGap="8px"
+    class="grid-item"
   >
     <mat-icon
       *ngIf="item.icon && isIcon"
@@ -20,6 +22,7 @@
       class="grid-item-icon"
       [src]="item.path"
       alt="item.alt"
+      loading="lazy"
     />
     <span *ngIf="item.title">{{ item.title | token }}</span>
     <span *ngIf="item.description">{{ item.description | token }}</span>
