@@ -37,6 +37,23 @@
 
   <!-- Hobbies -->
   <app-title
+    [text]="'about.titles.tech' | token"
+    [size]="'large'"
+    [icon]="'tech'"
+  ></app-title>
+  <app-content>
+    <div class="about-content-parapgraph">
+      {{ "about.contents.hobbies.p1" | token }}
+    </div>
+  </app-content>
+  <app-content>
+    <app-technologies [tech]="technologies"></app-technologies>
+  </app-content>
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <!-- Hobbies -->
+  <app-title
     [text]="'about.titles.hobbies' | token"
     [size]="'large'"
     [icon]="'hobbies'"
@@ -53,7 +70,7 @@
     [icon]="'camera'"
   ></app-title>
   <app-content>
-    <app-pictures></app-pictures>
+    <app-pictures [pictures]="pictures"></app-pictures>
   </app-content>
 
   <app-title
@@ -62,9 +79,10 @@
     [icon]="'gamepad'"
   ></app-title>
   <app-content>
-    <p>games talk</p>
+    <div class="about-content-parapgraph">
+      {{ "about.contents.hobbies.p2" | token }}
+    </div>
   </app-content>
-  
-  
+
   <!-- END Hobbies -->
 </div>

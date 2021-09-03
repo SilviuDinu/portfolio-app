@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MenuComponent } from './components/menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -36,6 +37,7 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { PicturesComponent } from './components/pictures/pictures.component';
+import { TechnologiesComponent } from './components/technologies/technologies.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,7 @@ import { PicturesComponent } from './components/pictures/pictures.component';
     SkillsComponent,
     SkillComponent,
     PicturesComponent,
+    TechnologiesComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ import { PicturesComponent } from './components/pictures/pictures.component';
     MatDividerModule,
     MatProgressBarModule,
     MatTooltipModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

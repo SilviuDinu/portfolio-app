@@ -33,6 +33,23 @@ export class IconProviderService {
     ['gamepad', 'gamepad.svg'],
     ['camera', 'camera.svg'],
     ['hobbies', 'hobbies.svg'],
+    ['express', 'expressjs.svg'],
+    ['tech', 'tech.svg'],
+    ['react', 'reactjs.svg'],
+    ['vue', 'vuejs.svg'],
+    ['angular', 'angular.svg'],
+    ['node', 'nodejs.svg'],
+    ['socketio', 'socket-io.svg'],
+    ['typescript', 'typescript.svg'],
+    ['mongodb', 'mongodb.svg'],
+    ['postgres', 'postgresql.svg'],
+    ['rxjs', 'rxjs.svg'],
+    ['html', 'html.svg'],
+    ['css', 'css.svg'],
+    ['sass', 'sass.svg'],
+    ['python', 'python.svg'],
+    ['php', 'php.svg'],
+    ['js', 'javascript.svg'],
   ];
 
   constructor(

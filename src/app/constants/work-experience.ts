@@ -39,6 +39,21 @@ export const workExperience = [
 
 export const projects = [
   {
+    title: 'resume.projects.resumeApp.title',
+    city: 'resume.projects.resumeApp.city',
+    description: 'resume.projects.resumeApp.description',
+    period: 'resume.projects.resumeApp.period',
+    tools: [
+      'resume.projects.resumeApp.tools.tool1',
+      'resume.projects.resumeApp.tools.tool2',
+      'resume.projects.resumeApp.tools.tool3',
+      'resume.projects.resumeApp.tools.tool4',
+      'resume.projects.resumeApp.tools.tool5',
+    ],
+    website: 'resume.projects.resumeApp.website',
+    repo: 'resume.projects.resumeApp.repo',
+  },
+  {
     title: 'resume.projects.project1.title',
     city: 'resume.projects.project1.city',
     description: 'resume.projects.project1.description',

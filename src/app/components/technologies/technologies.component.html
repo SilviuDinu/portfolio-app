@@ -1,0 +1,13 @@
+<div class="technologies">
+  <div class="carousel" fxLayoutAlign="start center" fxLayout="row">
+    <div
+      class="carousel-item"
+      *ngFor="let item of tech"
+      fxLayoutAlign="start center"
+      fxLayout="column"
+    >
+      <mat-icon class="tech-icon" [svgIcon]="item.icon"></mat-icon>
+      <span class="carousel-item-description">{{ item.title | token }}</span>
+    </div>
+  </div>
+</div>

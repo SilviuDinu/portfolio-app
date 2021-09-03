@@ -1,7 +1,6 @@
 import { Responsive } from '@abstracts/responsive.abstract';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { pictures } from '@constants/pictures';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Picture } from '@models/picture.model';
 import { Observable, Subscription } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
@@ -12,11 +11,10 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./pictures.component.scss'],
 })
 export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
-  pictures: Picture[] = pictures;
+  @Input() pictures: Picture[];
+
   picGroups: any[] = [];
-
   wrap$: Observable<any>;
-
   subscribtions: Subscription[] = [];
 
   constructor(private breakpointObserver: BreakpointObserver) {
@@ -48,9 +46,11 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
             this.buildLayout(2);
           }
         }),
-      this.isBeyondLarge$.pipe(filter((isBeyondLarge) => !!isBeyondLarge)).subscribe(() => {
-        this.buildLayout(3);
-      })
+      this.isBeyondLarge$
+        .pipe(filter((isBeyondLarge) => !!isBeyondLarge))
+        .subscribe(() => {
+          this.buildLayout(3);
+        })
     );
   }
 

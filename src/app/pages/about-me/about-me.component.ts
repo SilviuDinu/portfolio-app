@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { tech } from '@constants/about-me';
+import { pictures } from '@constants/pictures';
+import { Picture } from '@models/picture.model';
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.scss'],
 })
 export class AboutMeComponent {
-  constructor() {}
+  pictures: Picture[];
+  technologies: { title: string; icon: string }[];
+
+  constructor() {
+    this.pictures = pictures;
+    this.technologies = tech;
+  }
 }
