@@ -58,5 +58,28 @@ export const tech = [
   {
     title: 'about.contents.technologies.tech.css',
     icon: 'css',
-  }
+  },
+];
+
+export const games = [
+  {
+    title: 'about.contents.games.witcher3.title',
+    path: 'assets/images/witcher3.png',
+    alt: 'about.contents.games.witcher3.title',
+  },
+  {
+    title: 'about.contents.games.rdr2.title',
+    path: 'assets/images/rdr2.png',
+    alt: 'about.contents.games.rdr2.title',
+  },
+  {
+    title: 'about.contents.games.tlou.title',
+    path: 'assets/images/tlou.png',
+    alt: 'about.contents.games.tlou.title',
+  },
+  {
+    title: 'about.contents.games.serious_sam.title',
+    path: 'assets/images/serious_sam.png',
+    alt: 'about.contents.games.serious_sam.title',
+  },
 ];

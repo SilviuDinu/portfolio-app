@@ -19,10 +19,10 @@ export const menuRoutes = [
     path: '/projects',
     isExternal: false,
   },
-  {
-    name: 'Github',
-    path: 'https://github.com/SilviuDinu/portfolio-app',
-    target: '_blank',
-    isExternal: true,
-  },
+  // {
+  //   name: 'Github',
+  //   path: 'https://github.com/SilviuDinu/portfolio-app',
+  //   target: '_blank',
+  //   isExternal: true,
+  // },
 ];

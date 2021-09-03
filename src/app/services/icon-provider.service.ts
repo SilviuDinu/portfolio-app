@@ -50,6 +50,10 @@ export class IconProviderService {
     ['python', 'python.svg'],
     ['php', 'php.svg'],
     ['js', 'javascript.svg'],
+    ['witcher3', 'witcher3.svg'],
+    ['tlou', 'tlou.svg'],
+    ['rdr2', 'rdr2.svg'],
+    ['serious_sam', 'serious_sam.svg'],
   ];
 
   constructor(

@@ -39,6 +39,8 @@ import { SkillComponent } from './components/skill/skill.component';
 import { PicturesComponent } from './components/pictures/pictures.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { GamesComponent } from './components/games/games.component';
+import { GridListComponent } from './components/grid-list/grid-list.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     PicturesComponent,
     TechnologiesComponent,
     CarouselComponent,
+    GamesComponent,
+    GridListComponent,
   ],
   imports: [
     BrowserModule,

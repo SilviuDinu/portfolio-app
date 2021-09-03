@@ -1,0 +1,27 @@
+<div
+  class="grid-container"
+  fxLayoutAlign="start center"
+  fxLayout="row wrap"
+  fxLayoutGap="48px"
+>
+  <div
+    *ngFor="let item of items"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+    fxLayoutGap="8px"
+  >
+    <mat-icon
+      *ngIf="item.icon && isIcon"
+      class="grid-item-icon"
+      [svgIcon]="item.icon"
+    ></mat-icon>
+    <img
+      *ngIf="!isIcon && item.path"
+      class="grid-item-icon"
+      [src]="item.path"
+      alt="item.alt"
+    />
+    <span *ngIf="item.title">{{ item.title | token }}</span>
+    <span *ngIf="item.description">{{ item.description | token }}</span>
+  </div>
+</div>
