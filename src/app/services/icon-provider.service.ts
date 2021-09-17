@@ -55,6 +55,7 @@ export class IconProviderService {
     ['rdr2', 'rdr2.svg'],
     ['serious_sam', 'serious_sam.svg'],
     ['coding', 'coding.svg'],
+    ['skate', 'skate.svg'],
   ];
 
   constructor(

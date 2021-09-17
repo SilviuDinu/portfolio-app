@@ -90,6 +90,10 @@ table {
   min-width: 315px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
+  div {
+    text-align: center;
+  }
+
   thead tr {
     background-color: #009879;
     color: #ffffff;
@@ -99,6 +103,7 @@ table {
   th,
   td {
     padding: 12px 15px;
+    text-align: center;
   }
 
   tbody tr {
