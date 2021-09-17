@@ -73,6 +73,80 @@
     <app-pictures [pictures]="pictures"></app-pictures>
   </app-content>
 
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <app-title
+    [text]="'about.contents.hobbies.codewars' | token"
+    [size]="'medium'"
+    [icon]="'coding'"
+  ></app-title>
+  <app-content>
+    <table>
+      <!-- Name Column -->
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Honor</th>
+          <th>Position</th>
+          <th>Score</th>
+          <th>Level</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="name">
+              <span>{{ codewarsInfo?.name }}</span>
+            </div>
+          </td>
+
+          <!-- Honor Column -->
+          <td>
+            <div class="honor">
+              <span>{{ codewarsInfo?.honor }}</span>
+            </div>
+          </td>
+
+          <!-- Position Column -->
+          <td>
+            <div class="position">
+              <span>{{ codewarsInfo?.leaderboardPosition }}</span>
+            </div>
+          </td>
+
+          <td>
+            <div class="rank-score">
+              <span>{{ codewarsInfo?.ranks?.overall?.score }} </span>
+            </div>
+          </td>
+
+          <td>
+            <div class="rank-name">
+              <span
+                class="hex {{ codewarsInfo?.ranks?.overall?.color || 'basic' }}"
+              >
+                {{ codewarsInfo?.ranks?.overall?.name }}
+              </span>
+            </div>
+          </td>
+
+          <td>
+            <div class="source">
+              <a
+                href="{{ 'about.contents.hobbies.codewarsUrl' | token }}"
+                rel="nopener"
+                >{{ "about.contents.hobbies.codewarsUrl" | token }}
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </app-content>
+
+  <app-horizontal-divider></app-horizontal-divider>
+
   <app-title
     [text]="'about.contents.hobbies.games' | token"
     [size]="'medium'"

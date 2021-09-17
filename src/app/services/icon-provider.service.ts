@@ -54,6 +54,7 @@ export class IconProviderService {
     ['tlou', 'tlou.svg'],
     ['rdr2', 'rdr2.svg'],
     ['serious_sam', 'serious_sam.svg'],
+    ['coding', 'coding.svg'],
   ];
 
   constructor(

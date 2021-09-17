@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { tech } from '@constants/about-me';
 import { pictures } from '@constants/pictures';
 import { Picture } from '@models/picture.model';
+import { EndpointService } from '@services/endpoint.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-about-me',
@@ -11,9 +13,16 @@ import { Picture } from '@models/picture.model';
 export class AboutMeComponent {
   pictures: Picture[];
   technologies: { title: string; icon: string }[];
+  codewarsInfo: any;
 
-  constructor() {
+  constructor(private endpointService: EndpointService) {
     this.pictures = pictures;
     this.technologies = tech;
+
+    this.endpointService.getCodewarsInfo()
+    .pipe(take(1))
+    .subscribe((data: any) => {
+      this.codewarsInfo = data;
+    })
   }
 }
