@@ -31,7 +31,7 @@ export const pictures = [
     path: 'assets/images/nike.jpg',
     width: 300,
     height: 300,
-    url: 'https://unsplash.com/photos/qWvKHnu9lyY',
+    url: 'https://unsplash.com/photos/CuxlhYpBsfA',
     alt: 'Person standing on a rock over a cliff',
   },
   {
