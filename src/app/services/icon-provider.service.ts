@@ -36,6 +36,7 @@ export class IconProviderService {
     ['express', 'expressjs.svg'],
     ['tech', 'tech.svg'],
     ['react', 'reactjs.svg'],
+    ['angularjs', 'angularjs.svg'],
     ['vue', 'vuejs.svg'],
     ['angular', 'angular.svg'],
     ['node', 'nodejs.svg'],

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { projects } from '@constants/work-experience';
+import { Project } from '@models/project.model';
 
 @Component({
   selector: 'app-projects',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  constructor() {}
+  projects: Project[];
+  constructor() {
+    this.projects = projects;
+  }
 }

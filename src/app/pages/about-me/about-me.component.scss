@@ -1,6 +1,11 @@
 @import "../../../breakpoints.scss";
 @import "../../../colors.scss";
 
+.about-container {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
 app-horizontal-divider {
   width: 100%;
 }

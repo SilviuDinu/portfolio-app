@@ -28,6 +28,10 @@ export const tech = [
     icon: 'angular',
   },
   {
+    title: 'about.contents.technologies.tech.angularjs',
+    icon: 'angularjs',
+  },
+  {
     title: 'about.contents.technologies.tech.typescript',
     icon: 'typescript',
   },

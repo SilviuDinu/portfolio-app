@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { tech } from '@constants/about-me';
-import { pictures } from '@constants/pictures';
+import { pictures, skating } from '@constants/pictures';
 import { Picture } from '@models/picture.model';
 import { EndpointService } from '@services/endpoint.service';
 import { take } from 'rxjs/operators';
@@ -12,17 +12,20 @@ import { take } from 'rxjs/operators';
 })
 export class AboutMeComponent {
   pictures: Picture[];
+  skatingPictures: Picture[];
   technologies: { title: string; icon: string }[];
   codewarsInfo: any;
 
   constructor(private endpointService: EndpointService) {
     this.pictures = pictures;
+    this.skatingPictures = skating;
     this.technologies = tech;
 
-    this.endpointService.getCodewarsInfo()
-    .pipe(take(1))
-    .subscribe((data: any) => {
-      this.codewarsInfo = data;
-    })
+    this.endpointService
+      .getCodewarsInfo()
+      .pipe(take(1))
+      .subscribe((data: any) => {
+        this.codewarsInfo = data;
+      });
   }
 }

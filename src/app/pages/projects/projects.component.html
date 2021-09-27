@@ -1,1 +1,58 @@
-<app-title [text]="'projects.title' | token"></app-title>
+<div
+  fxFlex="100%"
+  fxLayoutAlign="center start"
+  fxLayout="column"
+  fxLayoutGap="16px"
+  class="projects-container"
+>
+  <app-title [text]="'projects.title' | token"></app-title>
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <app-content>
+    <div
+      class="projects"
+      fxFlex="100%"
+      fxLayoutAlign="space-between"
+      fxLayout="row wrap"
+    >
+      <div
+        *ngFor="let project of projects"
+        class="project-card"
+        fxFlex="49%"
+        fxFlex.lt-sm="100%"
+        fxLayoutAlign="start start"
+        fxLayout="row wrap"
+        fxLayoutGap="16px"
+      >
+        <mat-card
+          fxFlex="100%"
+          fxFlex.lt-sm="100%"
+          fxLayoutAlign="start center"
+          fxLayout="column wrap"
+          fxLayoutGap="16px"
+        >
+          <mat-card-title>
+            <span>{{ project.title | token }}</span></mat-card-title
+          >
+          <mat-card-subtitle>
+            <span *ngIf="city" class="location detail">{{ city }}</span>
+            <span *ngIf="period" class="period detail">{{ period }}</span>
+          </mat-card-subtitle>
+          <mat-card-content>
+            <img
+              mat-card-image
+              src="http://i.stack.imgur.com/SBv4T.gif"
+              alt="this slowpoke moves"
+              width="250"
+            />
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-button>Like</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </app-content>
+</div>
