@@ -21,6 +21,46 @@
         fxLayout="row wrap"
         fxLayoutGap="16px"
       >
+        <!-- <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <app-title
+                  [text]="project?.title | token"
+                  [size]="'medium'"
+                ></app-title>
+              </mat-panel-title>
+              <mat-panel-description>
+                <span *ngIf="project?.city" class="location detail">{{
+                  project.city | token
+                }}</span>
+                <span *ngIf="project?.period" class="period detail">{{
+                  project.period | token
+                }}</span>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <img
+              mat-card-image
+              [attr.src]="project?.gif"
+              alt="this slowpoke moves"
+              width="300"
+              height="200"
+            />
+            <app-button
+              [isUrl]="true"
+              [url]="project?.repo || null"
+              [text]="'projects.cardActions.primary' | token"
+              [type]="'primary'"
+            ></app-button>
+
+            <app-button
+              [isUrl]="true"
+              [url]="project?.website || null"
+              [text]="'projects.cardActions.secondary' | token"
+            ></app-button>
+          </mat-expansion-panel>
+        </mat-accordion> -->
+
         <mat-card
           fxFlex="1 1 100%"
           fxLayoutAlign="space-between center"
@@ -44,9 +84,10 @@
           <mat-card-content>
             <img
               mat-card-image
-              src="http://i.stack.imgur.com/SBv4T.gif"
+              [attr.src]="project?.gif"
               alt="this slowpoke moves"
-              width="250"
+              width="300"
+              height="200"
             />
           </mat-card-content>
           <mat-card-actions
@@ -66,7 +107,6 @@
               [url]="project?.website || null"
               [text]="'projects.cardActions.secondary' | token"
             ></app-button>
-            
           </mat-card-actions>
         </mat-card>
       </div>

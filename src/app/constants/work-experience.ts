@@ -52,6 +52,7 @@ export const projects = [
     ],
     website: '#',
     repo: 'https://github.com/SilviuDinu/portfolio-app',
+    gif: 'assets/gifs/portfolio-app.gif'
   },
   {
     title: 'resume.projects.project1.title',
@@ -68,6 +69,7 @@ export const projects = [
     ],
     website: 'https://forecast-report.com/',
     repo: 'https://github.com/SilviuDinu/react-weather-app',
+    gif: 'assets/gifs/react-weather-app.gif'
   },
   {
     title: 'resume.projects.project2.title',
@@ -82,6 +84,7 @@ export const projects = [
       'resume.projects.project2.tools.tool5',
     ],
     repo: 'https://github.com/SilviuDinu/web-sockets-chat',
+    gif: 'assets/gifs/web-sockets-chat.gif'
   },
   {
     title: 'resume.projects.project3.title',
@@ -97,6 +100,7 @@ export const projects = [
     ],
     website: 'https://slv.lol/',
     repo: 'https://github.com/SilviuDinu/url-shortener',
+    gif: 'assets/gifs/url-shortener.gif'
   },
   {
     title: 'resume.projects.project4.title',
@@ -112,6 +116,7 @@ export const projects = [
       'resume.projects.project4.tools.tool6',
     ],
     repo: 'https://github.com/SilviuDinu/cercetare_sem2_BE',
+    gif: 'assets/gifs/disease-predictor.gif'
   },
   {
     title: 'resume.projects.project5.title',
@@ -126,6 +131,7 @@ export const projects = [
       'resume.projects.project5.tools.tool5',
     ],
     repo: 'https://github.com/SilviuDinu/smoke-detector',
+    gif: 'assets/gifs/smoke-detector.gif'
   },
 ];
 

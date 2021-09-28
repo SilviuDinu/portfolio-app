@@ -11,12 +11,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MenuComponent } from './components/menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
 import { PhotoComponent } from './components/photo/photo.component';
 import { SocialComponent } from './components/social/social.component';
@@ -88,7 +89,8 @@ import { GridListComponent } from './components/grid-list/grid-list.component';
     MatDividerModule,
     MatProgressBarModule,
     MatTooltipModule,
-    MatGridListModule
+    MatGridListModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
