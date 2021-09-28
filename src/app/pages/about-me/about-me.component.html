@@ -39,22 +39,24 @@
 
   <!-- Technologies -->
   <!-- <div class="technologies"> -->
-  <app-title
-    [text]="'about.titles.tech' | token"
-    [size]="'large'"
-    [icon]="'tech'"
-  ></app-title>
-  <app-content>
-    <div class="about-content-parapgraph">
-      {{ "about.contents.technologies.p1" | token }}
-    </div>
-  </app-content>
-  <app-content>
-    <app-technologies [tech]="technologies"></app-technologies>
-  </app-content>
-  <!-- </div> -->
+  <ng-container *ngIf="technologies.length > 0">
+    <app-title
+      [text]="'about.titles.tech' | token"
+      [size]="'large'"
+      [icon]="'tech'"
+    ></app-title>
+    <app-content>
+      <div class="about-content-parapgraph">
+        {{ "about.contents.technologies.p1" | token }}
+      </div>
+    </app-content>
+    <app-content>
+      <app-technologies [tech]="technologies"></app-technologies>
+    </app-content>
+    <!-- </div> -->
 
-  <app-horizontal-divider></app-horizontal-divider>
+    <app-horizontal-divider></app-horizontal-divider>
+  </ng-container>
 
   <!-- <div class="hobbies"> -->
   <!-- Hobbies -->
@@ -74,118 +76,126 @@
     [length]="'half'"
   ></app-horizontal-divider>
 
-  <app-title
-    [text]="'about.contents.hobbies.speedSkating' | token"
-    [size]="'medium'"
-    [icon]="'skate'"
-  ></app-title>
-  <app-content>
-    <div class="about-content-parapgraph">
-      {{ "about.contents.hobbies.p3" | token }}
-    </div>
-  </app-content>
-  <app-content>
-    <div class="about-content-parapgraph">
-      {{ "about.contents.hobbies.p4" | token }}
-    </div>
-  </app-content>
-  <app-content>
-    <app-pictures [pictures]="skatingPictures"></app-pictures>
-  </app-content>
+  <ng-container *ngIf="skatingPictures.length > 0">
+    <app-title
+      [text]="'about.contents.hobbies.speedSkating' | token"
+      [size]="'medium'"
+      [icon]="'skate'"
+    ></app-title>
+    <app-content>
+      <div class="about-content-parapgraph">
+        {{ "about.contents.hobbies.p3" | token }}
+      </div>
+    </app-content>
+    <app-content>
+      <div class="about-content-parapgraph">
+        {{ "about.contents.hobbies.p4" | token }}
+      </div>
+    </app-content>
+    <app-content>
+      <app-pictures [pictures]="skatingPictures"></app-pictures>
+    </app-content>
 
-  <app-horizontal-divider
-    [isCentered]="true"
-    [length]="'half'"
-  ></app-horizontal-divider>
+    <app-horizontal-divider
+      [isCentered]="true"
+      [length]="'half'"
+    ></app-horizontal-divider>
+  </ng-container>
 
-  <app-title
-    [text]="'about.contents.hobbies.photography' | token"
-    [size]="'medium'"
-    [icon]="'camera'"
-  ></app-title>
-  <app-content>
-    <app-pictures [pictures]="pictures"></app-pictures>
-  </app-content>
+  <ng-container *ngIf="pictures.length > 0">
+    <app-title
+      [text]="'about.contents.hobbies.photography' | token"
+      [size]="'medium'"
+      [icon]="'camera'"
+    ></app-title>
+    <app-content>
+      <app-pictures [pictures]="pictures"></app-pictures>
+    </app-content>
 
-  <app-horizontal-divider
-    [isCentered]="true"
-    [length]="'half'"
-  ></app-horizontal-divider>
+    <app-horizontal-divider
+      [isCentered]="true"
+      [length]="'half'"
+    ></app-horizontal-divider>
+  </ng-container>
 
-  <app-title
-    [text]="'about.contents.hobbies.codingChallenges' | token"
-    [size]="'medium'"
-    [icon]="'coding'"
-  ></app-title>
-  <app-content>
-    <table>
-      <!-- Name Column -->
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Honor</th>
-          <th>Position</th>
-          <th>Score</th>
-          <th>Level</th>
-          <th>Source</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="name">
-              <span>{{ codewarsInfo?.name }}</span>
-            </div>
-          </td>
+  <ng-container *ngIf="codewarsInfo?.leaderboardPosition < 260000">
+    <app-title
+      [text]="'about.contents.hobbies.codingChallenges' | token"
+      [size]="'medium'"
+      [icon]="'coding'"
+    ></app-title>
+    <app-content>
+      <table>
+        <!-- Name Column -->
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Honor</th>
+            <th>Position</th>
+            <th>Score</th>
+            <th>Level</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="name">
+                <span>{{ codewarsInfo?.name }}</span>
+              </div>
+            </td>
 
-          <!-- Honor Column -->
-          <td>
-            <div class="honor">
-              <span>{{ codewarsInfo?.honor }}</span>
-            </div>
-          </td>
+            <!-- Honor Column -->
+            <td>
+              <div class="honor">
+                <span>{{ codewarsInfo?.honor }}</span>
+              </div>
+            </td>
 
-          <!-- Position Column -->
-          <td>
-            <div class="position">
-              <span>{{ codewarsInfo?.leaderboardPosition }}</span>
-            </div>
-          </td>
+            <!-- Position Column -->
+            <td>
+              <div class="position">
+                <span>{{ codewarsInfo?.leaderboardPosition }}</span>
+              </div>
+            </td>
 
-          <td>
-            <div class="rank-score">
-              <span>{{ codewarsInfo?.ranks?.overall?.score }} </span>
-            </div>
-          </td>
+            <td>
+              <div class="rank-score">
+                <span>{{ codewarsInfo?.ranks?.overall?.score }} </span>
+              </div>
+            </td>
 
-          <td>
-            <div class="rank-name">
-              <span
-                class="hex {{ codewarsInfo?.ranks?.overall?.color || 'basic' }}"
-              >
-                {{ codewarsInfo?.ranks?.overall?.name }}
-              </span>
-            </div>
-          </td>
+            <td>
+              <div class="rank-name">
+                <span
+                  class="hex {{
+                    codewarsInfo?.ranks?.overall?.color || 'basic'
+                  }}"
+                >
+                  {{ codewarsInfo?.ranks?.overall?.name }}
+                </span>
+              </div>
+            </td>
 
-          <td>
-            <div class="source">
-              <a
-                href="{{ 'about.contents.hobbies.codewarsUrl' | token }}"
-                rel="nopener"
-                >{{ "about.contents.hobbies.codewars" | token }}
-              </a>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </app-content>
+            <td>
+              <div class="source">
+                <a
+                  href="{{ 'about.contents.hobbies.codewarsUrl' | token }}"
+                  rel="nopener"
+                  >{{ "about.contents.hobbies.codewars" | token }}
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </app-content>
 
-  <app-horizontal-divider
-    [isCentered]="true"
-    [length]="'half'"
-  ></app-horizontal-divider>
+    <app-horizontal-divider
+      [isCentered]="true"
+      [length]="'half'"
+    ></app-horizontal-divider>
+  </ng-container>
 
   <app-title
     [text]="'about.contents.hobbies.games' | token"
@@ -200,6 +210,7 @@
   <app-content>
     <app-games></app-games>
   </app-content>
+
   <!-- </div> -->
   <!-- END Hobbies -->
 </div>

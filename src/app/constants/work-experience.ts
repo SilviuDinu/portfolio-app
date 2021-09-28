@@ -50,8 +50,8 @@ export const projects = [
       'resume.projects.resumeApp.tools.tool4',
       'resume.projects.resumeApp.tools.tool5',
     ],
-    website: 'resume.projects.resumeApp.website',
-    repo: 'resume.projects.resumeApp.repo',
+    website: '#',
+    repo: 'https://github.com/SilviuDinu/portfolio-app',
   },
   {
     title: 'resume.projects.project1.title',
@@ -66,8 +66,8 @@ export const projects = [
       'resume.projects.project1.tools.tool5',
       'resume.projects.project1.tools.tool6',
     ],
-    website: 'resume.projects.project1.website',
-    repo: 'resume.projects.project1.repo',
+    website: 'https://forecast-report.com/',
+    repo: 'https://github.com/SilviuDinu/react-weather-app',
   },
   {
     title: 'resume.projects.project2.title',
@@ -81,7 +81,7 @@ export const projects = [
       'resume.projects.project2.tools.tool4',
       'resume.projects.project2.tools.tool5',
     ],
-    repo: 'resume.projects.project2.repo',
+    repo: 'https://github.com/SilviuDinu/web-sockets-chat',
   },
   {
     title: 'resume.projects.project3.title',
@@ -95,8 +95,8 @@ export const projects = [
       'resume.projects.project3.tools.tool4',
       'resume.projects.project3.tools.tool5',
     ],
-    website: 'resume.projects.project3.website',
-    repo: 'resume.projects.project3.repo',
+    website: 'https://slv.lol/',
+    repo: 'https://github.com/SilviuDinu/url-shortener',
   },
   {
     title: 'resume.projects.project4.title',
@@ -111,7 +111,7 @@ export const projects = [
       'resume.projects.project4.tools.tool5',
       'resume.projects.project4.tools.tool6',
     ],
-    repo: 'resume.projects.project4.repo',
+    repo: 'https://github.com/SilviuDinu/cercetare_sem2_BE',
   },
   {
     title: 'resume.projects.project5.title',
@@ -125,7 +125,7 @@ export const projects = [
       'resume.projects.project5.tools.tool4',
       'resume.projects.project5.tools.tool5',
     ],
-    repo: 'resume.projects.project5.repo',
+    repo: 'https://github.com/SilviuDinu/smoke-detector',
   },
 ];
 

@@ -10,34 +10,36 @@
   <app-horizontal-divider></app-horizontal-divider>
 
   <app-content>
-    <div
-      class="projects"
-      fxFlex="100%"
-      fxLayoutAlign="space-between"
-      fxLayout="row wrap"
-    >
+    <div class="projects" fxLayoutAlign="space-between" fxLayout="row wrap">
       <div
         *ngFor="let project of projects"
         class="project-card"
         fxFlex="49%"
         fxFlex.lt-sm="100%"
+        fxFlex.gt-lg="32%"
         fxLayoutAlign="start start"
         fxLayout="row wrap"
         fxLayoutGap="16px"
       >
         <mat-card
-          fxFlex="100%"
-          fxFlex.lt-sm="100%"
-          fxLayoutAlign="start center"
-          fxLayout="column wrap"
+          fxFlex="1 1 100%"
+          fxLayoutAlign="space-between center"
+          fxLayout="column"
           fxLayoutGap="16px"
         >
           <mat-card-title>
-            <span>{{ project.title | token }}</span></mat-card-title
-          >
+            <app-title
+              [text]="project?.title | token"
+              [size]="'medium'"
+            ></app-title>
+          </mat-card-title>
           <mat-card-subtitle>
-            <span *ngIf="city" class="location detail">{{ city }}</span>
-            <span *ngIf="period" class="period detail">{{ period }}</span>
+            <span *ngIf="project?.city" class="location detail">{{
+              project.city | token
+            }}</span>
+            <span *ngIf="project?.period" class="period detail">{{
+              project.period | token
+            }}</span>
           </mat-card-subtitle>
           <mat-card-content>
             <img
@@ -47,9 +49,24 @@
               width="250"
             />
           </mat-card-content>
-          <mat-card-actions align="end">
-            <button mat-button>Like</button>
-            <button mat-button>SHARE</button>
+          <mat-card-actions
+            align="center"
+            fxLayoutAlign="center"
+            fxLayoutGap="16px"
+          >
+            <app-button
+              [isUrl]="true"
+              [url]="project?.repo || null"
+              [text]="'projects.cardActions.primary' | token"
+              [type]="'primary'"
+            ></app-button>
+
+            <app-button
+              [isUrl]="true"
+              [url]="project?.website || null"
+              [text]="'projects.cardActions.secondary' | token"
+            ></app-button>
+            
           </mat-card-actions>
         </mat-card>
       </div>
