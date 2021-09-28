@@ -14,14 +14,14 @@
       <div
         *ngFor="let project of projects"
         class="project-card"
-        fxFlex="49%"
+        fxFlex="100%"
         fxFlex.lt-sm="100%"
         fxFlex.gt-lg="32%"
         fxLayoutAlign="start start"
         fxLayout="row wrap"
         fxLayoutGap="16px"
       >
-        <!-- <mat-accordion>
+        <mat-accordion>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title>
@@ -39,29 +39,48 @@
                 }}</span>
               </mat-panel-description>
             </mat-expansion-panel-header>
-            <img
-              mat-card-image
-              [attr.src]="project?.gif"
-              alt="this slowpoke moves"
-              width="300"
-              height="200"
-            />
-            <app-button
-              [isUrl]="true"
-              [url]="project?.repo || null"
-              [text]="'projects.cardActions.primary' | token"
-              [type]="'primary'"
-            ></app-button>
+            <div class="panel-content">
+              <mat-card
+                fxFlex="1 1 100%"
+                fxLayoutAlign="space-between center"
+                fxLayout="column"
+                fxLayoutGap="16px"
+              >
+                <mat-card-content>
+                  <div class="project-description-paragraph">
+                    {{ project.description | token }}
+                  </div>
+                  <img
+                    mat-card-image
+                    [attr.src]="project?.gif"
+                    alt="this slowpoke moves"
+                    class="description-gif"
+                  />
+                </mat-card-content>
+                <mat-card-actions
+                  align="center"
+                  fxLayoutAlign="center"
+                  fxLayoutGap="16px"
+                >
+                  <app-button
+                    [isUrl]="true"
+                    [url]="project?.repo || null"
+                    [text]="'projects.cardActions.primary' | token"
+                    [type]="'primary'"
+                  ></app-button>
 
-            <app-button
-              [isUrl]="true"
-              [url]="project?.website || null"
-              [text]="'projects.cardActions.secondary' | token"
-            ></app-button>
+                  <app-button
+                    [isUrl]="true"
+                    [url]="project?.website || null"
+                    [text]="'projects.cardActions.secondary' | token"
+                  ></app-button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
           </mat-expansion-panel>
-        </mat-accordion> -->
+        </mat-accordion>
 
-        <mat-card
+        <!-- <mat-card
           fxFlex="1 1 100%"
           fxLayoutAlign="space-between center"
           fxLayout="column"
@@ -108,7 +127,7 @@
               [text]="'projects.cardActions.secondary' | token"
             ></app-button>
           </mat-card-actions>
-        </mat-card>
+        </mat-card> -->
       </div>
     </div>
   </app-content>
