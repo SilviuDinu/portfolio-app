@@ -16,6 +16,10 @@ export const tech = [
     icon: 'python',
   },
   {
+    title: 'about.contents.technologies.tech.pytorch',
+    icon: 'pytorch',
+  },
+  {
     title: 'about.contents.technologies.tech.php',
     icon: 'php',
   },

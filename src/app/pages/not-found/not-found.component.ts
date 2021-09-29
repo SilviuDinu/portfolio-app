@@ -13,6 +13,6 @@ export class NotFoundComponent {
   ) { }
 
   goHome(): void {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/about-me');
   }
 }

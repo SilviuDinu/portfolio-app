@@ -1,0 +1,56 @@
+<div class="project-card">
+  <mat-card
+    fxFlex="1 1 100%"
+    fxLayoutAlign="space-between center"
+    fxLayout="column"
+    fxLayoutGap="16px"
+  >
+    <mat-card-title>
+      <app-title [text]="title" [size]="'medium'"></app-title>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <span *ngIf="project?.city" class="location detail">{{
+        project.city | token
+      }}</span>
+      <span *ngIf="project?.period" class="period detail">{{
+        project.period | token
+      }}</span>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <img
+        mat-card-image
+        *ngIf="!project?.isVideo"
+        [attr.src]="project?.videoDescription"
+        alt="{{ project?.alt }}"
+        class="description-image"
+      />
+      <iframe
+        class="description-image"
+        *ngIf="project.isVideo"
+        [attr.src]="getSanitizedUrl(project.videoDescription)"
+        title="YouTube video player"
+        alt="{{ project?.alt }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <div class="project-description-paragraph">
+        {{ project.description | token }}
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="center" fxLayoutAlign="center" fxLayoutGap="16px">
+      <app-button
+        [isUrl]="true"
+        [url]="project?.repo || null"
+        [text]="'projects.cardActions.primary' | token"
+        [type]="'primary'"
+      ></app-button>
+
+      <app-button
+        [isUrl]="true"
+        [url]="project?.website || null"
+        [text]="'projects.cardActions.secondary' | token"
+      ></app-button>
+    </mat-card-actions>
+  </mat-card>
+</div>

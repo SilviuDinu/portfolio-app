@@ -42,6 +42,7 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GamesComponent } from './components/games/games.component';
 import { GridListComponent } from './components/grid-list/grid-list.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { GridListComponent } from './components/grid-list/grid-list.component';
     CarouselComponent,
     GamesComponent,
     GridListComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,

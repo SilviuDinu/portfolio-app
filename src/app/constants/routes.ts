@@ -1,9 +1,9 @@
 export const menuRoutes = [
-  {
-    name: 'Home',
-    path: '/',
-    isExternal: false,
-  },
+  // {
+  //   name: 'Home',
+  //   path: '/',
+  //   isExternal: false,
+  // },
   {
     name: 'About me',
     path: '/about-me',

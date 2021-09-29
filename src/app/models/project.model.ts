@@ -6,5 +6,7 @@ export interface Project {
   tools: string[],
   repo?: string,
   website?: string,
-  gif?: string
+  videoDescription?: string,
+  isVideo?: boolean,
+  alt?: string
 }

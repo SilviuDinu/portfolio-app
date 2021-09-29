@@ -13,7 +13,11 @@
     [attr.aria-label]="icon"
   >
     <span fxLayout="row">
-      <mat-icon class="social-icon" [svgIcon]="icon"></mat-icon>
+      <mat-icon
+        class="social-icon"
+        [svgIcon]="icon"
+        [attr.aria-hidden]="ariaHidden"
+      ></mat-icon>
     </span>
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </a>
@@ -22,7 +26,11 @@
 <ng-template #noLink>
   <div fxFlex fxLayoutAlign="start center" fxLayoutGap="8px">
     <span fxLayout="row">
-      <mat-icon class="social-icon" [svgIcon]="icon"></mat-icon>
+      <mat-icon
+        class="social-icon"
+        [svgIcon]="icon"
+        [attr.aria-hidden]="ariaHidden"
+      ></mat-icon>
     </span>
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </div>

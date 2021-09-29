@@ -13,102 +13,17 @@
     <div class="projects" fxLayoutAlign="space-between" fxLayout="row wrap">
       <div
         *ngFor="let project of projects"
-        class="project-card"
         fxFlex="49%"
         fxFlex.lt-sm="100%"
         fxFlex.gt-lg="32%"
         fxLayoutAlign="start start"
-        fxLayout="row wrap"
+        fxLayout="column wrap"
         fxLayoutGap="16px"
       >
-        <!-- <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <app-title
-                  [text]="project?.title | token"
-                  [size]="'medium'"
-                ></app-title>
-              </mat-panel-title>
-              <mat-panel-description>
-                <span *ngIf="project?.city" class="location detail">{{
-                  project.city | token
-                }}</span>
-                <span *ngIf="project?.period" class="period detail">{{
-                  project.period | token
-                }}</span>
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <img
-              mat-card-image
-              [attr.src]="project?.gif"
-              alt="this slowpoke moves"
-              width="300"
-              height="200"
-            />
-            <app-button
-              [isUrl]="true"
-              [url]="project?.repo || null"
-              [text]="'projects.cardActions.primary' | token"
-              [type]="'primary'"
-            ></app-button>
-
-            <app-button
-              [isUrl]="true"
-              [url]="project?.website || null"
-              [text]="'projects.cardActions.secondary' | token"
-            ></app-button>
-          </mat-expansion-panel>
-        </mat-accordion> -->
-
-        <mat-card
-          fxFlex="1 1 100%"
-          fxLayoutAlign="space-between center"
-          fxLayout="column"
-          fxLayoutGap="16px"
-        >
-          <mat-card-title>
-            <app-title
-              [text]="project?.title | token"
-              [size]="'medium'"
-            ></app-title>
-          </mat-card-title>
-          <mat-card-subtitle>
-            <span *ngIf="project?.city" class="location detail">{{
-              project.city | token
-            }}</span>
-            <span *ngIf="project?.period" class="period detail">{{
-              project.period | token
-            }}</span>
-          </mat-card-subtitle>
-          <mat-card-content>
-            <img
-              mat-card-image
-              [attr.src]="project?.gif"
-              alt="this slowpoke moves"
-              width="300"
-              height="200"
-            />
-          </mat-card-content>
-          <mat-card-actions
-            align="center"
-            fxLayoutAlign="center"
-            fxLayoutGap="16px"
-          >
-            <app-button
-              [isUrl]="true"
-              [url]="project?.repo || null"
-              [text]="'projects.cardActions.primary' | token"
-              [type]="'primary'"
-            ></app-button>
-
-            <app-button
-              [isUrl]="true"
-              [url]="project?.website || null"
-              [text]="'projects.cardActions.secondary' | token"
-            ></app-button>
-          </mat-card-actions>
-        </mat-card>
+        <app-project-card
+          [title]="project?.title | token"
+          [project]="project"
+        ></app-project-card>
       </div>
     </div>
   </app-content>
