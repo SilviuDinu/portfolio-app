@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "dev": "lite-server --baseDir='dist/portfolio-app'",
     "start": "cd server && npm start",
-    "heroku-postbuild": "npm run build && cd server/ && npm i && cd ../"
+    "heroku-postbuild": "cd server/ && npm i && cd ../"
   },
   "private": true,
   "dependencies": {
