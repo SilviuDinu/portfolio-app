@@ -6,7 +6,8 @@ export interface Project {
   tools: string[],
   repo?: string,
   website?: string,
-  videoDescription?: string,
+  videoUrl?: string,
   isVideo?: boolean,
-  alt?: string
+  alt?: string,
+  isYTVideo?: boolean
 }

@@ -6,8 +6,8 @@
     [length]="'three-quarters'"
   ></app-horizontal-divider>
 
-  <ul class="menu-list" role="menubar" aria-hidden="true">
-    <li *ngFor="let route of routes" class="menu-item" role="menuitem">
+  <ul class="menu-list" role="menubar" aria-hidden="false">
+    <li *ngFor="let route of routes" class="menu-item">
       <!-- These are router paths -->
       <a
         *ngIf="!route.isExternal"

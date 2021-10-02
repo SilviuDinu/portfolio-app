@@ -20,16 +20,29 @@
       <img
         mat-card-image
         *ngIf="!project?.isVideo"
-        [attr.src]="project?.videoDescription"
+        [attr.src]="project?.gifUrl"
         alt="{{ project?.alt }}"
         class="description-image"
+        loading="lazy"
       />
+      <video
+        controls
+        class="description-image"
+        *ngIf="project.isVideo && !project.isYTVideo"
+      >
+        <source
+          [attr.src]="project.videoUrl"
+          type="video/mp4"
+          alt="{{ project?.alt }}"
+        />
+        Your browser does not support HTML video.
+      </video>
       <iframe
         class="description-image"
-        *ngIf="project.isVideo"
-        [attr.src]="getSanitizedUrl(project.videoDescription)"
-        title="YouTube video player"
+        *ngIf="project.isYTVideo"
+        [attr.src]="getSanitizedUrl(project.videoUrl)"
         alt="{{ project?.alt }}"
+        title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
