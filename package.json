@@ -28,7 +28,9 @@
     "moment": "^2.29.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "sass": "^1.41.0",
+    "sass-loader": "^7.0.35"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.1.3",
