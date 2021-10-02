@@ -1,0 +1,52 @@
+<div class="contact-information">
+  <app-photo></app-photo>
+
+  <div
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    fxLayoutGap="16px"
+    class="social"
+  >
+    <app-social
+      [url]="'social.github.url' | token"
+      [icon]="'github_logo'"
+      [ariaHidden]="false"
+    ></app-social>
+    <app-social
+      [url]="'social.linkedin.url' | token"
+      [icon]="'linkedin_circle'"
+      [ariaHidden]="false"
+    ></app-social>
+    <app-social
+      [url]="'social.twitter.url' | token"
+      [icon]="'twitter'"
+      [ariaHidden]="false"
+    ></app-social>
+    <app-social
+      [url]="'social.facebook.url' | token"
+      [icon]="'facebook_circle'"
+      [ariaHidden]="false"
+    ></app-social>
+  </div>
+
+  <app-horizontal-divider
+    [isCentered]="true"
+    [length]="'three-quarters'"
+  ></app-horizontal-divider>
+
+  <div class="email-phone">
+    <div fxLayout="row" fxLayoutAlign="start center" class="email-container">
+      <app-social
+        url="{{ 'mailto:' + ('contact.email' | token) }}"
+        [icon]="'email_black'"
+      >
+        <span class="email">{{ "contact.email" | token }}</span>
+      </app-social>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center" class="phone-container">
+      <app-social [icon]="'phone_black'">
+        <span class="phone">{{ "contact.phone" | token | mobileNumber }}</span>
+      </app-social>
+    </div>
+  </div>
+</div>

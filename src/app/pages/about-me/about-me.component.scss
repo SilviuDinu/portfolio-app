@@ -1,0 +1,129 @@
+@import "../../../breakpoints.scss";
+@import "../../../colors.scss";
+
+.about-container {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+app-horizontal-divider {
+  width: 100%;
+}
+
+app-games {
+  width: 100%;
+}
+
+app-content {
+  // @media screen and (max-width: #{$xs}) {
+  width: 100%;
+  // }
+}
+
+.hex {
+  position: relative;
+  width: 60px;
+  // height: 34.64px;
+  margin: 17.32px 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  & > span {
+    display: flex;
+    background-color: #000;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+  }
+
+  &:before {
+    bottom: 100%;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+  }
+
+  &.yellow {
+    background-color: $codewars-yellow;
+
+    &:before,
+    &:after {
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+    }
+
+    &:before {
+      border-bottom: 17.32px solid $codewars-yellow;
+    }
+
+    &:after {
+      border-top: 17.32px solid $codewars-yellow;
+    }
+  }
+
+  &.basic {
+    background-color: lightgreen;
+
+    &:before,
+    &:after {
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+    }
+
+    &:before {
+      border-bottom: 17.32px solid lightgreen;
+    }
+
+    &:after {
+      border-top: 17.32px solid lightgreen;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  min-width: 315px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  div {
+    text-align: center;
+  }
+
+  thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+
+  td {
+    text-align: left;
+  }
+}

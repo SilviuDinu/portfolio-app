@@ -1,23 +1,44 @@
-.app-main-container {
-  width: 100%;
-  height: 100%;
+@import "../../../breakpoints.scss";
+@import "../../../colors.scss";
+@import "../../../sizes.scss";
+
+mat-sidenav-container {
+  min-height: 100vh;
+  overflow-y: hidden;
 }
 
 .app-main-sidenav {
   width: 300px;
   background-color: lightcoral;
   color: white;
-  // margin: 16px;
-  // border-radius: 10px;
-  padding: 16px;
   text-align: center;
   font-size: 16xp;
+  @media screen and (max-width: #{$md}) {
+    padding-top: $toolbar-height;
+  }
 }
 
 .app-main-content {
-  margin: 16px 16px 16px 32px;
-  padding: 16px;
-  font-size: 2rem;
-  color: lightgray;
-  text-align: center;
+  color: $gray-700;
+  background-color: $main-bg;
+  overflow: auto;
+  min-height: 100vh;
+  
+  @media screen and (max-width: #{$md}) {
+    padding-top: $toolbar-height;
+  }
+
+  main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #main {
+    padding: 8px 32px;
+    margin: 16px;
+
+    @media screen and (max-width: #{$sm}) {
+      padding: 8px 8px;
+    }
+  }
 }

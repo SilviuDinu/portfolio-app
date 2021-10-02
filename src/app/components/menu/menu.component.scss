@@ -1,21 +1,49 @@
+@import '../../../colors.scss';
+
 .app-menu {
-  margin-top: 32px;
+  margin-top: 48px;
+  margin-bottom: 72px;
+  overflow: auto;
+  font-weight: 400;
+
   ul.menu-list {
     list-style: none;
     text-align: center;
     padding-left: 0;
     text-align: center;
     list-style-type: none;
+    line-height: 24px;
   }
 
   li.menu-item {
-    padding: 16px;
-    margin-top: 8px;
+    // margin-top: 16px;
+    height: 48px;
+    width: 100%;
     font-size: 1rem;
     text-align: center;
+    vertical-align: middle;
 
-    .menu-item-wrapper {
-      text-align: center;
+    a {
+      padding: 8px;
+      text-decoration: none;
+      vertical-align: middle;
+      color: $lighter-gray-900;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: rgba(15, 108, 255, 0.1);
+      }
+    }
+
+    // &:hover, &:focus {
+    //   background: rgba(15, 108, 255, 0.1);
+    // }
+
+    .menu-item-route {
+      .route {
+        text-align: center;
+      }
     }
   }
 }

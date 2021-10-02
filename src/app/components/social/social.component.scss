@@ -1,0 +1,30 @@
+@import '../../../colors.scss';
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+mat-icon {
+  ::ng-deep {
+    svg {
+      fill: $lighter-gray-900;
+    }
+  }
+}
+
+
+.social-container {
+  &:hover {
+    box-shadow: darkgray;
+  }
+  a {
+    text-decoration: none;
+    color: $lighter-gray-900;
+  }
+  ::ng-deep {
+    span {
+      color: $lighter-gray-900;
+    }
+  }
+}

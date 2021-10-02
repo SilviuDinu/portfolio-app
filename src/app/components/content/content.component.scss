@@ -1,0 +1,14 @@
+@import "../../../breakpoints.scss";
+
+.content,
+.content-section {
+  width: 100%;
+  overflow: hidden;
+  @media screen and (max-width: #{$sm}) {
+    overflow: scroll;
+  }
+}
+
+.content-display {
+  line-height: 18pt;
+}

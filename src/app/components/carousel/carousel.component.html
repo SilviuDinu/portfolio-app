@@ -1,0 +1,30 @@
+<div
+  class="carousel"
+  fxLayoutAlign="start center"
+  fxLayout="row"
+  fxLayoutGap="48px"
+>
+  <!-- To make the carousel an infinite loop, 
+  we need to have 2 carousel-item divs that start one after another-->
+  <div
+    class="carousel-item"
+    *ngFor="let item of data"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+    fxLayoutGap="8px"
+  >
+    <mat-icon class="carousel-icon" [svgIcon]="item.icon"></mat-icon>
+    <span class="carousel-item-description">{{ item.title | token }}</span>
+  </div>
+
+  <div
+    class="carousel-item"
+    *ngFor="let item of data"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+    fxLayoutGap="8px"
+  >
+    <mat-icon class="carousel-icon" [svgIcon]="item.icon"></mat-icon>
+    <span class="carousel-item-description">{{ item.title | token }}</span>
+  </div>
+</div>

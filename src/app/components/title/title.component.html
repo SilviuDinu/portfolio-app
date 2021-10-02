@@ -1,0 +1,52 @@
+<div
+  fxFlex="100%"
+  fxLayoutAlign="start start"
+  fxLayout="column"
+  fxLayoutGap="4px"
+  class="page-header title"
+>
+  <ng-container [ngSwitch]="true">
+    <h1
+      *ngSwitchCase="isLargest"
+      class="{{ 'page-title ' + size }}"
+      fxFlex="100%"
+      fxLayoutAlign="start center"
+    >
+      {{ text }}
+      <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+    </h1>
+    <h2
+      *ngSwitchCase="isLarge"
+      fxFlex="100%"
+      fxLayoutAlign="start center"
+      class="{{ 'title ' + size }}"
+    >
+      {{ text }}
+      <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+    </h2>
+    <h3
+      *ngSwitchCase="isMedium"
+      class="{{ 'title ' + size }}"
+      fxFlex="100%"
+      fxLayoutAlign="start center"
+    >
+      {{ text }}
+      <mat-icon
+        *ngIf="icon"
+        [svgIcon]="icon"
+        fxFlex="100%"
+        fxLayoutAlign="start center"
+      ></mat-icon>
+    </h3>
+    <h4
+      *ngSwitchCase="isSmall"
+      class="{{ 'title ' + size }}"
+      fxFlex="100%"
+      fxLayoutAlign="start center"
+    >
+      {{ text }}
+      <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+    </h4>
+  </ng-container>
+  <ng-content></ng-content>
+</div>

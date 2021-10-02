@@ -1,0 +1,45 @@
+<div
+  class="pictures-container"
+  [fxLayout.lt-md]="'row'"
+  [fxLayout.gt-md]="(wrap$ | async) ? 'column' : 'row'"
+  fxLayoutAlign="start start"
+  fxFlex="100%"
+>
+  <div class="picture" *ngFor="let groups of picGroups">
+    <a
+      [href]="pic.url"
+      target="_blank"
+      *ngFor="let pic of groups"
+      rel="noreferrer"
+    >
+      <img
+        class="{{ pic.type }}"
+        [src]="pic.path"
+        [alt]="pic.alt"
+        loading="lazy"
+        [width]="pic.width"
+        height="auto"
+      />
+    </a>
+  </div>
+</div>
+
+<!-- <div>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let pic of pictures">
+      <a
+        [href]="pic.url"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          [src]="pic.path"
+          [alt]="pic.alt"
+          loading="lazy"
+          [width]="pic.width"
+          height="auto"
+        />
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div> -->

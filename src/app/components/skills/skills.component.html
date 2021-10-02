@@ -1,0 +1,84 @@
+<div class="skills-container">
+  <div
+    class="skill-groups"
+    fxFlex="100%"
+    fxLayout="column"
+    fxLayoutAlign="start center"
+    fxLayoutGap="40px"
+  >
+    <ng-container *ngFor="let item of skills" [ngSwitch]="item.type">
+      <div
+        fxFlex="100%"
+        fxLayout="row wrap"
+        fxLayoutAlign="start start"
+        class="group profesional"
+        *ngSwitchCase="'professional'"
+      >
+        <app-title
+          [text]="'resume.subtitles.proSkills' | token"
+          [size]="'medium'"
+        ></app-title>
+        <app-skill
+          *ngFor="let skill of sortHighToLow(item.list)"
+          [skill]="skill?.token | token"
+          [level]="skill?.level"
+        ></app-skill>
+      </div>
+      <div
+        class="group developmentTools"
+        fxFlex="100%"
+        fxLayout="column"
+        fxLayoutGap="8px"
+        fxLayoutAlign="start start"
+        *ngSwitchCase="'developmentTools'"
+      >
+        <app-title
+          [text]="'resume.subtitles.developmentToolsSkills' | token"
+          [size]="'medium'"
+        ></app-title>
+        <ul role="list" class="dev-skills skills-list">
+          <li *ngFor="let skill of item.list" role="listitem">
+            <app-skill [skill]="skill | token"></app-skill>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="group languages"
+        fxFlex="100%"
+        fxLayout="column"
+        fxLayoutGap="8px"
+        fxLayoutAlign="start start"
+        *ngSwitchCase="'languages'"
+      >
+        <app-title
+          [text]="'resume.subtitles.languagesSkills' | token"
+          [size]="'medium'"
+        ></app-title>
+        <ul role="list" class="language-skills skills-list">
+          <li *ngFor="let skill of item.list" role="listitem">
+            <app-skill [skill]="skill | token"></app-skill>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="group personal"
+        fxFlex="100%"
+        fxLayout="column"
+        fxLayoutGap="8px"
+        fxLayoutAlign="start start"
+        *ngSwitchCase="'personal'"
+      >
+        <app-title
+          [text]="'resume.subtitles.softSkills' | token"
+          [size]="'medium'"
+        ></app-title>
+        <ul role="list" class="soft-skills skills-list">
+          <li *ngFor="let skill of item.list" role="listitem">
+            <app-skill [skill]="skill | token"></app-skill>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </div>
+</div>

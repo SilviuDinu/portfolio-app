@@ -1,0 +1,21 @@
+.divider {
+  width: 100%;
+
+  mat-divider {
+    margin-top: 8px;
+    margin-bottom: 8px;
+   
+    &.max {
+      width: 100%;
+    }
+    &.three-quarters {
+      width: 75%;
+    }
+    &.half {
+      width: 50%;
+    }
+    &.quarter {
+      width: 25%;
+    }
+  }
+}

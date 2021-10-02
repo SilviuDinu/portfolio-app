@@ -1,0 +1,55 @@
+<div class="button-container">
+  <ng-container *ngIf="!isLink; else anchor">
+    <button
+      mat-raised-button
+      [attr.aria-label]="text"
+      [attr.type]="type"
+      [color]="type"
+      (click)="onClick()"
+    >
+      <span fxLayoutAlign="start center">
+        <ng-container *ngIf="icon">
+          <mat-icon svgIcon="{{ icon }}"></mat-icon>
+        </ng-container>
+        <span>{{ text }}</span>
+      </span>
+    </button>
+  </ng-container>
+
+  <ng-template #anchor>
+    <ng-container *ngIf="isDownload">
+      <a [href]="downloadUrl" download>
+        <button
+          class="{{ 'btn ' + type }}"
+          [attr.aria-label]="text"
+          [attr.type]="type"
+        >
+          <span fxLayoutAlign="start center">
+            <ng-container *ngIf="icon">
+              <mat-icon svgIcon="{{ icon }}"></mat-icon>
+            </ng-container>
+            <span>{{ text }}</span>
+          </span>
+        </button>
+      </a>
+    </ng-container>
+
+    <ng-container *ngIf="isUrl">
+      <a [attr.href]="url" target="_blank" rel="noreferrer">
+        <button
+          mat-raised-button
+          [attr.aria-label]="text"
+          color="{{ type }}"
+          [disabled]="!url"
+        >
+          <span fxLayoutAlign="start center">
+            <ng-container *ngIf="icon">
+              <mat-icon svgIcon="{{ icon }}"></mat-icon>
+            </ng-container>
+            <span>{{ text }}</span>
+          </span>
+        </button>
+      </a>
+    </ng-container>
+  </ng-template>
+</div>

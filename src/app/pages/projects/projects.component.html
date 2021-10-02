@@ -1,0 +1,30 @@
+<div
+  fxFlex="100%"
+  fxLayoutAlign="center start"
+  fxLayout="column"
+  fxLayoutGap="16px"
+  class="projects-container"
+>
+  <app-title [text]="'projects.title' | token"></app-title>
+
+  <app-horizontal-divider></app-horizontal-divider>
+
+  <app-content>
+    <div class="projects" fxLayoutAlign="space-between" fxLayout="row wrap">
+      <div
+        *ngFor="let project of projects"
+        fxFlex="49%"
+        fxFlex.lt-sm="100%"
+        fxFlex.gt-lg="32%"
+        fxLayoutAlign="start start"
+        fxLayout="column wrap"
+        fxLayoutGap="16px"
+      >
+        <app-project-card
+          [title]="project?.title | token"
+          [project]="project"
+        ></app-project-card>
+      </div>
+    </div>
+  </app-content>
+</div>

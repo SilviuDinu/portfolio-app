@@ -1,0 +1,76 @@
+<div
+  fxFlex="100%"
+  fxLayout="column"
+  fxLayoutAlign="start start"
+  class="experience-container"
+>
+  <ng-container *ngIf="!isProject; else project">
+    <h4 class="position">
+      {{ position.toUpperCase() }}
+      <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+    </h4>
+    <div
+      fxFlex="100%"
+      fxLayout="row wrap"
+      fxLayoutAlign="start start"
+      fxLayoutGap="8px"
+      class="experience-details"
+    >
+      <span *ngIf="company" class="company detail">{{
+        company | capitalize
+      }}</span>
+      <span *ngIf="city" class="location detail">{{ city }}</span>
+      <span *ngIf="period" class="period detail">{{ period }}</span>
+    </div>
+    <div *ngIf="responsibilities?.length" class="experience-responsibilities">
+      <ul role="list" class="responsibilities">
+        <li *ngFor="let item of responsibilities" role="listitem">
+          <span class="responsibility">{{ item | token }}</span>
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #project>
+  <h4 class="title">
+    {{ title.toUpperCase() }}
+    <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+  </h4>
+  <div
+    fxFlex="100%"
+    fxLayout="row wrap"
+    fxLayoutAlign="start start"
+    fxLayoutGap="8px"
+    class="experience-details"
+  >
+    <span *ngIf="company" class="company detail">{{
+      company | capitalize
+    }}</span>
+    <span *ngIf="city" class="location detail">{{ city }}</span>
+    <span *ngIf="period" class="period detail">{{ period }}</span>
+  </div>
+  <div class="description">
+    <span>{{ description }}</span>
+  </div>
+  <div *ngIf="tools?.length > 0" class="experience-tools">
+    <div role="list" class="tools">
+      <span class="label">Tools: </span>
+      <span *ngFor="let item of tools" class="tool">{{ item | token }}</span>
+    </div>
+  </div>
+  <div *ngIf="website || repo" class="websites">
+    <div *ngIf="website" class="website-container">
+      <span class="label">Website: </span>
+      <a [href]="website">
+        <span class="website">{{ website }}</span>
+      </a>
+    </div>
+    <div *ngIf="repo" class="website-container">
+      <span class="label">Repository: </span>
+      <a [href]="repo">
+        <span class="repo">{{ repo }} </span>
+      </a>
+    </div>
+  </div>
+</ng-template>

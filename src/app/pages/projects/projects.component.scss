@@ -1,0 +1,31 @@
+@import "../../../breakpoints.scss";
+
+.projects-container {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+app-horizontal-divider {
+  width: 100%;
+}
+
+mat-accordion {
+  width: 100%;
+}
+
+mat-expansion-panel {
+  width: 100%;
+  &.mat-expansion-panel-spacing {
+    margin: 0;
+  }
+}
+
+.projects {
+  margin-bottom: 64px;
+  margin: 0 1px 64px;
+
+  app-project-card {
+    display: flex;
+    flex: 1;
+  }
+}

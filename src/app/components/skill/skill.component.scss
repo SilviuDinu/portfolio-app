@@ -1,0 +1,17 @@
+.skill {
+  width: 100%;
+  // margin-bottom: 8px;
+}
+
+.skill-name, .skill-level {
+  width: 100%;
+}
+
+.skill-level {
+  margin-bottom: 8px;
+  // margin-top: 8px;
+
+  mat-progress-bar {
+    height: 12px;
+  }
+}

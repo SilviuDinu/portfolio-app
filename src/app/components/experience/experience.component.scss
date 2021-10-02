@@ -1,0 +1,53 @@
+.experience-container {
+  .label {
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  a {
+    word-wrap: break-word;
+    width: 100%;
+  }
+  .experience-details,
+  .description {
+    margin-top: 8px;
+    width: 100%;
+
+    .detail {
+      font-weight: 300;
+      &:not(:last-child) {
+        &::after {
+          content: " | ";
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+  .experience-responsibilities,
+  .experience-tools {
+    .responsibilities {
+      li {
+        margin-top: 8px;
+      }
+    }
+    .tools {
+      margin-top: 8px;
+
+      .tool {
+        &:not(:last-child) {
+          &::after {
+            content: ", ";
+          }
+        }
+      }
+    }
+  }
+
+  .website-container {
+    margin-top: 8px;
+  }
+}
+
+.websites {
+  width: 100%;
+}

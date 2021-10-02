@@ -1,0 +1,41 @@
+<div class="social-container">
+  <ng-container *ngIf="url; then withLink; else noLink"></ng-container>
+</div>
+
+<ng-template #withLink>
+  <a
+    fxFlex
+    fxLayoutAlign="start center"
+    fxLayoutGap="8px"
+    [href]="url"
+    rel="noreferrer"
+    target="_blank"
+    [attr.aria-label]="icon"
+  >
+    <span fxLayout="row">
+      <mat-icon
+        class="social-icon"
+        [svgIcon]="icon"
+        [attr.aria-hidden]="ariaHidden"
+      ></mat-icon>
+    </span>
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </a>
+</ng-template>
+
+<ng-template #noLink>
+  <div fxFlex fxLayoutAlign="start center" fxLayoutGap="8px">
+    <span fxLayout="row">
+      <mat-icon
+        class="social-icon"
+        [svgIcon]="icon"
+        [attr.aria-hidden]="ariaHidden"
+      ></mat-icon>
+    </span>
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

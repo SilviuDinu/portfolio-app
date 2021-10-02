@@ -1,0 +1,27 @@
+@import "../../../breakpoints.scss";
+
+.grid-container {
+  width: 100%;
+
+  @media screen and (max-width: #{$xs}) {
+    overflow-x: scroll;
+  }
+}
+
+.grid-item-icon {
+  width: 160px;
+  height: auto;
+
+  @media screen and (max-width: 420px) {
+    width: 200px;
+    height: auto;
+  }
+}
+
+.grid-item {
+  &:not(:first-child) {
+    @media screen and (max-width: 420px) {
+      margin-top: 16px;
+    }
+  }
+}

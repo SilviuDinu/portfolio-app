@@ -1,0 +1,23 @@
+@import "../../../colors.scss";
+
+.page-header {
+  width: 100%;
+
+  .page-title {
+    width: 100%;
+  }
+}
+
+.title {
+  width: 100%;
+  white-space: nowrap;
+}
+
+mat-icon {
+  margin-left: 8px;
+  ::ng-deep {
+    svg {
+      fill: $gray-700;
+    }
+  }
+}

@@ -2,27 +2,30 @@
 
 <mat-sidenav-container class="app-main-container">
   <mat-sidenav
+    #sidenavMenu
     role="navigation"
     aria-label="Panel"
+    fixedInViewport
+    [autoFocus]="false"
     [disableClose]="(isUpToMedium$ | async) ? false : true"
     fxFlex
-    fxLayoutAlign="start center"
+    fxLayoutAlign="center center"
     fxLayout="column"
     [mode]="(isUpToMedium$ | async) ? 'over' : 'side'"
     class="app-main-sidenav"
     [opened]="(isUpToMedium$ | async) ? false : true"
+    [class.mobile]="isUpToMedium$ | async"
   >
     <app-menu></app-menu>
   </mat-sidenav>
 
   <mat-sidenav-content
     fxFlex
-    fxLayoutAlign="center center"
+    fxLayoutAlign="start start"
     class="app-main-content"
   >
     <main>
       <div id="main">
-        Main content
         <router-outlet></router-outlet>
       </div>
     </main>

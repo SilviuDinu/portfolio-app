@@ -1,6 +1,38 @@
 <header>
-  <mat-toolbar
-   color="primary">
-    Toolbar
+  <mat-toolbar color="primary">
+    <div class="toolbar-wrapper">
+      <div
+        fxLayout="row"
+        fxLayout.xs="row"
+        fxLayoutWrap
+        fxLayoutAlign="start center"
+        fxFill
+      >
+        <div>
+          <button
+            fxFlex="40px"
+            fxLayoutAlign="center center"
+            class="menu-toggle"
+            aria-label="Panel navigation"
+            [attr.aria-expanded]="isSidenavOpened"
+            mat-icon-button
+            color="white"
+            (click)="toggleSidenav($event)"
+          >
+            <mat-icon
+              class="open-toggle"
+              svgIcon="menu_white"
+              [class.active]="!isSidenavOpened"
+            ></mat-icon>
+
+            <mat-icon
+              class="close-toggle"
+              svgIcon="close_white"
+              [class.active]="isSidenavOpened"
+            ></mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
   </mat-toolbar>
 </header>

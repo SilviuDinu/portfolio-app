@@ -1,0 +1,70 @@
+@import "../../../breakpoints.scss";
+
+.pictures-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 8px;
+
+  .picture {
+    width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    height: auto;
+
+    & > a {
+      text-align: center;
+      max-height: 100%;
+      display: flex;
+      margin-right: 16px;
+      overflow: hidden;
+      height: auto;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      box-shadow: 4px ​4px 8px 0px rgb(0 0 0 / 56%);
+
+      @media screen and (max-width: #{$xs}) {
+        width: 100%;
+        padding-right: 16px;
+        box-shadow: 0 4px 4px -8px rgb(0 0 0 / 56%);
+      }
+
+      img {
+        max-height: 100%;
+        border-radius: 6px;
+        width: 100%;
+        height: auto;
+
+        &.generic {
+          max-width: 300px;
+        }
+
+        &.skating {
+          max-width: 100%;
+        }
+
+        @media screen and (max-width: #{$xs}) {
+          width: 100%;
+          height: auto;
+        }
+
+        @media screen and (min-width: #{$md}) {
+          // opacity: 0.75;
+
+          &:hover {
+            opacity: 1;
+            transition: 0.3s linear;
+            transform: scale(1.1);
+            -ms-transform: scale(1.1); /* IE 9 */
+            -moz-transform: scale(1.1); /* Firefox */
+            -webkit-transform: scale(1.1); /* Safari and Chrome */
+            -o-transform: scale(1.1); /* Opera */
+          }
+        }
+      }
+    }
+  }
+}
