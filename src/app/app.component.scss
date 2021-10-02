@@ -1,10 +1,8 @@
 @import "../breakpoints.scss";
 
-
 .container {
   width: 100%;
   max-height: 100vh;
-
 
   @media screen and (min-width: #{$md}) {
     height: 100%;

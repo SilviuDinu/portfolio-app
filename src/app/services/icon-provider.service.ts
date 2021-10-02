@@ -49,6 +49,7 @@ export class IconProviderService {
     ['css', 'css.svg'],
     ['sass', 'sass.svg'],
     ['python', 'python.svg'],
+    ['pytorch', 'pytorch.svg'],
     ['php', 'php.svg'],
     ['js', 'javascript.svg'],
     ['witcher3', 'witcher3.svg'],

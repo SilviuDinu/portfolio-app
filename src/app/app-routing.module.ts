@@ -9,8 +9,9 @@ import { NotFoundComponent } from '@pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
-    component: HomeComponent,
     path: '',
+    pathMatch: 'full',
+    redirectTo: 'about-me'
   },
   {
     path: 'about-me',
@@ -26,12 +27,12 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '404-not-found'
+    redirectTo: '404-not-found',
   },
   {
     path: '404-not-found',
-    component: NotFoundComponent
-  }
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({

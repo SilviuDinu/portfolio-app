@@ -52,7 +52,10 @@ export const projects = [
     ],
     website: '#',
     repo: 'https://github.com/SilviuDinu/portfolio-app',
-    gif: 'assets/gifs/portfolio-app.gif'
+    videoUrl: 'assets/videos/portfolio-app-Broadband High.mp4',
+    gifUrl: 'assets/videos/portfolio-app.gif',
+    alt: 'portfolio web application gif',
+    isVideo: true
   },
   {
     title: 'resume.projects.project1.title',
@@ -69,7 +72,10 @@ export const projects = [
     ],
     website: 'https://forecast-report.com/',
     repo: 'https://github.com/SilviuDinu/react-weather-app',
-    gif: 'assets/gifs/react-weather-app.gif'
+    videoUrl: 'assets/videos/react-weather-app-Broadband High.mp4',
+    gifUrl: 'assets/videos/react-weather-app.gif',
+    alt: 'react weather app gif',
+    isVideo: true
   },
   {
     title: 'resume.projects.project2.title',
@@ -84,7 +90,10 @@ export const projects = [
       'resume.projects.project2.tools.tool5',
     ],
     repo: 'https://github.com/SilviuDinu/web-sockets-chat',
-    gif: 'assets/gifs/web-sockets-chat.gif'
+    videoUrl: 'assets/videos/web-sockets-chat-Broadband High.mp4',
+    gifUrl: 'assets/videos/web-sockets-chat.gif',
+    alt: 'web sockets chat react app gif',
+    isVideo: true
   },
   {
     title: 'resume.projects.project3.title',
@@ -100,7 +109,10 @@ export const projects = [
     ],
     website: 'https://slv.lol/',
     repo: 'https://github.com/SilviuDinu/url-shortener',
-    gif: 'assets/gifs/url-shortener.gif'
+    videoUrl: 'assets/videos/url-shortener-Broadband High.mp4',
+    gifUrl: 'assets/videos/url-shortener.gif',
+    alt: 'vue utl shortener app gif',
+    isVideo: true
   },
   {
     title: 'resume.projects.project4.title',
@@ -116,7 +128,10 @@ export const projects = [
       'resume.projects.project4.tools.tool6',
     ],
     repo: 'https://github.com/SilviuDinu/cercetare_sem2_BE',
-    gif: 'assets/gifs/disease-predictor.gif'
+    videoUrl: 'assets/videos/disease-predictor-Broadband High.mp4',
+    gifUrl: 'assets/videos/disease-predictor.gif',
+    isVideo: true,
+    alt: 'disease predictor app gif'
   },
   {
     title: 'resume.projects.project5.title',
@@ -131,7 +146,10 @@ export const projects = [
       'resume.projects.project5.tools.tool5',
     ],
     repo: 'https://github.com/SilviuDinu/smoke-detector',
-    gif: 'assets/gifs/smoke-detector.gif'
+    videoUrl: 'https://www.youtube.com/embed/-RQZF3_onj4',
+    alt: 'smoke detector system video',
+    isVideo: true,
+    isYTVideo: true
   },
 ];
 

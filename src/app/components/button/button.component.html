@@ -35,7 +35,7 @@
     </ng-container>
 
     <ng-container *ngIf="isUrl">
-      <a [attr.href]="url">
+      <a [attr.href]="url" target="_blank" rel="noreferrer">
         <button
           mat-raised-button
           [attr.aria-label]="text"
