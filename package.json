@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "dev": "lite-server --baseDir='dist/portfolio-app'"
+    "dev": "lite-server --baseDir='dist/portfolio-app'",
+    "start": "lite-server --baseDir='dist/portfolio-app'",
+    "heroku-postbuild": "ng build"
   },
   "private": true,
   "dependencies": {
