@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "dev": "lite-server --baseDir='dist/portfolio-app'",
     "start": "cd server && npm start",
-    "prestart": "ng build --max_old_space_size=2560 --prod",
+    "prestart": "ng build --prod",
     "heroku-postbuild": "cd server/ && npm i && cd ../"
   },
   "private": true,
