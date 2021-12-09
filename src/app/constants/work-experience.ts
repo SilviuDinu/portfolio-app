@@ -1,7 +1,7 @@
 /*
   To add a new work experience section you can copy and paste
   one of the models below (the ones inside { } braces) and change
-  the 'experience1' or 'experience2' word with 'experience3' or 
+  the 'experience1' or 'experience2' word with 'experience3' or
   whatever the number is next. The rest should stay the same.
 
   In addition to that, you need to go to /assets/tokens.json file
@@ -13,6 +13,17 @@
 */
 
 export const workExperience = [
+  {
+    title: 'EPAM Systems',
+    position: 'resume.experiences.epam.position',
+    company: 'resume.experiences.epam.company',
+    city: 'resume.experiences.epam.city',
+    period: 'resume.experiences.epam.period',
+    responsibilities: [
+      'resume.experiences.epam.responsibilities.item1',
+      'resume.experiences.epam.responsibilities.item2',
+    ],
+  },
   {
     title: 'Deloitte Digital',
     position: 'resume.experiences.experience1.position',
@@ -232,17 +243,7 @@ export const skills = [
         token: 'resume.skills.professional.php',
         level: 57,
         priority: 2
-      },
-      {
-        token: 'resume.skills.professional.java',
-        level: 45,
-        priority: 2
-      },
-      {
-        token: 'resume.skills.professional.cpp',
-        level: 45,
-        priority: 2
-      },
+      }
     ],
   },
   {
