@@ -33,24 +33,18 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
         this.buildLayout(2);
       }),
       this.isTablet$.pipe(filter((isTablet) => !!isTablet)).subscribe(() => {
-        window.innerHeight < window.innerWidth
-          ? this.buildLayout(3)
-          : this.buildLayout(2);
+        window.innerHeight < window.innerWidth ? this.buildLayout(3) : this.buildLayout(2);
       }),
-      this.isUpToMedium$
-        .pipe(filter((isUpToMedium) => !!isUpToMedium))
-        .subscribe(() => {
-          if (window.innerWidth > 900) {
-            this.buildLayout(3);
-          } else {
-            this.buildLayout(2);
-          }
-        }),
-      this.isBeyondLarge$
-        .pipe(filter((isBeyondLarge) => !!isBeyondLarge))
-        .subscribe(() => {
+      this.isUpToMedium$.pipe(filter((isUpToMedium) => !!isUpToMedium)).subscribe(() => {
+        if (window.innerWidth > 900) {
           this.buildLayout(3);
-        })
+        } else {
+          this.buildLayout(2);
+        }
+      }),
+      this.isBeyondLarge$.pipe(filter((isBeyondLarge) => !!isBeyondLarge)).subscribe(() => {
+        this.buildLayout(3);
+      })
     );
   }
 
@@ -61,18 +55,17 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
         this.picGroups.push(this.pictures);
         break;
       case 2:
-        this.picGroups.push(
-          this.pictures.slice(0, Math.ceil(this.pictures.length / 2) - 1),
-          this.pictures.slice(Math.ceil(this.pictures.length / 2))
-        );
+        this.pictures.length === 1
+          ? this.picGroups.push(this.pictures)
+          : this.picGroups.push(
+              this.pictures.slice(0, Math.floor(this.pictures.length / 2)),
+              this.pictures.slice(Math.floor(this.pictures.length / 2))
+            );
         break;
       case 3:
         this.picGroups.push(
           this.pictures.slice(0, Math.ceil(this.pictures.length / 3)),
-          this.pictures.slice(
-            Math.ceil(this.pictures.length / 3),
-            Math.ceil(this.pictures.length / 3) * 2
-          ),
+          this.pictures.slice(Math.ceil(this.pictures.length / 3), Math.ceil(this.pictures.length / 3) * 2),
           this.pictures.slice(Math.ceil(this.pictures.length / 3) * 2)
         );
         break;

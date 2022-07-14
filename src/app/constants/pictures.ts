@@ -76,7 +76,9 @@ export const pictures = [
 export const skating = [
   {
     path: 'assets/images/tg_mures.png',
-    alt: 'Jack Daniels glass with Nikon and Airpods',
-    type: 'skating'
+    alt: 'A kid skating',
+    type: 'skating',
+    width: 300,
+    height: 300,
   }
 ]

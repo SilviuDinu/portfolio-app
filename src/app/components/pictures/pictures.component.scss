@@ -1,4 +1,4 @@
-@import "../../../breakpoints.scss";
+@import '../../../breakpoints.scss';
 
 .pictures-container {
   width: 100%;
@@ -8,7 +8,6 @@
   margin-top: 8px;
 
   .picture {
-    width: 100%;
     max-height: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -38,12 +37,9 @@
         width: 100%;
         height: auto;
 
-        &.generic {
-          max-width: 300px;
-        }
-
+        &.generic,
         &.skating {
-          max-width: 100%;
+          max-width: 300px;
         }
 
         @media screen and (max-width: #{$xs}) {
