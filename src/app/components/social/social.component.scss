@@ -8,7 +8,7 @@
 mat-icon {
   ::ng-deep {
     svg {
-      fill: $lighter-gray-900;
+      fill: $menu-text-color;
     }
   }
 }
@@ -20,11 +20,11 @@ mat-icon {
   }
   a {
     text-decoration: none;
-    color: $lighter-gray-900;
+    color: $menu-text-color;
   }
   ::ng-deep {
     span {
-      color: $lighter-gray-900;
+      color: $menu-text-color;
     }
   }
 }

@@ -47,13 +47,30 @@ export const pictures = [
     alt: 'Jack Daniels glass with Nikon and Airpods',
     type: 'generic'
   },
-  // {
-  //   path: 'assets/images/chairs.jpg',
-  //   width: 300,
-  //   height: 300,
-  //   url: 'https://unsplash.com/photos/aJncVsc-dn4',
-  //   alt: 'Chairs on Cliff',
-  // },
+  {
+    path: 'assets/images/sunflower.jpg',
+    width: 300,
+    height: 300,
+    url: 'https://unsplash.com/photos/KvB0Cgz3SSs',
+    alt: 'Sunflower picture',
+    type: 'generic'
+  },
+  {
+    path: 'assets/images/boat.jpg',
+    width: 300,
+    height: 300,
+    url: 'https://unsplash.com/photos/BBYbtPQU9LQ',
+    alt: 'Green sailing boat on the beach',
+    type: 'generic'
+  },
+  {
+    path: 'assets/images/drone.jpg',
+    width: 300,
+    height: 300,
+    url: "https://unsplash.com/photos/2vajkRGV08E",
+    alt: 'Picture of DJI Air 2S drone',
+    type: 'generic'
+  }
 ];
 
 export const skating = [

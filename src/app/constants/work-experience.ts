@@ -66,7 +66,7 @@ export const projects = [
     videoUrl: 'assets/videos/portfolio-app-Broadband High.mp4',
     gifUrl: 'assets/videos/portfolio-app.gif',
     alt: 'portfolio web application gif',
-    isVideo: true
+    isVideo: true,
   },
   {
     title: 'resume.projects.project1.title',
@@ -86,7 +86,7 @@ export const projects = [
     videoUrl: 'assets/videos/react-weather-app-Broadband High.mp4',
     gifUrl: 'assets/videos/react-weather-app.gif',
     alt: 'react weather app gif',
-    isVideo: true
+    isVideo: true,
   },
   {
     title: 'resume.projects.project2.title',
@@ -104,7 +104,7 @@ export const projects = [
     videoUrl: 'assets/videos/web-sockets-chat-Broadband High.mp4',
     gifUrl: 'assets/videos/web-sockets-chat.gif',
     alt: 'web sockets chat react app gif',
-    isVideo: true
+    isVideo: true,
   },
   {
     title: 'resume.projects.project3.title',
@@ -123,7 +123,7 @@ export const projects = [
     videoUrl: 'assets/videos/url-shortener-Broadband High.mp4',
     gifUrl: 'assets/videos/url-shortener.gif',
     alt: 'vue utl shortener app gif',
-    isVideo: true
+    isVideo: true,
   },
   {
     title: 'resume.projects.project4.title',
@@ -142,7 +142,7 @@ export const projects = [
     videoUrl: 'assets/videos/disease-predictor-Broadband High.mp4',
     gifUrl: 'assets/videos/disease-predictor.gif',
     isVideo: true,
-    alt: 'disease predictor app gif'
+    alt: 'disease predictor app gif',
   },
   {
     title: 'resume.projects.project5.title',
@@ -160,22 +160,28 @@ export const projects = [
     videoUrl: 'https://www.youtube.com/embed/-RQZF3_onj4',
     alt: 'smoke detector system video',
     isVideo: true,
-    isYTVideo: true
+    isYTVideo: true,
   },
 ];
 
 export const education = [
   {
+    position: 'resume.education.education0.position',
+    company: 'resume.education.education0.company',
+    city: 'resume.education.education0.city',
+    period: 'resume.education.education0.period',
+    links: [
+      {
+        text: 'resume.education.education0.responsibilities.item1',
+        link: 'https://www.researchgate.net/publication/357430190_Neural_Network_Based_System_for_Disease_Prediction',
+      },
+    ],
+  },
+  {
     position: 'resume.education.education1.position',
     company: 'resume.education.education1.company',
     city: 'resume.education.education1.city',
     period: 'resume.education.education1.period',
-  },
-  {
-    position: 'resume.education.education2.position',
-    company: 'resume.education.education2.company',
-    city: 'resume.education.education2.city',
-    period: 'resume.education.education2.period',
   },
   {
     position: 'resume.education.education3.position',
@@ -192,66 +198,63 @@ export const skills = [
       {
         token: 'resume.skills.professional.js',
         level: 90,
-        priority: 1
+        priority: 1,
       },
       {
         token: 'resume.skills.professional.angular',
         level: 86,
-        priority: 1
+        priority: 1,
       },
       {
         token: 'resume.skills.professional.react',
         level: 83,
-        priority: 1
+        priority: 1,
       },
       {
         token: 'resume.skills.professional.vue',
         level: 65,
-        priority: 2
+        priority: 2,
       },
       {
         token: 'resume.skills.professional.nodeExpress',
         level: 80,
-        priority: 1
+        priority: 1,
       },
       {
         token: 'resume.skills.professional.socket',
         level: 68,
-        priority: 2
+        priority: 2,
       },
       {
         token: 'resume.skills.professional.htmlCss',
         level: 90,
-        priority: 2
+        priority: 2,
       },
       {
         token: 'resume.skills.professional.db',
         level: 72,
-        priority: 2
+        priority: 2,
       },
       {
         token: 'resume.skills.professional.rest',
         level: 82,
-        priority: 2
+        priority: 2,
       },
       {
         token: 'resume.skills.professional.python',
         level: 72,
-        priority: 2
+        priority: 2,
       },
       {
         token: 'resume.skills.professional.php',
         level: 57,
-        priority: 2
-      }
+        priority: 2,
+      },
     ],
   },
   {
     type: 'languages',
-    list: [
-      'resume.skills.languages.english',
-      'resume.skills.languages.romanian',
-    ],
+    list: ['resume.skills.languages.english', 'resume.skills.languages.romanian'],
   },
   {
     type: 'developmentTools',

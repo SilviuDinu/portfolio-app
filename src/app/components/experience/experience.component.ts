@@ -18,6 +18,7 @@ export class ExperienceComponent {
   @Input() repo: string;
   @Input() responsibilities: string[];
   @Input() tools: string[];
+  @Input() links: { text: string; link: string }[];
 
   // Projects
   @Input() title: string;

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { isObject } from 'lodash';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
 @Injectable({

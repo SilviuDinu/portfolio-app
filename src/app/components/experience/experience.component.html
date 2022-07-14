@@ -1,24 +1,11 @@
-<div
-  fxFlex="100%"
-  fxLayout="column"
-  fxLayoutAlign="start start"
-  class="experience-container"
->
+<div fxFlex="100%" fxLayout="column" fxLayoutAlign="start start" class="experience-container">
   <ng-container *ngIf="!isProject; else project">
     <h4 class="position">
       {{ position.toUpperCase() }}
       <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
     </h4>
-    <div
-      fxFlex="100%"
-      fxLayout="row wrap"
-      fxLayoutAlign="start start"
-      fxLayoutGap="8px"
-      class="experience-details"
-    >
-      <span *ngIf="company" class="company detail">{{
-        company | capitalize
-      }}</span>
+    <div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="8px" class="experience-details">
+      <span *ngIf="company" class="company detail">{{ company | capitalize }}</span>
       <span *ngIf="city" class="location detail">{{ city }}</span>
       <span *ngIf="period" class="period detail">{{ period }}</span>
     </div>
@@ -26,6 +13,18 @@
       <ul role="list" class="responsibilities">
         <li *ngFor="let item of responsibilities" role="listitem">
           <span class="responsibility">{{ item | token }}</span>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="links?.length" class="experience-links">
+      <ul role="list" class="links-list">
+        <li *ngFor="let item of links" role="listitem">
+          <div class="links">
+            <span class="link-text">{{ item.text | token }}: </span>
+            <a [href]="item.link | token" rel="nopener" target="_blank" class="link">{{
+              item.link | token
+            }}</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -37,16 +36,8 @@
     {{ title.toUpperCase() }}
     <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
   </h4>
-  <div
-    fxFlex="100%"
-    fxLayout="row wrap"
-    fxLayoutAlign="start start"
-    fxLayoutGap="8px"
-    class="experience-details"
-  >
-    <span *ngIf="company" class="company detail">{{
-      company | capitalize
-    }}</span>
+  <div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="8px" class="experience-details">
+    <span *ngIf="company" class="company detail">{{ company | capitalize }}</span>
     <span *ngIf="city" class="location detail">{{ city }}</span>
     <span *ngIf="period" class="period detail">{{ period }}</span>
   </div>

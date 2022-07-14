@@ -16,8 +16,8 @@ export class MainComponent extends Responsive implements AfterViewInit {
   constructor(private sidenavService: SidenavService, private router: Router) {
     super();
 
-    /* 
-    Automatically close the sidenav after 
+    /*
+    Automatically close the sidenav after
     clicking on a route for mobile / tablet
     */
     this.router.events

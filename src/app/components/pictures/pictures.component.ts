@@ -62,7 +62,7 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
         break;
       case 2:
         this.picGroups.push(
-          this.pictures.slice(0, Math.ceil(this.pictures.length / 2)),
+          this.pictures.slice(0, Math.ceil(this.pictures.length / 2) - 1),
           this.pictures.slice(Math.ceil(this.pictures.length / 2))
         );
         break;
@@ -71,9 +71,9 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
           this.pictures.slice(0, Math.ceil(this.pictures.length / 3)),
           this.pictures.slice(
             Math.ceil(this.pictures.length / 3),
-            Math.ceil(this.pictures.length / 2 + 1)
+            Math.ceil(this.pictures.length / 3) * 2
           ),
-          this.pictures.slice(this.pictures.length / 2 + 1)
+          this.pictures.slice(Math.ceil(this.pictures.length / 3) * 2)
         );
         break;
     }

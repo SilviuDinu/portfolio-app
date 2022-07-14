@@ -4,27 +4,33 @@
     margin-right: 4px;
   }
 
+  line-height: 18pt;
+
   a {
     word-wrap: break-word;
     width: 100%;
   }
-  .experience-details,
-  .description {
-    margin-top: 8px;
-    width: 100%;
 
-    .detail {
-      font-weight: 300;
-      &:not(:last-child) {
-        &::after {
-          content: " | ";
-          margin-left: 4px;
-        }
+  .detail {
+    margin-top: 0;
+    font-weight: 300;
+    &:not(:last-child) {
+      &::after {
+        content: ' | ';
+        margin-left: 4px;
       }
     }
   }
+
+  .description {
+    width: 100%;
+    margin-top: 8px;
+  }
+
   .experience-responsibilities,
-  .experience-tools {
+  .experience-tools,
+  .experience-links {
+    margin-top: 4px;
     .responsibilities {
       li {
         margin-top: 8px;
@@ -36,10 +42,16 @@
       .tool {
         &:not(:last-child) {
           &::after {
-            content: ", ";
+            content: ', ';
           }
         }
       }
+    }
+
+    .links {
+      margin-top: 8px;
+      word-break: break-word;
+      width: 100%;
     }
   }
 
