@@ -43,6 +43,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { GamesComponent } from './components/games/games.component';
 import { GridListComponent } from './components/grid-list/grid-list.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { InViewDirective } from './directives/in-view.directive';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     GamesComponent,
     GridListComponent,
     ProjectCardComponent,
+    InViewDirective,
   ],
   imports: [
     BrowserModule,

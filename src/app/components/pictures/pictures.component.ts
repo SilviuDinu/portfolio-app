@@ -1,17 +1,25 @@
 import { Responsive } from '@abstracts/responsive.abstract';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
+import { slideRightLeft } from '@constants/animations';
 import { Picture } from '@models/picture.model';
-import { Observable, Subscription } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { combineLatest, Observable, Subject, Subscription } from 'rxjs';
+import { filter, map, takeUntil, withLatestFrom } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pictures',
   templateUrl: './pictures.component.html',
   styleUrls: ['./pictures.component.scss'],
+  animations: [slideRightLeft]
 })
 export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
   @Input() pictures: Picture[];
+  private readonly ngDestroy$ = new Subject<void>();
 
   picGroups: any[] = [];
   wrap$: Observable<any>;
@@ -26,29 +34,40 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.buildLayout(2);
-
-    this.subscribtions.push(
-      this.isHandset$.pipe(filter((isHandset) => !!isHandset)).subscribe(() => {
+    this.isHandset$
+      .pipe(
+        filter((a) => !!a),
+        takeUntil(this.ngDestroy$)
+      )
+      .subscribe(() => {
         this.buildLayout(2);
-      }),
-      this.isTablet$.pipe(filter((isTablet) => !!isTablet)).subscribe(() => {
-        window.innerHeight < window.innerWidth ? this.buildLayout(3) : this.buildLayout(2);
-      }),
-      this.isUpToMedium$.pipe(filter((isUpToMedium) => !!isUpToMedium)).subscribe(() => {
-        if (window.innerWidth > 900) {
-          this.buildLayout(3);
-        } else {
-          this.buildLayout(2);
-        }
-      }),
-      this.isBeyondLarge$.pipe(filter((isBeyondLarge) => !!isBeyondLarge)).subscribe(() => {
-        this.buildLayout(3);
-      })
-    );
+      });
+
+    combineLatest([this.isTablet$, this.isLarge$])
+      .pipe(
+        filter(([a, b]) => !!a),
+        takeUntil(this.ngDestroy$)
+      )
+      .subscribe(([, isLarge]) => {
+        window.innerHeight < window.innerWidth || isLarge
+          ? this.buildLayout(3)
+          : this.buildLayout(2);
+      });
+
+    combineLatest([this.isDesktop$, this.isLarge$])
+      .pipe(
+        filter(([a, b]) => !!a),
+        takeUntil(this.ngDestroy$)
+      )
+      .subscribe(([, isLarge]) => {
+        isLarge ? this.buildLayout(3) : this.buildLayout(2);
+      });
   }
 
   buildLayout(cols: number) {
+    if (cols === this.picGroups.length) {
+      return;
+    }
     this.picGroups = [];
     switch (cols) {
       case 1:
@@ -65,7 +84,10 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
       case 3:
         this.picGroups.push(
           this.pictures.slice(0, Math.ceil(this.pictures.length / 3)),
-          this.pictures.slice(Math.ceil(this.pictures.length / 3), Math.ceil(this.pictures.length / 3) * 2),
+          this.pictures.slice(
+            Math.ceil(this.pictures.length / 3),
+            Math.ceil(this.pictures.length / 3) * 2
+          ),
           this.pictures.slice(Math.ceil(this.pictures.length / 3) * 2)
         );
         break;
@@ -73,6 +95,7 @@ export class PicturesComponent extends Responsive implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscribtions.forEach((sub: Subscription) => sub.unsubscribe());
+    this.ngDestroy$.next();
+    this.ngDestroy$.complete();
   }
 }

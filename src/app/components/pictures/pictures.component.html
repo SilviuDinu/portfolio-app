@@ -4,6 +4,7 @@
   [fxLayout.gt-md]="(wrap$ | async) ? 'column' : 'row'"
   fxLayoutAlign="start start"
   fxFlex="100%"
+  [@slideRightLeft]
 >
   <div class="picture" *ngFor="let groups of picGroups">
     <a

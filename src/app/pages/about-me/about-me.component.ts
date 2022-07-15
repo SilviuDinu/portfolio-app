@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { tech } from '@constants/about-me';
+import { slideRightLeft } from '@constants/animations';
 import { pictures, skating } from '@constants/pictures';
 import { Picture } from '@models/picture.model';
 import { EndpointService } from '@services/endpoint.service';
@@ -9,6 +10,7 @@ import { take } from 'rxjs/operators';
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
+  animations: [slideRightLeft]
 })
 export class AboutMeComponent {
   pictures: Picture[];
