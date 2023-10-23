@@ -1,4 +1,4 @@
-@import "../../../breakpoints.scss";
+@import '../../../breakpoints.scss';
 
 .grid-container {
   width: 100%;
@@ -22,6 +22,9 @@
   &:not(:first-child) {
     @media screen and (max-width: 420px) {
       margin-top: 16px;
+    }
+    @media print {
+      margin-top: 8px;
     }
   }
 }

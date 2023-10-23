@@ -1,4 +1,4 @@
-@import "../breakpoints.scss";
+@import '../breakpoints.scss';
 
 .container {
   width: 100%;
@@ -10,7 +10,7 @@
   }
 
   @media screen and (min-width: #{$md}) {
-    background: url("/assets/images/background.jpg");
+    background: url('/assets/images/background.jpg');
     background-size: cover;
     background-position: 50% 50%;
   }

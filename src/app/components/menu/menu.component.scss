@@ -13,6 +13,9 @@
     text-align: center;
     list-style-type: none;
     line-height: 24px;
+    @media print {
+      display: none;
+    }
   }
 
   li.menu-item {
@@ -20,6 +23,9 @@
     height: 48px;
     width: 100%;
     font-size: 1rem;
+    @media print {
+      font-size: 12px;
+    }
     text-align: center;
     vertical-align: middle;
 

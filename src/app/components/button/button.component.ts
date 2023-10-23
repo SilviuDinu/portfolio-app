@@ -10,6 +10,7 @@ export class ButtonComponent {
   @Input() icon: string;
   @Input() isDownload = false;
   @Input() isUrl = false;
+  @Input() isTransparent = false;
   @Input() url: string;
   @Input() downloadUrl: string;
   @Input() type: string = 'button';

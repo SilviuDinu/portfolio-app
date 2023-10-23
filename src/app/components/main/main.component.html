@@ -1,29 +1,14 @@
 <app-header *ngIf="isUpToMedium$ | async"></app-header>
 
 <mat-sidenav-container class="app-main-container">
-  <mat-sidenav
-    #sidenavMenu
-    role="navigation"
-    aria-label="Panel"
-    fixedInViewport
-    [autoFocus]="false"
-    [disableClose]="(isUpToMedium$ | async) ? false : true"
-    fxFlex
-    fxLayoutAlign="center center"
-    fxLayout="column"
-    [mode]="(isUpToMedium$ | async) ? 'over' : 'side'"
-    class="app-main-sidenav"
-    [opened]="(isUpToMedium$ | async) ? false : true"
-    [class.mobile]="isUpToMedium$ | async"
-  >
+  <mat-sidenav #sidenavMenu role="navigation" aria-label="Panel" fixedInViewport [autoFocus]="false"
+    [disableClose]="(isUpToMedium$ | async) ? false : true" fxFlex fxLayoutAlign="center center" fxLayout="column"
+    [mode]="(isUpToMedium$ | async) ? 'over' : 'side'" class="app-main-sidenav"
+    [opened]="(isUpToMedium$ | async) ? false : true" [class.mobile]="isUpToMedium$ | async">
     <app-menu></app-menu>
   </mat-sidenav>
 
-  <mat-sidenav-content
-    fxFlex
-    fxLayoutAlign="start start"
-    class="app-main-content"
-  >
+  <mat-sidenav-content fxFlex fxLayoutAlign="start start" class="app-main-content">
     <main>
       <div id="main">
         <router-outlet></router-outlet>

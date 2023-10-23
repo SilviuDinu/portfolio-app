@@ -1,4 +1,4 @@
-@import "../../../colors.scss";
+@import '../../../colors.scss';
 
 .page-header {
   width: 100%;
@@ -11,6 +11,10 @@
 .title {
   width: 100%;
   white-space: nowrap;
+
+  @media print {
+    font-size: 18px !important;
+  }
 }
 
 mat-icon {

@@ -1,4 +1,4 @@
-@import "../../../colors.scss";
+@import '../../../colors.scss';
 
 a.btn {
   text-decoration: none;
@@ -9,8 +9,11 @@ a.btn {
   min-width: 60px;
   border: 0;
   border-radius: 40px;
-  padding: 0;
   font-size: 16px;
+  @media print {
+    font-size: 12px;
+    height: 30px;
+  }
   outline: none;
   cursor: pointer;
   font-weight: 400;
@@ -20,13 +23,11 @@ a.btn {
     // outline-ra
   }
 
+  &.transparent {
+    background-color: transparent;
+  }
 
   &.primary {
-    span {
-      span {
-        padding: 8px 16px;
-      }
-    }
     background-color: $primary-btn-bg;
     color: #ecf3ff;
 

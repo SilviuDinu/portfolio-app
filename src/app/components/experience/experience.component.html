@@ -1,6 +1,6 @@
 <div fxFlex="100%" fxLayout="column" fxLayoutAlign="start start" class="experience-container">
   <ng-container *ngIf="!isProject; else project">
-    <h4 class="position">
+    <h4 *ngIf="position" class="position">
       {{ position.toUpperCase() }}
       <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
     </h4>
@@ -23,7 +23,7 @@
             <span class="link-text">{{ item.text | token }}: </span>
             <a [href]="item.link | token" rel="nopener" target="_blank" class="link">{{
               item.link | token
-            }}</a>
+              }}</a>
           </div>
         </li>
       </ul>
@@ -43,6 +43,10 @@
   </div>
   <div class="description">
     <span>{{ description }}</span>
+  </div>
+  <div *ngIf="credentialLink" class="credential">
+    <app-button [icon]="'outward'" [isUrl]="true" [url]="credentialLink" [text]="'View credential'"
+      type="secondary"></app-button>
   </div>
   <div *ngIf="tools?.length > 0" class="experience-tools">
     <div role="list" class="tools">

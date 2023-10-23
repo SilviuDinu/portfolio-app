@@ -9,6 +9,9 @@ app-horizontal-divider {
 
 .resume-content-parapgraph {
   width: 100%;
+  @media print {
+    margin-bottom: 20px !important;
+  }
 }
 
 app-content {

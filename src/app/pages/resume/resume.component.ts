@@ -1,11 +1,7 @@
 import { Responsive } from '@abstracts/responsive.abstract';
 import { Component } from '@angular/core';
-import {
-  education,
-  projects,
-  skills,
-  workExperience,
-} from '@constants/work-experience';
+import { certifications, education, projects, skills, workExperience } from '@constants/work-experience';
+import { Certification } from '@models/certification.model';
 import { Experience } from '@models/experience.model';
 import { Project } from '@models/project.model';
 import { Skill } from '@models/skill.model';
@@ -17,6 +13,7 @@ import { Skill } from '@models/skill.model';
 })
 export class ResumeComponent extends Responsive {
   experiences: Experience[] = workExperience;
+  certifications: Certification[] = certifications;
   projects: Project[] = projects;
   education: Experience[] = education;
   skills: Skill[] = skills;

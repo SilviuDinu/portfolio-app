@@ -46,6 +46,7 @@ export class IconProviderService {
     ['postgres', 'postgresql.svg'],
     ['rxjs', 'rxjs.svg'],
     ['html', 'html.svg'],
+    ['outward', 'outward.svg'],
     ['css', 'css.svg'],
     ['sass', 'sass.svg'],
     ['python', 'python.svg'],
@@ -60,19 +61,11 @@ export class IconProviderService {
     ['skate', 'skate.svg'],
   ];
 
-  constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
-  ) {}
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {}
 
   init() {
     this.icons.forEach((icon) => {
-      this.matIconRegistry.addSvgIcon(
-        icon[0],
-        this.domSanitizer.bypassSecurityTrustResourceUrl(
-          `assets/icons/${icon[1]}`
-        )
-      );
+      this.matIconRegistry.addSvgIcon(icon[0], this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${icon[1]}`));
     });
   }
 }

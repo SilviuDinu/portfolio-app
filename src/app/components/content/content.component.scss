@@ -1,4 +1,4 @@
-@import "../../../breakpoints.scss";
+@import '../../../breakpoints.scss';
 
 .content,
 .content-section {
@@ -11,4 +11,8 @@
 
 .content-display {
   line-height: 20pt;
+  @media print {
+    font-size: 12px;
+    line-height: 1.5 !important;
+  }
 }

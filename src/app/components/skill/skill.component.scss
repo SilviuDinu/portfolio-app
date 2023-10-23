@@ -3,13 +3,18 @@
   // margin-bottom: 8px;
 }
 
-.skill-name, .skill-level {
+.skill-name,
+.skill-level {
   width: 100%;
 }
 
 .skill-level {
   margin-bottom: 8px;
   // margin-top: 8px;
+
+  @media print {
+    display: none;
+  }
 
   mat-progress-bar {
     height: 12px;

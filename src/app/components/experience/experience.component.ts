@@ -11,6 +11,7 @@ export class ExperienceComponent {
 
   @Input() position: string;
   @Input() company: string;
+  @Input() credentialLink?: string;
   @Input() icon: string;
   @Input() city: string;
   @Input() period: string;

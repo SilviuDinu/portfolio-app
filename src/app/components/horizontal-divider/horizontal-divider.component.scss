@@ -4,7 +4,12 @@
   mat-divider {
     margin-top: 8px;
     margin-bottom: 8px;
-   
+
+    @media print {
+      margin-top: 4px !important;
+      margin-bottom: 4px !important;
+    }
+
     &.max {
       width: 100%;
     }
