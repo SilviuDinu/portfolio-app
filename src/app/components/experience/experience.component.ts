@@ -28,8 +28,9 @@ export class ExperienceComponent {
 
   get elapsedTime() {
     const [startDate, endDateString] = this.period?.split(' - ');
-    const endDate = endDateString.toLowerCase() === 'present' ? moment() : moment(endDateString);
-    const totalMonths = endDate.diff(moment(startDate), 'months');
+    const format = 'MMM YYYY';
+    const endDate = endDateString.toLowerCase() === 'present' ? moment() : moment(endDateString, format);
+    const totalMonths = endDate.diff(moment(startDate, format), 'months');
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
 
