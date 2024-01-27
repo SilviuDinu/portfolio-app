@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import moment from 'moment';
 
 @Component({
   selector: 'app-experience',
@@ -24,6 +25,22 @@ export class ExperienceComponent {
 
   // Projects
   @Input() title: string;
+
+  get elapsedTime() {
+    const [startDate, endDateString] = this.period?.split(' - ');
+    const endDate = endDateString.toLowerCase() === 'present' ? moment() : moment(endDateString);
+    const totalMonths = endDate.diff(moment(startDate), 'months');
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+
+    if (years === 0) {
+      return `${months} mo${months !== 1 ? 's' : ''}`;
+    } else if (months === 0) {
+      return `${years} yr${years !== 1 ? 's' : ''}`;
+    }
+
+    return `${years} yr${years !== 1 ? 's' : ''} ${months} mo${months !== 1 ? 's' : ''}`;
+  }
 
   constructor() {}
 }

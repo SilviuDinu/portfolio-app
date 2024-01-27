@@ -14,12 +14,28 @@
 
 export const workExperience = [
   {
+    title: 'London Stock Exchange Group',
+    position: 'resume.experiences.lseg.position',
+    company: 'resume.experiences.lseg.company',
+    city: 'resume.experiences.lseg.city',
+    period: 'resume.experiences.lseg.period',
+    icon: 'lseg-logo',
+    responsibilities: [
+      'resume.experiences.lseg.responsibilities.item1',
+      'resume.experiences.lseg.responsibilities.item2',
+    ],
+  },
+  {
     title: 'Cognizant',
     position: 'resume.experiences.cognizant.position',
     company: 'resume.experiences.cognizant.company',
     city: 'resume.experiences.cognizant.city',
     period: 'resume.experiences.cognizant.period',
-    responsibilities: ['resume.experiences.cognizant.responsibilities.item1', 'resume.experiences.cognizant.responsibilities.item2'],
+    icon: 'cognizant-logo',
+    responsibilities: [
+      'resume.experiences.cognizant.responsibilities.item1',
+      'resume.experiences.cognizant.responsibilities.item2',
+    ],
   },
   {
     title: 'EPAM Systems',
@@ -27,7 +43,11 @@ export const workExperience = [
     company: 'resume.experiences.epam.company',
     city: 'resume.experiences.epam.city',
     period: 'resume.experiences.epam.period',
-    responsibilities: ['resume.experiences.epam.responsibilities.item1', 'resume.experiences.epam.responsibilities.item2'],
+    icon: 'epam-logo',
+    responsibilities: [
+      'resume.experiences.epam.responsibilities.item1',
+      'resume.experiences.epam.responsibilities.item2',
+    ],
   },
   {
     title: 'Deloitte Digital',
@@ -35,7 +55,11 @@ export const workExperience = [
     company: 'resume.experiences.experience1.company',
     city: 'resume.experiences.experience1.city',
     period: 'resume.experiences.experience1.period',
-    responsibilities: ['resume.experiences.experience1.responsibilities.item1', 'resume.experiences.experience1.responsibilities.item2'],
+    icon: 'deloitte-digital-logo',
+    responsibilities: [
+      'resume.experiences.experience1.responsibilities.item1',
+      'resume.experiences.experience1.responsibilities.item2',
+    ],
   },
   {
     title: 'Themeisle',
@@ -43,7 +67,11 @@ export const workExperience = [
     company: 'resume.experiences.experience2.company',
     city: 'resume.experiences.experience2.city',
     period: 'resume.experiences.experience2.period',
-    responsibilities: ['resume.experiences.experience2.responsibilities.item1', 'resume.experiences.experience2.responsibilities.item2'],
+    icon: 'themeisle-logo',
+    responsibilities: [
+      'resume.experiences.experience2.responsibilities.item1',
+      'resume.experiences.experience2.responsibilities.item2',
+    ],
   },
 ];
 

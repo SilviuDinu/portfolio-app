@@ -7,7 +7,7 @@
     <div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="8px" class="experience-details">
       <span *ngIf="company" class="company detail">{{ company | capitalize }}</span>
       <span *ngIf="city" class="location detail">{{ city }}</span>
-      <span *ngIf="period" class="period detail">{{ period }}</span>
+      <span *ngIf="period" class="period detail">{{ period }} · {{ elapsedTime }}</span>
     </div>
     <div *ngIf="responsibilities?.length" class="experience-responsibilities">
       <ul role="list" class="responsibilities">

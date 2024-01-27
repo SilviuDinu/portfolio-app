@@ -65,7 +65,10 @@ export class IconProviderService {
 
   init() {
     this.icons.forEach((icon) => {
-      this.matIconRegistry.addSvgIcon(icon[0], this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${icon[1]}`));
+      this.matIconRegistry.addSvgIcon(
+        icon[0],
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${icon[1]}`)
+      );
     });
   }
 }
