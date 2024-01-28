@@ -10,43 +10,51 @@ import './style.scss';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile] = useDimensions();
-  const sidenavRef = useRef<HTMLDivElement>();
+  const navRef = useRef<HTMLDivElement>();
 
   const openSidenav = useCallback(() => {
     setIsOpen(true);
   }, []);
 
-  const closeSidenav = useCallback(() => {
+  const closeSidenav = useCallback((event?: React.MouseEvent<SVGSVGElement> | MouseEvent) => {
+    if (event) {
+      event.stopPropagation();
+    }
+
     setIsOpen(false);
   }, []);
 
-  useClickOutside(sidenavRef, closeSidenav);
+  useClickOutside(navRef, closeSidenav);
 
   return (
-    <nav className='navbar flex-row center'>
-      {!isMobile ? (
-        <Menu className='flex-row center' />
-      ) : (
-        <div className='mobile-header'>
-          {isOpen ? (
-            <CloseIcon
-              className='trigger'
+    <>
+      {isOpen && <div className='overlay'></div>}
+      <nav
+        ref={navRef}
+        className='navbar flex-row center'>
+        {!isMobile ? (
+          <Menu className='flex-row center' />
+        ) : (
+          <div className='mobile-header'>
+            {isOpen ? (
+              <CloseIcon
+                className='trigger'
+                onClick={closeSidenav}
+              />
+            ) : (
+              <HamburgerMenuIcon
+                className='trigger'
+                onClick={openSidenav}
+              />
+            )}
+            <Sidenav
+              isOpen={isOpen}
               onClick={closeSidenav}
             />
-          ) : (
-            <HamburgerMenuIcon
-              className='trigger'
-              onClick={openSidenav}
-            />
-          )}
-          <Sidenav
-            ref={sidenavRef}
-            isOpen={isOpen}
-            onClick={closeSidenav}
-          />
-        </div>
-      )}
-    </nav>
+          </div>
+        )}
+      </nav>
+    </>
   );
 };
 
