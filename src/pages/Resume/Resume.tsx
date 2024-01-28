@@ -1,8 +1,12 @@
+import Page from '@components/Page/Page';
+
 const Resume = () => {
   return (
-    <div className='resume page'>
-      <h1 className='title'>Resume</h1>
-    </div>
+    <Page
+      title='Resume'
+      className='resume'>
+      cucu
+    </Page>
   );
 };
 

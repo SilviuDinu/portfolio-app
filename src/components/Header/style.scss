@@ -1,10 +1,30 @@
 @import '@styles/variables.scss';
+@import '@styles/mixins.scss';
 
 .navbar {
-  gap: 2rem;
   height: $navbar-height;
+  border-bottom: 0.1px solid #464444;
+  background-color: $dark-bg-color;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
 
-  .menu-item {
-    font-size: 1.6rem;
+  @include small {
+    height: calc($navbar-height / 1.5);
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.2rem;
+    .trigger {
+      margin-left: auto;
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: $basic-green;
+    }
   }
 }

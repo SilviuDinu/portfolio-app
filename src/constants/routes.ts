@@ -9,31 +9,31 @@ const ContactPage = React.lazy(() => import('@pages/Contact/Contact'));
 
 const routes: Route[] = [
   {
-    label: 'Home',
+    label: '/home',
     path: '/home',
     component: HomePage,
     isIndexRoute: true,
   },
   {
-    label: 'About me',
+    label: '/about me',
     path: '/about-me',
     component: AboutMePage,
     isIndexRoute: false,
   },
   {
-    label: 'Resume',
+    label: '/resume',
     path: '/resume',
     component: ResumePage,
     isIndexRoute: false,
   },
   {
-    label: 'projects',
-    path: '/Projects',
+    label: '/projects',
+    path: '/projects',
     component: ProjectsPage,
     isIndexRoute: false,
   },
   {
-    label: 'Contact',
+    label: '/contact',
     path: '/contact',
     component: ContactPage,
     isIndexRoute: false,

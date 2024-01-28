@@ -1,8 +1,12 @@
+import Page from '@components/Page/Page';
+
 const AboutMe = () => {
   return (
-    <div className='about-me page'>
-      <h1 className='title'>About me</h1>
-    </div>
+    <Page
+      title='About me'
+      className='about-me'>
+      cucu
+    </Page>
   );
 };
 

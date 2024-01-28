@@ -14,6 +14,7 @@ export const Routes = () => {
               key={idx}
               index={isIndexRoute}
               path={path}
+              exact
               element={<Page />}
             />
           );

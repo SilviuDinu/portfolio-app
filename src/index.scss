@@ -10,7 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0 !important;
-  background-color: #f9fafa;
+  background-color: $dark-bg-color;
+  color: $white-text-color;
 }
 
 code {

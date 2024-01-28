@@ -22,18 +22,14 @@
     "paths": {
       "@*": ["src/*"],
       "@assets/*": ["src/assets/*"],
-      "@auth/*": ["src/auth/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@contexts/*": ["src/contexts/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
-      "@reducers/*": ["src/reducers/*"],
-      "@store/*": ["src/store/*"],
       "@hooks/*": ["src/hooks/*"],
       "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"],
-      "@api/*": ["src/api/*"]
+      "@helpers/*": ["src/helpers/*"]
     }
   },
   "include": ["src/**/*"],

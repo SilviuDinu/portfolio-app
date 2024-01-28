@@ -1,9 +1,10 @@
+@import '@styles/grid-breakpoints.scss';
+
 $sizes: 12;
 
 @mixin margin-classes {
   @for $i from 1 through $sizes {
     $margin: $i * 0.25rem;
-    /* margin #{$margin} */
     .m-#{$i} {
       margin: $margin;
     }
@@ -30,3 +31,27 @@ $sizes: 12;
   }
 }
 @include margin-classes;
+
+@mixin extra-small {
+  @media screen and (max-width: #{$xs + 0.9}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{$sm + 0.9}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: #{$lg + 1}) {
+    @content;
+  }
+}
+
+@mixin not-small {
+  @media screen and (min-width: #{$sm + 1}) {
+    @content;
+  }
+}

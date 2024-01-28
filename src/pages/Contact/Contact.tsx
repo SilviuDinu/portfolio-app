@@ -1,8 +1,12 @@
+import Page from '@components/Page/Page';
+
 const Contact = () => {
   return (
-    <div className='contact page'>
-      <h1 className='title'>Contact</h1>
-    </div>
+    <Page
+      title='Contact'
+      className='contact'>
+      cucu
+    </Page>
   );
 };
 

@@ -1,8 +1,12 @@
+import Page from '@components/Page/Page';
+
 const Projects = () => {
   return (
-    <div className='projects page'>
-      <h1 className='title'>Projects</h1>
-    </div>
+    <Page
+      title='Projects'
+      className='projects'>
+      cucu
+    </Page>
   );
 };
 

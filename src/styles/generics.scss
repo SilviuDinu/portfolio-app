@@ -10,6 +10,14 @@
   }
 }
 
+.desktop {
+  @media screen and (max-width: #{$sm}) {
+    display: none;
+  }
+
+  display: block;
+}
+
 .hide-on-mobile {
   @media screen and (max-width: #{$sm}) {
     display: none !important;

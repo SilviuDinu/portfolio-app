@@ -1,8 +1,20 @@
+import Blinker from '@components/Blinker/Blinker';
+import Page from '@components/Page/Page';
+import './style.scss';
+
 const Home = () => {
   return (
-    <div className='home page'>
-      <h1 className='title'>Home</h1>
-    </div>
+    <Page
+      title={
+        <Blinker
+          as='h1'
+          text={"Hi, I'm Silviu"}
+          className='title'
+        />
+      }
+      className='home'>
+      cucu
+    </Page>
   );
 };
 

@@ -43,6 +43,10 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      },
+      {
         test: /\.(png|jpg|gif|pdf)$/i,
         use: [
           {
@@ -65,18 +69,14 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@assets': path.resolve(__dirname, 'src/assets'),
-      '@auth': path.resolve(__dirname, 'src/auth'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@constants': path.resolve(__dirname, 'src/constants'),
       '@models': path.resolve(__dirname, 'src/models'),
       '@contexts': path.resolve(__dirname, 'src/contexts'),
       '@pages': path.resolve(__dirname, 'src/pages'),
-      '@reducers': path.resolve(__dirname, 'src/reducers'),
-      '@store': path.resolve(__dirname, 'src/store'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@styles': path.resolve(__dirname, 'src/styles'),
-      '@utils': path.resolve(__dirname, 'src/utils'),
-      '@api': path.resolve(__dirname, 'src/api'),
+      '@helpers': path.resolve(__dirname, 'src/helpers'),
     },
   },
   output: {
