@@ -1,0 +1,26 @@
+@import './styles/grid-breakpoints.scss';
+@import './styles/variables.scss';
+@import './styles/generics.scss';
+@import './styles/mixins.scss';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.page-container {
+  background-color: #f9fafa;
+  height: 100vh;
+  position: relative;
+
+  .page {
+    .title {
+      font-weight: 700;
+      font-size: 15rem;
+    }
+  }
+}

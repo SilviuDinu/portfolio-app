@@ -1,0 +1,10 @@
+@import '@styles/variables.scss';
+
+.navbar {
+  gap: 2rem;
+  height: $navbar-height;
+
+  .menu-item {
+    font-size: 1.6rem;
+  }
+}

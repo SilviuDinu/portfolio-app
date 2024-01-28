@@ -1,0 +1,51 @@
+{
+  "name": "portfolio-app",
+  "version": "1.0.0",
+  "description": "A portfolio app created by Silviu Dinu",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
+    "dev": "NODE_ENV=development webpack serve --config webpack.config.js --mode development",
+    "build": "NODE_ENV=production webpack --config webpack.config.js --mode production"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.19",
+    "@types/react-dom": "^18.0.6",
+    "classnames": "^2.3.2",
+    "file-loader": "^6.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.49.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.19.0",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilviuDinu/portfolio-app.git"
+  },
+  "author": "Silviu Dinu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilviuDinu/portfolio-app/issues"
+  },
+  "homepage": "https://github.com/SilviuDinu/portfolio-app#readme"
+}

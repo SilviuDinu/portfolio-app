@@ -1,0 +1,27 @@
+@import './App.scss';
+
+* {
+  font-family: 'IBM Plex Mono', monospace;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
+  background-color: #f9fafa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+  text-align: center;
+  word-break: break-word;
+}
+
+hr {
+  margin: 32px 0;
+}
