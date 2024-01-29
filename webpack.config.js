@@ -17,7 +17,15 @@ if (mode === 'production') {
   plugins.push(new CleanWebpackPlugin());
   plugins.push(
     new CopyPlugin({
-      patterns: [{ from: 'src/assets', to: 'assets' }],
+      patterns: [
+        {
+          from: 'src/assets',
+          to: 'assets',
+          globOptions: {
+            ignore: ['**/content/**'], // Ignore everything inside /assets/content
+          },
+        },
+      ],
     })
   );
 }
@@ -71,6 +79,7 @@ module.exports = {
       '@assets': path.resolve(__dirname, 'src/assets'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@constants': path.resolve(__dirname, 'src/constants'),
+      '@services': path.resolve(__dirname, 'src/services'),
       '@models': path.resolve(__dirname, 'src/models'),
       '@contexts': path.resolve(__dirname, 'src/contexts'),
       '@pages': path.resolve(__dirname, 'src/pages'),

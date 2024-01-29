@@ -6,5 +6,6 @@ footer {
   border-top: 0.1px solid $light-grey;
   position: relative;
   width: 100%;
-  bottom: 0;
+  bottom: -$navbar-height;
+  // margin-top: auto;
 }

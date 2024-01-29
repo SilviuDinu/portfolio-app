@@ -1,5 +1,6 @@
+import useDelayedRender from '@hooks/useDelayedRender';
 import classNames from 'classnames';
-import { PropsWithChildren, useMemo } from 'react';
+import { PropsWithChildren, useLayoutEffect, useMemo } from 'react';
 import './style.scss';
 
 export interface PageProps extends PropsWithChildren {
@@ -16,6 +17,10 @@ const Page = ({ className, title, children }: PageProps) => {
     return title;
   }, [title]);
 
+  useLayoutEffect(() => {
+    window?.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className={classNames('page', className)}>
       {title && <section className='title-container'>{titleElement}</section>}
@@ -24,4 +29,8 @@ const Page = ({ className, title, children }: PageProps) => {
   );
 };
 
-export default Page;
+const PageWrapper = (props: PageProps) => {
+  return useDelayedRender(<Page {...props} />, 1000);
+};
+
+export default PageWrapper;

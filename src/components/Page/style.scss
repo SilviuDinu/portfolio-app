@@ -8,20 +8,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // margin-top: $navbar-height;
+  margin-top: $navbar-height;
+  color: $green;
   .title-container {
     display: flex;
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    // margin-top: -$navbar-height;
   }
   .title {
     font-weight: 700;
     font-size: 12rem;
-    color: $basic-green;
     margin: 0;
     word-break: break-word;
     max-width: 85%;

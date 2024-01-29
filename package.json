@@ -4,9 +4,10 @@
   "description": "A portfolio app created by Silviu Dinu",
   "main": "index.js",
   "scripts": {
+    "combine-tokens": "node combineTokens.js",
     "start": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
-    "dev": "NODE_ENV=development webpack serve --config webpack.config.js --mode development",
-    "build": "NODE_ENV=production webpack --config webpack.config.js --mode production"
+    "dev": "node combineTokens.js && NODE_ENV=development webpack serve --config webpack.config.js --mode development",
+    "build": "node combineTokens.js && NODE_ENV=production webpack --config webpack.config.js --mode production"
   },
   "dependencies": {
     "@types/react": "^18.0.19",

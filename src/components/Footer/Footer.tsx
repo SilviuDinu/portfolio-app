@@ -1,7 +1,9 @@
+import contentService from '@services/content.service';
 import './style.scss';
 
 const Footer = () => {
-  return <footer className='footer flex-row center'>Made with 💚 by Silviu Dinu</footer>;
+  const footerContent = contentService.getFooter();
+  return <footer className='footer flex-row center'>{footerContent}</footer>;
 };
 
 export default Footer;

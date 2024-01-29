@@ -25,6 +25,7 @@
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@contexts/*": ["src/contexts/*"],
+      "@services/*": ["src/services/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@hooks/*": ["src/hooks/*"],
@@ -32,6 +33,6 @@
       "@helpers/*": ["src/helpers/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "combineTokens.js"],
   "exclude": ["node_modules"]
 }

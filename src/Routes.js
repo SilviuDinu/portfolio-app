@@ -1,3 +1,4 @@
+import Loader from '@components/Loader/Loader';
 import React, { Suspense } from 'react';
 import { Navigate, Route, Routes as Switch } from 'react-router-dom';
 import routes from './constants/routes';
@@ -6,7 +7,7 @@ const NotFoundPage = React.lazy(() => import('@pages/NotFound/NotFound'));
 
 export const Routes = () => {
   return (
-    <Suspense fallback={<h2>Loading...</h2>}>
+    <Suspense fallback={<Loader />}>
       <Switch>
         {routes.map(({ path, component: Page, isIndexRoute }, idx) => {
           return (
