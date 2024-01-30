@@ -2,8 +2,13 @@
 @import './styles/variables.scss';
 @import './styles/generics.scss';
 @import './styles/mixins.scss';
+@import '@pages/Contact/style.scss';
 
 .page-container {
-  height: 100vh;
+  height: calc(100vh - (3 * $navbar-height) / 2);
   position: relative;
+}
+
+svg {
+  fill: currentColor;
 }

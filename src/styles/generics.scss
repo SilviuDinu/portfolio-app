@@ -73,8 +73,22 @@ button {
   height: 100vh;
 }
 
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.6rem;
+}
+
 button {
   cursor: pointer;
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: $green;
 }
 
 .flex-row {

@@ -44,14 +44,14 @@ $sizes: 12;
   }
 }
 
-@mixin large {
-  @media screen and (min-width: #{$lg + 1}) {
+@mixin medium {
+  @media screen and (max-width: #{$md + 0.9}) {
     @content;
   }
 }
 
-@mixin not-small {
-  @media screen and (min-width: #{$sm + 1}) {
+@mixin large {
+  @media screen and (max-width: #{$lg + 1}) {
     @content;
   }
 }

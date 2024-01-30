@@ -7,6 +7,9 @@ interface Certification {
 interface Contact {
   email: string;
   phone: string;
+  name: string;
+  position: string;
+  location: string;
 }
 
 interface Education {

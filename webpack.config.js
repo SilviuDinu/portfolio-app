@@ -2,6 +2,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
+const { ContextReplacementPlugin } = require('webpack');
 
 const path = require('path');
 const mode = process.env.NODE_ENV || 'development';
@@ -11,6 +12,8 @@ const plugins = [
   new HtmlWebPackPlugin({
     template: './public/index.html',
   }),
+  new ContextReplacementPlugin(/moment[\/\\]locale$/, /en|ro/),
+  // new BundleAnalyzerPlugin(),
 ];
 
 if (mode === 'production') {
@@ -22,7 +25,7 @@ if (mode === 'production') {
           from: 'src/assets',
           to: 'assets',
           globOptions: {
-            ignore: ['**/content/**'], // Ignore everything inside /assets/content
+            ignore: ['**/content/**', '**/images/**', '**/videos/**'], // Ignore everything inside /assets/content
           },
         },
       ],
@@ -60,7 +63,34 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 2048,
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
+              jpg: {
+                progressive: true,
+                quality: 65,
+              },
             },
           },
         ],

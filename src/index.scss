@@ -3,6 +3,7 @@
 * {
   font-family: 'IBM Plex Mono', monospace;
   box-sizing: border-box;
+  font-display: swap;
 }
 
 body {
@@ -11,7 +12,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 0 !important;
   background-color: $dark-bg-color;
-  color: $white-text-color;
+  color: $white;
+  font-size: 1.1rem;
 }
 
 code {
