@@ -1,8 +1,6 @@
 import Menu from '@components/Menu/Menu';
 import classNames from 'classnames';
 import React, { RefObject } from 'react';
-import './style.scss';
-
 export interface SidenavProps {
   isOpen: boolean;
   onClick?: () => void;

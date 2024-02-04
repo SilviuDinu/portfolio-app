@@ -1,8 +1,6 @@
 import useDelayedRender from '@hooks/useDelayedRender';
 import classNames from 'classnames';
 import { PropsWithChildren, useLayoutEffect, useMemo } from 'react';
-import './style.scss';
-
 export interface PageProps extends PropsWithChildren {
   title?: JSX.Element | string;
   className?: string;

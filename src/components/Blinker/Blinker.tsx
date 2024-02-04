@@ -1,7 +1,5 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
-import './style.scss';
-
 export interface BlinkerProps {
   text: string;
   as?: React.ElementType;

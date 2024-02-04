@@ -10,11 +10,13 @@ export const debounce = (fn: Function, ms: number): ((...args: unknown[]) => voi
 };
 
 export const preloadImage = (src: string) => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.as = 'image';
-  link.href = src;
-  document.head.appendChild(link);
+  if (!document.head.querySelector(`link[rel="preload"][href="${src}"][as="image"]`)) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
+  }
 };
 
 export const formatPhoneNumber = (value: string) => {

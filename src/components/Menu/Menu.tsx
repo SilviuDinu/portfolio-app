@@ -2,8 +2,6 @@ import routes from '@constants/routes';
 import classNames from 'classnames';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './style.scss';
-
 const Menu = ({ className = '', onClick = null }: { className?: string; onClick?: () => void }) => {
   return (
     <div className={classNames('menu-items', className)}>

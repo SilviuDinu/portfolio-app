@@ -13,7 +13,7 @@ const plugins = [
     template: './public/index.html',
   }),
   new ContextReplacementPlugin(/moment[\/\\]locale$/, /en|ro/),
-  // new BundleAnalyzerPlugin(),
+  new BundleAnalyzerPlugin(),
 ];
 
 if (mode === 'production') {
@@ -25,7 +25,7 @@ if (mode === 'production') {
           from: 'src/assets',
           to: 'assets',
           globOptions: {
-            ignore: ['**/content/**', '**/images/**', '**/videos/**'], // Ignore everything inside /assets/content
+            ignore: ['**/content/**', '**/images/**', '**/videos/**', '**/icons/**'], // Ignore everything inside /assets/content
           },
         },
       ],
@@ -55,7 +55,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack', 'url-loader'],
+        use: ['@svgr/webpack'],
       },
       {
         test: /\.(png|jpg|gif|pdf)$/i,

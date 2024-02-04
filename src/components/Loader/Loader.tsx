@@ -1,7 +1,5 @@
 import useDimensions from '@hooks/useDimensions';
 import { useEffect, useRef } from 'react';
-import './style.scss';
-
 const Loader = ({ duration }: { duration?: number }) => {
   const characters = 'LOADING';
   const canvasRef = useRef(null);

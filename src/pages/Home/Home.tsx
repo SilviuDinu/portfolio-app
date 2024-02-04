@@ -1,7 +1,6 @@
 import Blinker from '@components/Blinker/Blinker';
 import Page from '@components/Page/Page';
 import contentService from '@services/content.service';
-import './style.scss';
 
 const Home = () => {
   const { title } = contentService.getHomepage();

@@ -1,12 +1,9 @@
-import { ReactComponent as CloseIcon } from '@assets/icons/close.svg';
-import { ReactComponent as HamburgerMenuIcon } from '@assets/icons/hamburger-menu.svg';
+import Icon from '@components/Icon/Icon';
 import Menu from '@components/Menu/Menu';
 import Sidenav from '@components/Sidenav/Sidenav';
 import useClickOutside from '@hooks/useClickOutside';
 import useDimensions from '@hooks/useDimensions';
 import React, { useCallback, useRef, useState } from 'react';
-import './style.scss';
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile] = useDimensions();
@@ -37,14 +34,16 @@ const Header = () => {
         ) : (
           <div className='mobile-header'>
             {isOpen ? (
-              <CloseIcon
+              <Icon
                 className='trigger'
                 onClick={closeSidenav}
+                name='close'
               />
             ) : (
-              <HamburgerMenuIcon
+              <Icon
                 className='trigger'
                 onClick={openSidenav}
+                name='hamburger-menu'
               />
             )}
             <Sidenav

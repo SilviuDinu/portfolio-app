@@ -42,6 +42,7 @@ interface Project {
   tools: string[];
   website?: string;
   repo: string;
+  video: string;
 }
 
 interface Skill {
@@ -60,6 +61,7 @@ interface Skills {
 interface SocialMediaLink {
   name: string;
   url: string;
+  icon: string;
 }
 
 interface TechnologyItem {
