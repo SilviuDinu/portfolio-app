@@ -20,7 +20,6 @@ export const Routes = () => {
             />
           );
         })}
-
         <Route
           index
           element={

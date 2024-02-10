@@ -1,6 +1,6 @@
 .loader {
   overflow: hidden;
-  min-height: 100vh;
+  height: calc(100% + $navbar-height);
 }
 
 @keyframes fadeInOut {

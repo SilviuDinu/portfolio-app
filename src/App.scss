@@ -4,6 +4,7 @@
 @import './styles/mixins.scss';
 @import '@pages/Contact/style.scss';
 @import '@pages/Home/style.scss';
+@import '@pages/Projects/style.scss';
 @import '@components/Blinker/style.scss';
 @import '@components/Divider/style.scss';
 @import '@components/Footer/style.scss';
@@ -12,6 +13,7 @@
 @import '@components/Menu/style.scss';
 @import '@components/Page/style.scss';
 @import '@components/Sidenav/style.scss';
+@import '@components/Project/style.scss';
 
 .page-container {
   height: calc(100vh - (3 * $navbar-height) / 2);

@@ -34,7 +34,7 @@ interface Photography {
   type: string;
 }
 
-interface Project {
+export interface Project {
   title: string;
   city: string;
   description: string;
